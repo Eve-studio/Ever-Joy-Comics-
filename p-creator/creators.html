@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Discover writers and artists creating stories on Ever Joy Comics."
+    >
+
+    <title>Creators | Ever Joy Comics</title>
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================================
+         CREATOR PAGE CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/p-creator.css"
+    >
+
+</head>
+
+
+<body class="creators-page">
+
+
+    <!-- =====================================================
+         CREATOR HEADER
+         ===================================================== -->
+
+    <header class="creators-header">
+
+        <button
+            class="creator-back-button"
+            id="creatorBackButton"
+            aria-label="Go back"
+        >
+
+            ←
+
+        </button>
+
+
+        <div class="creators-header-title">
+
+            <h1>
+                Creators
+            </h1>
+
+            <p>
+                Discover the people behind the stories.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="creators-container">
+
+
+        <!-- =================================================
+             SEARCH
+             ================================================= -->
+
+        <section class="creator-search-section">
+
+            <label
+                for="creatorSearchInput"
+                class="sr-only"
+            >
+
+                Search creators
+
+            </label>
+
+
+            <div class="creator-search">
+
+                <span
+                    class="creator-search-icon"
+                    aria-hidden="true"
+                >
+
+                    ⌕
+
+                </span>
+
+
+                <input
+                    type="search"
+                    id="creatorSearchInput"
+                    placeholder="Search creators..."
+                    autocomplete="off"
+                >
+
+
+                <button
+                    type="button"
+                    id="creatorSearchClear"
+                    class="creator-search-clear"
+                    aria-label="Clear search"
+                    hidden
+                >
+
+                    ×
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DISCOVER
+             ================================================= -->
+
+        <section class="creator-discover-section">
+
+            <div class="creator-section-heading">
+
+                <div>
+
+                    <span class="creator-section-eyebrow">
+                        Discover
+                    </span>
+
+                    <h2>
+                        Creators
+                    </h2>
+
+                </div>
+
+
+                <span
+                    id="creatorResultCount"
+                    class="creator-result-count"
+                >
+
+                    0 creators
+
+                </span>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 CREATOR RESULTS
+                 ============================================= -->
+
+            <div
+                class="creator-grid"
+                id="creatorGrid"
+            >
+
+                <!--
+
+                    Creator cards will be inserted
+                    here by creators.js.
+
+                -->
+
+            </div>
+
+
+
+            <!-- =============================================
+                 LOADING
+                 ============================================= -->
+
+            <div
+                class="creator-loading"
+                id="creatorLoading"
+                hidden
+            >
+
+                <div class="creator-loader"></div>
+
+                <p>
+                    Finding creators...
+                </p>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 EMPTY STATE
+                 ============================================= -->
+
+            <div
+                class="creator-empty"
+                id="creatorEmpty"
+                hidden
+            >
+
+                <div
+                    class="creator-empty-icon"
+                    aria-hidden="true"
+                >
+
+                    ◌
+
+                </div>
+
+
+                <h2>
+                    No creators found
+                </h2>
+
+
+                <p>
+                    Try searching for another creator.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="../js/script.js"
+    ></script>
+
+
+    <script
+        src="../js/creators.js"
+    ></script>
+
+</body>
+
+</html>

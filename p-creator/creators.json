@@ -1,0 +1,186 @@
+{
+  "creators": [
+    {
+      "id": "creator_001",
+      "username": "creatorname",
+      "displayName": "Creator Name",
+      "penName": "Creator Name",
+      "avatar": "assets/images/creators/creator-001.webp",
+      "bio": "Fantasy and romance creator.",
+      "verified": true,
+      "role": "Writer",
+      "workCount": 1,
+      "works": [
+        "comic_001"
+      ]
+    },
+    {
+      "id": "creator_002",
+      "username": "artistname",
+      "displayName": "Artist Name",
+      "penName": "Artist Name",
+      "avatar": "assets/images/creators/creator-002.webp",
+      "bio": "Visual artist and storyteller.",
+      "verified": true,
+      "role": "Artist",
+      "workCount": 1,
+      "works": [
+        "comic_001"
+      ]
+    },
+    {
+      "id": "creator_003",
+      "username": "coloristname",
+      "displayName": "Colorist Name",
+      "penName": "Colorist Name",
+      "avatar": "assets/images/creators/creator-003.webp",
+      "bio": "Comic colorist.",
+      "verified": true,
+      "role": "Colorist",
+      "workCount": 1,
+      "works": [
+        "comic_001"
+      ]
+    },
+    {
+      "id": "creator_004",
+      "username": "writername",
+      "displayName": "Writer Name",
+      "penName": "Writer Name",
+      "avatar": "assets/images/creators/creator-004.webp",
+      "bio": "Writer and storyteller.",
+      "verified": true,
+      "role": "Writer",
+      "workCount": 1,
+      "works": [
+        "comic_002"
+      ]
+    },
+    {
+      "id": "creator_005",
+      "username": "artistname2",
+      "displayName": "Artist Name",
+      "penName": "Artist Name",
+      "avatar": "assets/images/creators/creator-005.webp",
+      "bio": "Comic artist.",
+      "verified": true,
+      "role": "Artist",
+      "workCount": 1,
+      "works": [
+        "comic_002"
+      ]
+    },
+    {
+      "id": "creator_006",
+      "username": "writername2",
+      "displayName": "Writer Name",
+      "penName": "Writer Name",
+      "avatar": "assets/images/creators/creator-006.webp",
+      "bio": "Fantasy and adventure writer.",
+      "verified": true,
+      "role": "Writer",
+      "workCount": 1,
+      "works": [
+        "comic_003"
+      ]
+    },
+    {
+      "id": "creator_007",
+      "username": "artistname3",
+      "displayName": "Writer Name",
+      "penName": "Writer Name",
+      "avatar": "assets/images/creators/creator-007.webp",
+      "bio": "Comic artist and storyteller.",
+      "verified": true,
+      "role": "Artist",
+      "workCount": 1,
+      "works": [
+        "comic_003"
+      ]
+    },
+    {
+      "id": "creator_008",
+      "username": "coloristname2",
+      "displayName": "Colorist Name",
+      "penName": "Colorist Name",
+      "avatar": "assets/images/creators/creator-008.webp",
+      "bio": "Comic colorist.",
+      "verified": true,
+      "role": "Colorist",
+      "workCount": 1,
+      "works": [
+        "comic_003"
+      ]
+    },
+    {
+      "id": "creator_009",
+      "username": "writername3",
+      "displayName": "Writer Name",
+      "penName": "Writer Name",
+      "avatar": "assets/images/creators/creator-009.webp",
+      "bio": "Romance and drama writer.",
+      "verified": true,
+      "role": "Writer",
+      "workCount": 1,
+      "works": [
+        "comic_004"
+      ]
+    },
+    {
+      "id": "creator_010",
+      "username": "artistname4",
+      "displayName": "Artist Name",
+      "penName": "Artist Name",
+      "avatar": "assets/images/creators/creator-010.webp",
+      "bio": "Graphic novel artist.",
+      "verified": true,
+      "role": "Artist",
+      "workCount": 1,
+      "works": [
+        "comic_004"
+      ]
+    },
+    {
+      "id": "creator_011",
+      "username": "writername4",
+      "displayName": "Writer Name",
+      "penName": "Writer Name",
+      "avatar": "assets/images/creators/creator-011.webp",
+      "bio": "Fantasy and mystery writer.",
+      "verified": true,
+      "role": "Writer",
+      "workCount": 1,
+      "works": [
+        "comic_005"
+      ]
+    },
+    {
+      "id": "creator_012",
+      "username": "artistname5",
+      "displayName": "Writer Name",
+      "penName": "Writer Name",
+      "avatar": "assets/images/creators/creator-012.webp",
+      "bio": "Comic artist.",
+      "verified": true,
+      "role": "Artist",
+      "workCount": 1,
+      "works": [
+        "comic_005"
+      ]
+    },
+    {
+      "id": "creator_013",
+      "username": "coloristname3",
+      "displayName": "Colorist Name",
+      "penName": "Colorist Name",
+      "avatar": "assets/images/creators/creator-013.webp",
+      "bio": "Comic colorist.",
+      "verified": true,
+      "role": "Colorist",
+      "workCount": 1,
+      "works": [
+        "comic_005"
+      ]
+    }
+  ]
+}
