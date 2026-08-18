@@ -1,0 +1,438 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Create your Ever Joy Comics account."
+>
+
+<title>Create Account | Ever Joy Comics</title>
+
+
+<!-- GLOBAL CSS -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- ACCOUNT CSS -->
+
+<link
+    rel="stylesheet"
+    href="../css/account.css"
+>
+
+
+<!-- SIGNUP CSS -->
+
+<link
+    rel="stylesheet"
+    href="../css/signup.css"
+>
+
+</head><body class="signup-page"><main class="signup-container">
+
+
+    <!-- BRAND -->
+
+    <header class="signup-brand">
+
+        <a
+            href="../index.html"
+            class="signup-logo"
+        >
+            Ever Joy
+        </a>
+
+        <span class="signup-brand-subtitle">
+            COMICS
+        </span>
+
+        <p>
+            Stories worth keeping.
+        </p>
+
+    </header>
+
+
+
+    <!-- SIGNUP CARD -->
+
+    <section class="signup-card">
+
+
+        <div class="signup-heading">
+
+            <span class="signup-eyebrow">
+                JOIN EVER JOY
+            </span>
+
+            <h1>
+                Create your account
+            </h1>
+
+            <p>
+                Build your personal reading world,
+                save your favorites, and make
+                Ever Joy yours.
+            </p>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <form
+            id="signupForm"
+            class="signup-form"
+            novalidate
+        >
+
+
+            <!-- USERNAME -->
+
+            <div class="signup-field">
+
+                <label for="signupUsername">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="signupUsername"
+                    name="username"
+                    placeholder="Choose a username"
+                    autocomplete="username"
+                    minlength="3"
+                    maxlength="30"
+                    required
+                >
+
+                <small>
+                    3–30 characters. Letters, numbers
+                    and underscores only.
+                </small>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="signup-field">
+
+                <label for="signupEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="signupEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- PASSWORD -->
+
+            <div class="signup-field">
+
+                <label for="signupPassword">
+                    Password
+                </label>
+
+                <div class="signup-password">
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        name="password"
+                        placeholder="Create a password"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="toggleSignupPassword"
+                        class="signup-password-toggle"
+                        aria-label="Show password"
+                    >
+                        Show
+                    </button>
+
+                </div>
+
+                <small>
+                    Use at least 8 characters.
+                </small>
+
+            </div>
+
+
+
+            <!-- CONFIRM PASSWORD -->
+
+            <div class="signup-field">
+
+                <label for="signupConfirmPassword">
+                    Confirm password
+                </label>
+
+                <div class="signup-password">
+
+                    <input
+                        type="password"
+                        id="signupConfirmPassword"
+                        name="confirmPassword"
+                        placeholder="Enter your password again"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="toggleConfirmPassword"
+                        class="signup-password-toggle"
+                        aria-label="Show password"
+                    >
+                        Show
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GENDER -->
+
+            <div class="signup-field">
+
+                <label>
+                    Gender
+                </label>
+
+                <div class="signup-gender">
+
+                    <label class="signup-gender-option">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                        >
+
+                        <span>
+                            Male
+                        </span>
+
+                    </label>
+
+
+                    <label class="signup-gender-option">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                        >
+
+                        <span>
+                            Female
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATE OF BIRTH -->
+
+            <div class="signup-field">
+
+                <label for="signupBirthday">
+                    Date of birth
+                </label>
+
+                <input
+                    type="date"
+                    id="signupBirthday"
+                    name="dateOfBirth"
+                    autocomplete="bday"
+                    required
+                >
+
+                <small>
+                    Used for appropriate platform settings.
+                </small>
+
+            </div>
+
+
+<!-- =================================================
+     CREATOR ACCESS
+     ================================================= -->
+
+<div class="signup-creator">
+
+    <div class="signup-creator-heading">
+
+        <span>
+            Creator access
+        </span>
+
+        <small>
+            Optional
+        </small>
+
+    </div>
+
+
+    <p class="signup-creator-description">
+        Have a Creator Code? Enter it here to
+        unlock creator features.
+    </p>
+
+
+    <input
+        type="text"
+        id="signupCreatorCode"
+        name="creatorCode"
+        placeholder="Enter Creator Code"
+        autocomplete="off"
+        maxlength="30"
+        spellcheck="false"
+    >
+
+</div>
+
+
+
+            <!-- TERMS -->
+
+            <label class="signup-terms">
+
+                <input
+                    type="checkbox"
+                    id="signupTerms"
+                    name="terms"
+                >
+
+                <span>
+                    I agree to the
+                    <a href="../terms.html">
+                        Terms of Service
+                    </a>
+                    and
+                    <a href="../privacy.html">
+                        Privacy Policy
+                    </a>.
+                </span>
+
+            </label>
+
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="signupMessage"
+                class="signup-message"
+                aria-live="polite"
+                role="status"
+            ></div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                id="signupSubmit"
+                class="signup-submit"
+            >
+                Create Account
+            </button>
+
+
+        </form>
+
+
+
+        <!-- LOGIN -->
+
+        <div class="signup-login">
+
+            <span>
+                Already have an account?
+            </span>
+
+            <a href="./login.html">
+                Log in
+            </a>
+
+        </div>
+
+
+
+        <!-- BACK -->
+
+        <div class="signup-back">
+
+            <a href="./auth.html">
+                ← Back to authentication
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="signup-footer">
+
+        <span>
+            Ever Joy Comics
+        </span>
+
+        <span>
+            © 2026
+        </span>
+
+    </footer>
+
+
+</main>
+
+
+<!-- SHARED AUTHENTICATION SYSTEM -->
+
+<script src="../js/auth.js"></script>
+
+
+<!-- SIGNUP PAGE LOGIC -->
+
+<script src="../js/signup.js"></script>
+
+</body></html>

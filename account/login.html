@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Log in to your Ever Joy Comics account."
+>
+
+<title>Log In | Ever Joy Comics</title>
+
+
+<!-- GLOBAL STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- ACCOUNT STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/account.css"
+>
+
+
+<!-- LOGIN PAGE STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/login.css"
+>
+
+</head><body class="account-body"><main class="account-page">
+
+
+    <!-- BRAND -->
+
+    <header class="account-brand">
+
+        <div class="account-logo">
+            Ever Joy
+        </div>
+
+        <span class="account-brand-subtitle">
+            COMICS
+        </span>
+
+    </header>
+
+
+
+    <!-- LOGIN CARD -->
+
+    <section class="account-card">
+
+
+        <div class="account-heading">
+
+            <span class="account-eyebrow">
+                WELCOME BACK
+            </span>
+
+            <h1>
+                Log in to Ever Joy.
+            </h1>
+
+            <p>
+                Continue your reading journey,
+                return to your library, and keep
+                your favorite stories close.
+            </p>
+
+        </div>
+
+
+
+        <!-- LOGIN FORM -->
+
+        <form
+            id="loginForm"
+            class="account-form"
+            novalidate
+        >
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="loginEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- PASSWORD -->
+
+            <div class="form-group">
+
+                <div class="form-label-row">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <a
+                        href="./forgot-password.html"
+                        class="forgot-password-link"
+                    >
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <div class="password-field">
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        id="toggleLoginPassword"
+                        class="password-toggle"
+                        aria-label="Show password"
+                    >
+                        Show
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="loginMessage"
+                class="account-message"
+                aria-live="polite"
+            ></div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                id="loginSubmit"
+                class="account-submit"
+            >
+                Log In
+            </button>
+
+        </form>
+
+
+
+        <!-- SIGN UP -->
+
+        <div class="account-switch">
+
+            <span>
+                Don't have an account?
+            </span>
+
+            <a href="./signup.html">
+                Create an account
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="account-footer">
+
+        <span>
+            Ever Joy Comics
+        </span>
+
+        <span>
+            © 2026
+        </span>
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- SHARED AUTHENTICATION SYSTEM -->
+
+<script src="../js/auth.js"></script>
+
+
+<!-- LOGIN PAGE LOGIC -->
+
+<script src="../js/login.js"></script>
+
+</body></html>
