@@ -1,0 +1,1151 @@
+/* =========================================================
+   EVER JOY COMICS
+   CREATOR STUDIO — ANALYTICS
+   Premium Analytics Interface
+========================================================= */
+
+
+/* =========================================================
+   1. PAGE FOUNDATION
+========================================================= */
+
+.creator-dashboard-body {
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(120, 92, 180, 0.12),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(80, 120, 190, 0.08),
+            transparent 30%
+        ),
+        #090a10;
+    color: #f4f3f7;
+    font-family: inherit;
+}
+
+.creator-studio {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* =========================================================
+   2. SIDEBAR
+========================================================= */
+
+.creator-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 250px;
+    min-height: 100vh;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(22, 23, 32, 0.98),
+            rgba(12, 13, 19, 0.98)
+        );
+
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    z-index: 20;
+}
+
+
+/* =========================================================
+   3. SIDEBAR BRAND
+========================================================= */
+
+.creator-sidebar-brand {
+    padding: 4px 10px 30px;
+}
+
+.creator-logo {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.creator-studio-label {
+    display: block;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   4. NAVIGATION
+========================================================= */
+
+.creator-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.creator-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 46px;
+    padding: 0 13px;
+
+    border-radius: 13px;
+
+    color: rgba(255, 255, 255, 0.58);
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.creator-nav-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.055);
+    transform: translateX(2px);
+}
+
+.creator-nav-item.active {
+    color: #ffffff;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(145, 112, 220, 0.22),
+            rgba(88, 110, 190, 0.12)
+        );
+    border: 1px solid rgba(165, 140, 230, 0.16);
+}
+
+.creator-nav-icon {
+    width: 22px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   5. SIDEBAR FOOTER
+========================================================= */
+
+.creator-sidebar-footer {
+    margin-top: auto;
+    padding: 20px 10px 5px;
+}
+
+.creator-return-link {
+    color: rgba(255, 255, 255, 0.42);
+    text-decoration: none;
+    font-size: 0.78rem;
+    transition: color 0.2s ease;
+}
+
+.creator-return-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   6. MAIN AREA
+========================================================= */
+
+.creator-main {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    margin-left: 250px;
+    box-sizing: border-box;
+    padding: 0 42px 60px;
+}
+
+
+/* =========================================================
+   7. TOP BAR
+========================================================= */
+
+.creator-topbar {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.creator-page-heading h1 {
+    margin: 5px 0 0;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    letter-spacing: -0.04em;
+}
+
+.creator-eyebrow {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   8. ACCOUNT AREA
+========================================================= */
+
+.creator-account-area {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.creator-notification-button {
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.035);
+    color: rgba(255, 255, 255, 0.7);
+
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.creator-notification-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.creator-account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.creator-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a98ee8,
+            #6578b7
+        );
+
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.creator-account-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.creator-account-text strong {
+    font-size: 0.82rem;
+}
+
+.creator-account-text small {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.68rem;
+}
+
+
+/* =========================================================
+   9. WELCOME PANEL
+========================================================= */
+
+.creator-welcome-panel {
+    margin-top: 32px;
+    padding: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(145, 112, 220, 0.16),
+            transparent 38%
+        ),
+        rgba(255, 255, 255, 0.035);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.creator-welcome-content {
+    max-width: 720px;
+}
+
+.creator-welcome-content h2 {
+    margin: 8px 0 10px;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    letter-spacing: -0.035em;
+}
+
+.creator-welcome-content p {
+    margin: 0;
+    max-width: 650px;
+    color: rgba(255, 255, 255, 0.58);
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   10. SELECT
+========================================================= */
+
+.creator-select {
+    min-width: 170px;
+    padding: 11px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.creator-select option {
+    background: #11121a;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   11. SECTIONS
+========================================================= */
+
+.creator-section {
+    margin-top: 48px;
+}
+
+.creator-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.creator-section-heading h2 {
+    margin: 6px 0 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   12. STATISTICS
+========================================================= */
+
+.creator-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.creator-stat-card {
+    min-width: 0;
+    padding: 21px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.creator-stat-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.13);
+}
+
+.creator-stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.76rem;
+}
+
+.creator-stat-icon {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.creator-stat-card > strong {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.75rem;
+    letter-spacing: -0.04em;
+}
+
+.creator-stat-card > small {
+    display: block;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   13. CHART
+========================================================= */
+
+.creator-chart-card {
+    padding: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.creator-chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.creator-chart-header div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.creator-chart-header span {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.72rem;
+}
+
+.creator-chart-header strong {
+    font-size: 1.45rem;
+}
+
+.creator-chart-empty-label {
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   14. CHART BODY
+========================================================= */
+
+.creator-chart {
+    position: relative;
+    min-height: 260px;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 100% 52px;
+}
+
+.creator-chart-line {
+    position: absolute;
+    inset: auto 0 30%;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.creator-chart-message {
+    position: relative;
+    z-index: 2;
+
+    max-width: 400px;
+    padding: 25px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.creator-chart-message span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    color: rgba(170, 145, 235, 0.8);
+}
+
+.creator-chart-message p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 0.84rem;
+}
+
+
+/* =========================================================
+   15. ACTION GRID
+========================================================= */
+
+.creator-action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.creator-action-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.creator-action-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.creator-action-card strong {
+    display: block;
+}
+
+.creator-action-card p {
+    margin: 6px 0 0;
+
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+.creator-inline-value {
+    display: block !important;
+    margin-top: 14px !important;
+    font-size: 1.3rem;
+}
+
+
+/* =========================================================
+   16. COMIC GRID
+========================================================= */
+
+.creator-comics-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(250px, 1fr)
+        );
+    gap: 18px;
+}
+
+.creator-analytics-comic-card {
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.creator-analytics-comic-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   17. ANALYTICS COVER
+========================================================= */
+
+.creator-analytics-cover-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    background: #11121a;
+}
+
+.creator-analytics-cover {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   18. COMIC CONTENT
+========================================================= */
+
+.creator-analytics-comic-content {
+    padding: 20px;
+}
+
+.creator-analytics-comic-title {
+    margin: 10px 0 8px;
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.creator-analytics-comic-description {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   19. STATUS
+========================================================= */
+
+.creator-analytics-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   20. COMIC METRICS
+========================================================= */
+
+.creator-analytics-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.creator-analytics-metric {
+    padding: 12px;
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.creator-analytics-metric span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 0.68rem;
+}
+
+.creator-analytics-metric strong {
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   21. PERFORMANCE BAR
+========================================================= */
+
+.creator-analytics-performance {
+    margin-top: 18px;
+}
+
+.creator-analytics-performance-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-bottom: 8px;
+
+    font-size: 0.75rem;
+}
+
+.creator-analytics-performance-header span {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.creator-analytics-bar {
+    width: 100%;
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.creator-analytics-bar-fill {
+    width: 0;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a58be2,
+            #738bd0
+        );
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================================
+   22. RANK
+========================================================= */
+
+.creator-analytics-rank {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   23. ACTIVITY
+========================================================= */
+
+.creator-analytics-activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.creator-analytics-activity-item:last-child {
+    border-bottom: none;
+}
+
+.creator-analytics-activity-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.creator-analytics-activity-content {
+    min-width: 0;
+}
+
+.creator-analytics-activity-content strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.creator-analytics-activity-content p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.creator-analytics-activity-time {
+    display: block;
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 0.68rem;
+}
+
+
+/* =========================================================
+   24. EMPTY STATES
+========================================================= */
+
+.creator-comics-empty,
+.creator-activity-empty,
+.creator-analytics-empty {
+    padding: 55px 25px;
+
+    text-align: center;
+
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.creator-empty-icon {
+    margin-bottom: 14px;
+    font-size: 1.5rem;
+    opacity: 0.65;
+}
+
+.creator-comics-empty h3,
+.creator-activity-empty h3,
+.creator-analytics-empty h3 {
+    margin: 0 0 8px;
+}
+
+.creator-comics-empty p,
+.creator-activity-empty p,
+.creator-analytics-empty p {
+    max-width: 500px;
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    line-height: 1.7;
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   25. CHECK CARD
+========================================================= */
+
+.creator-check-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(145, 112, 220, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+}
+
+.creator-check-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.creator-check-card strong {
+    display: block;
+}
+
+.creator-check-card p {
+    margin: 7px 0 0;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 0.82rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   26. TEMPORARY NOTIFICATION
+========================================================= */
+
+.creator-temporary-notice {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 100;
+
+    padding: 13px 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    background: rgba(20, 21, 30, 0.96);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.35);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   27. MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .creator-sidebar {
+        width: 220px;
+    }
+
+    .creator-main {
+        width: calc(100% - 220px);
+        margin-left: 220px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .creator-stat-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   28. SMALL TABLETS
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .creator-sidebar {
+        position: static;
+        width: 100%;
+        min-height: auto;
+
+        padding: 18px;
+
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .creator-studio {
+        display: block;
+    }
+
+    .creator-navigation {
+        display: grid;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .creator-sidebar-footer {
+        display: none;
+    }
+
+    .creator-main {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 20px 50px;
+    }
+
+    .creator-topbar {
+        min-height: 78px;
+    }
+
+    .creator-action-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   29. PHONES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .creator-sidebar-brand {
+        padding-bottom: 18px;
+    }
+
+    .creator-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .creator-account-text {
+        display: none;
+    }
+
+    .creator-topbar {
+        gap: 12px;
+    }
+
+    .creator-page-heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .creator-welcome-panel {
+        margin-top: 22px;
+        padding: 22px;
+
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .creator-select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .creator-section {
+        margin-top: 36px;
+    }
+
+    .creator-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .creator-comics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .creator-chart {
+        min-height: 220px;
+    }
+
+    .creator-check-card {
+        padding: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   30. VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .creator-main {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .creator-welcome-panel {
+        padding: 18px;
+    }
+
+    .creator-stat-card {
+        padding: 17px;
+    }
+
+    .creator-chart-card {
+        padding: 16px;
+    }
+
+}

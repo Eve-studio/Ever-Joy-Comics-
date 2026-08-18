@@ -1,0 +1,2303 @@
+/* =========================================================
+EVER JOY COMICS
+READER + LIBRARY EXPERIENCE
+COMPLETE LAYOUT SYSTEM
+========================================================= */
+
+/* =========================================================
+
+1. READER FOUNDATION
+   ========================================================= */
+
+.reader-body {
+
+margin: 0;
+padding: 0;
+
+width: 100%;
+min-height: 100vh;
+
+background: #050507;
+color: #ffffff;
+
+overflow-x: hidden;
+
+-webkit-tap-highlight-color: transparent;
+
+}
+
+/* =========================================================
+2. READER APP SHELL
+========================================================= */
+
+.reader-app {
+
+position: relative;
+
+width: 100%;
+min-height: 100vh;
+
+background: #050507;
+
+}
+
+/* =========================================================
+3. READER HEADER
+========================================================= */
+
+.reader-header {
+
+position: fixed;
+
+top: 0;
+left: 0;
+right: 0;
+
+z-index: 1000;
+
+width: 100%;
+height: 62px;
+
+display: grid;
+
+grid-template-columns: 44px minmax(0, 1fr) 44px;
+
+align-items: center;
+
+box-sizing: border-box;
+
+padding: 0 12px;
+
+background:
+    rgba(5, 5, 7, 0.94);
+
+border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+
+backdrop-filter:
+    blur(18px);
+
+-webkit-backdrop-filter:
+    blur(18px);
+
+}
+
+/* =========================================================
+4. HEADER BUTTONS
+========================================================= */
+
+.reader-header-btn {
+
+width: 40px;
+height: 40px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 0;
+
+border: none;
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.07);
+
+color: #ffffff;
+
+font-size: 21px;
+line-height: 1;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.reader-header-btn:hover {
+
+background:
+    rgba(255, 255, 255, 0.12);
+
+}
+
+.reader-header-btn:active {
+
+transform: scale(0.88);
+
+}
+
+.reader-header-btn:focus-visible {
+
+outline:
+    2px solid rgba(255, 255, 255, 0.55);
+
+outline-offset: 2px;
+
+}
+
+/* =========================================================
+5. READER TITLE AREA
+========================================================= */
+
+.reader-title-area {
+
+min-width: 0;
+
+width: 100%;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+
+padding: 0 10px;
+
+box-sizing: border-box;
+
+overflow: hidden;
+
+}
+
+/* =========================================================
+6. COMIC TITLE
+========================================================= */
+
+.reader-comic-title {
+
+display: block;
+
+width: 100%;
+max-width: 260px;
+
+margin: 0;
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap;
+
+text-align: center;
+
+color: #ffffff;
+
+font-size: 13px;
+font-weight: 650;
+
+line-height: 1.25;
+
+letter-spacing: 0.15px;
+
+}
+
+/* =========================================================
+7. CHAPTER TITLE
+========================================================= */
+
+.reader-chapter-title {
+
+display: block;
+
+width: 100%;
+max-width: 260px;
+
+margin: 3px 0 0;
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap;
+
+text-align: center;
+
+color:
+    rgba(255, 255, 255, 0.48);
+
+font-size: 10px;
+
+line-height: 1.25;
+
+}
+
+/* =========================================================
+8. READER CONTAINER
+========================================================= */
+
+.reader-container {
+
+width: 100%;
+min-height: 100vh;
+
+box-sizing: border-box;
+
+padding-top: 62px;
+padding-bottom: 70px;
+
+background: #050507;
+
+}
+
+/* =========================================================
+9. COMIC READING STAGE
+========================================================= */
+
+.comic-pages {
+
+width: 100%;
+max-width: 960px;
+
+margin: 0 auto;
+padding: 0;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: flex-start;
+
+background: #050507;
+
+}
+
+/* =========================================================
+10. INDIVIDUAL COMIC PAGE
+========================================================= */
+
+.comic-page {
+
+display: block;
+
+width: 100%;
+max-width: 960px;
+
+height: auto;
+
+margin: 0;
+padding: 0;
+
+border: 0;
+
+user-select: none;
+
+-webkit-user-drag: none;
+
+vertical-align: top;
+
+}
+
+/* =========================================================
+11. PREVENT PAGE GAPS
+========================================================= */
+
+.comic-page + .comic-page {
+
+margin-top: 0;
+
+}
+
+/* =========================================================
+12. LOADING STATE
+========================================================= */
+
+.reader-loading {
+
+width: 100%;
+min-height:
+    calc(100vh - 132px);
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+
+gap: 15px;
+
+box-sizing: border-box;
+
+color:
+    rgba(255, 255, 255, 0.48);
+
+text-align: center;
+
+}
+
+.reader-loader {
+
+width: 30px;
+height: 30px;
+
+border:
+    3px solid rgba(255, 255, 255, 0.12);
+
+border-top-color:
+    rgba(255, 255, 255, 0.9);
+
+border-radius: 50%;
+
+animation:
+    readerSpin 0.8s linear infinite;
+
+}
+
+@keyframes readerSpin {
+
+from {
+
+    transform: rotate(0deg);
+
+}
+
+to {
+
+    transform: rotate(360deg);
+
+}
+
+}
+
+/* =========================================================
+13. CHAPTER END
+========================================================= */
+
+.chapter-end {
+
+width: min(100%, 520px);
+
+display: none;
+
+margin: 0 auto;
+
+padding:
+    76px 22px 50px;
+
+box-sizing: border-box;
+
+text-align: center;
+
+}
+
+.chapter-end.visible {
+
+display: block;
+
+}
+
+/* =========================================================
+14. CHAPTER END ICON
+========================================================= */
+
+.chapter-end-icon {
+
+width: 60px;
+height: 60px;
+
+margin: 0 auto 20px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.07);
+
+border:
+    1px solid rgba(255, 255, 255, 0.07);
+
+color: #ffffff;
+
+font-size: 24px;
+
+}
+
+/* =========================================================
+15. CHAPTER END TEXT
+========================================================= */
+
+.chapter-end h2 {
+
+margin: 0;
+
+color: #ffffff;
+
+font-size: 22px;
+font-weight: 700;
+
+line-height: 1.25;
+
+}
+
+.chapter-end p {
+
+max-width: 340px;
+
+margin:
+    10px auto 26px;
+
+color:
+    rgba(255, 255, 255, 0.48);
+
+font-size: 13px;
+
+line-height: 1.65;
+
+}
+
+/* =========================================================
+16. CHAPTER END ACTIONS
+========================================================= */
+
+.chapter-end-actions {
+
+width: 100%;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 10px;
+
+}
+
+/* =========================================================
+17. CHAPTER END BUTTONS
+========================================================= */
+
+.next-chapter-btn,
+.back-details-btn {
+
+width: 100%;
+min-height: 48px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding:
+    0 18px;
+
+border: none;
+border-radius: 12px;
+
+font-size: 14px;
+font-weight: 650;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s ease;
+
+}
+
+.next-chapter-btn {
+
+background: #ffffff;
+
+color: #050507;
+
+}
+
+.back-details-btn {
+
+background:
+    rgba(255, 255, 255, 0.08);
+
+color: #ffffff;
+
+border:
+    1px solid rgba(255, 255, 255, 0.05);
+
+}
+
+.next-chapter-btn:hover {
+
+background:
+    rgba(255, 255, 255, 0.9);
+
+}
+
+.back-details-btn:hover {
+
+background:
+    rgba(255, 255, 255, 0.13);
+
+}
+
+.next-chapter-btn:active,
+.back-details-btn:active {
+
+transform: scale(0.97);
+
+}
+
+/* =========================================================
+18. READER BOTTOM CONTROL BAR
+========================================================= */
+
+.reader-controls {
+
+position: fixed;
+
+left: 0;
+right: 0;
+bottom: 0;
+
+z-index: 1000;
+
+width: 100%;
+height: 62px;
+
+display: grid;
+
+grid-template-columns: 44px minmax(70px, 1fr) 44px;
+
+align-items: center;
+
+box-sizing: border-box;
+
+padding: 0 12px;
+
+background:
+    rgba(5, 5, 7, 0.95);
+
+border-top:
+    1px solid rgba(255, 255, 255, 0.06);
+
+backdrop-filter:
+    blur(18px);
+
+-webkit-backdrop-filter:
+    blur(18px);
+
+}
+
+/* =========================================================
+19. READER CONTROL BUTTONS
+========================================================= */
+
+.reader-control-btn {
+
+width: 40px;
+height: 40px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 0;
+
+border: none;
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.07);
+
+color: #ffffff;
+
+font-size: 23px;
+line-height: 1;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.reader-control-btn:hover {
+
+background:
+    rgba(255, 255, 255, 0.12);
+
+}
+
+.reader-control-btn:active {
+
+transform: scale(0.88);
+
+}
+
+/* =========================================================
+20. READER PROGRESS AREA
+========================================================= */
+
+.reader-progress-area {
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+gap: 7px;
+
+min-width: 70px;
+
+color:
+    rgba(255, 255, 255, 0.75);
+
+font-size: 12px;
+font-weight: 500;
+
+text-align: center;
+
+}
+
+/* =========================================================
+21. PROGRESS DIVIDER
+========================================================= */
+
+.reader-progress-divider {
+
+color:
+    rgba(255, 255, 255, 0.25);
+
+}
+
+/* =========================================================
+22. READER MENU
+========================================================= */
+
+.reader-menu {
+
+position: fixed;
+
+top: 0;
+right: 0;
+bottom: 0;
+
+z-index: 1200;
+
+width: min(340px, 88vw);
+
+box-sizing: border-box;
+
+display: flex;
+
+flex-direction: column;
+
+background:
+    #0b0b0f;
+
+border-left:
+    1px solid rgba(255, 255, 255, 0.07);
+
+transform:
+    translateX(100%);
+
+visibility: hidden;
+
+transition:
+    transform 0.28s ease,
+    visibility 0.28s ease;
+
+box-shadow:
+    -18px 0 45px rgba(0, 0, 0, 0.28);
+
+}
+
+.reader-menu.open {
+
+transform:
+    translateX(0);
+
+visibility: visible;
+
+}
+
+/* =========================================================
+23. READER MENU HEADER
+========================================================= */
+
+.reader-menu-header {
+
+flex-shrink: 0;
+
+min-height: 62px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding: 0 16px;
+
+box-sizing: border-box;
+
+border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+
+}
+
+.reader-menu-header h2 {
+
+margin: 0;
+
+color: #ffffff;
+
+font-size: 15px;
+font-weight: 650;
+
+line-height: 1.2;
+
+}
+
+.reader-menu-close {
+
+width: 36px;
+height: 36px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 0;
+
+border: none;
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.07);
+
+color: #ffffff;
+
+font-size: 21px;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.reader-menu-close:hover {
+
+background:
+    rgba(255, 255, 255, 0.12);
+
+}
+
+.reader-menu-close:active {
+
+transform: scale(0.88);
+
+}
+
+/* =========================================================
+24. READER MENU CONTENT
+========================================================= */
+
+.reader-menu-content {
+
+width: 100%;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 4px;
+
+padding: 12px;
+
+box-sizing: border-box;
+
+overflow-y: auto;
+
+}
+
+/* =========================================================
+25. READER MENU OPTION
+========================================================= */
+
+.reader-menu-option {
+
+width: 100%;
+min-height: 52px;
+
+display: flex;
+
+align-items: center;
+
+gap: 12px;
+
+padding:
+    0 14px;
+
+box-sizing: border-box;
+
+border: none;
+border-radius: 10px;
+
+background: transparent;
+
+color: #ffffff;
+
+text-align: left;
+
+font-size: 13px;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease;
+
+}
+
+.reader-menu-option:hover {
+
+background:
+    rgba(255, 255, 255, 0.06);
+
+}
+
+.reader-menu-option:active {
+
+background:
+    rgba(255, 255, 255, 0.09);
+
+}
+
+.reader-menu-option span {
+
+width: 24px;
+
+flex-shrink: 0;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+color:
+    rgba(255, 255, 255, 0.78);
+
+font-size: 17px;
+
+text-align: center;
+
+}
+
+/* =========================================================
+26. READER OVERLAY
+========================================================= */
+
+.reader-overlay {
+
+position: fixed;
+
+inset: 0;
+
+z-index: 1100;
+
+background:
+    rgba(0, 0, 0, 0.58);
+
+opacity: 0;
+
+visibility: hidden;
+
+pointer-events: none;
+
+transition:
+    opacity 0.28s ease,
+    visibility 0.28s ease;
+
+}
+
+.reader-overlay.visible {
+
+opacity: 1;
+
+visibility: visible;
+
+pointer-events: auto;
+
+}
+
+/* =========================================================
+27. READER MENU SCROLLBAR
+========================================================= */
+
+.reader-menu-content {
+
+scrollbar-width: thin;
+
+scrollbar-color:
+    rgba(255, 255, 255, 0.16)
+    transparent;
+
+}
+
+.reader-menu-content::-webkit-scrollbar {
+
+width: 5px;
+
+}
+
+.reader-menu-content::-webkit-scrollbar-track {
+
+background: transparent;
+
+}
+
+.reader-menu-content::-webkit-scrollbar-thumb {
+
+background:
+    rgba(255, 255, 255, 0.14);
+
+border-radius: 10px;
+
+}
+
+/* =========================================================
+28. READER MOBILE LAYOUT
+========================================================= */
+
+@media (max-width: 600px) {
+
+.reader-header {
+
+    height: 56px;
+
+    grid-template-columns:
+        42px minmax(0, 1fr) 42px;
+
+    padding:
+        0 9px;
+}
+
+
+.reader-header-btn {
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 20px;
+}
+
+
+.reader-comic-title {
+
+    max-width: 190px;
+
+    font-size: 12px;
+}
+
+
+.reader-chapter-title {
+
+    max-width: 190px;
+
+    font-size: 9px;
+}
+
+
+.reader-container {
+
+    padding-top: 56px;
+    padding-bottom: 60px;
+}
+
+
+.comic-pages {
+
+    width: 100%;
+    max-width: none;
+}
+
+
+.comic-page {
+
+    width: 100%;
+    max-width: none;
+}
+
+
+.reader-controls {
+
+    height: 56px;
+
+    grid-template-columns:
+        42px minmax(70px, 1fr) 42px;
+
+    padding:
+        0 9px;
+}
+
+
+.reader-control-btn {
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 21px;
+}
+
+
+.reader-progress-area {
+
+    font-size: 11px;
+}
+
+
+.reader-menu {
+
+    width: min(330px, 90vw);
+}
+
+
+.chapter-end {
+
+    padding:
+        64px 18px 42px;
+}
+
+}
+
+/* =========================================================
+29. READER LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1000px) {
+
+.reader-container {
+
+    padding-top: 70px;
+    padding-bottom: 76px;
+}
+
+
+.reader-header {
+
+    height: 70px;
+
+    grid-template-columns:
+        48px minmax(0, 1fr) 48px;
+
+    padding:
+        0 18px;
+}
+
+
+.reader-controls {
+
+    height: 70px;
+
+    grid-template-columns:
+        48px minmax(80px, 1fr) 48px;
+
+    padding:
+        0 18px;
+}
+
+
+.comic-pages {
+
+    max-width: 960px;
+}
+
+
+.comic-page {
+
+    max-width: 960px;
+}
+
+}
+
+/* =========================================================
+30. LIBRARY FOUNDATION
+========================================================= */
+
+body {
+
+padding-bottom: 76px;
+
+}
+
+/* =========================================================
+31. LIBRARY HEADER
+========================================================= */
+
+.library-header {
+
+position: sticky;
+
+top: 0;
+
+z-index: 900;
+
+width: 100%;
+min-height: 68px;
+
+display: flex;
+
+align-items: center;
+justify-content: space-between;
+
+padding:
+    10px 16px;
+
+box-sizing: border-box;
+
+background:
+    rgba(5, 5, 7, 0.92);
+
+border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+
+backdrop-filter:
+    blur(18px);
+
+-webkit-backdrop-filter:
+    blur(18px);
+
+}
+
+/* =========================================================
+32. LIBRARY HEADER LEFT
+========================================================= */
+
+.library-header-left {
+
+min-width: 0;
+
+display: flex;
+
+align-items: center;
+
+gap: 12px;
+
+}
+
+.library-menu-btn {
+
+width: 38px;
+height: 38px;
+
+flex-shrink: 0;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 0;
+
+border: none;
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.07);
+
+color: #ffffff;
+
+font-size: 18px;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+}
+
+.library-menu-btn:hover {
+
+background:
+    rgba(255, 255, 255, 0.12);
+
+}
+
+.library-menu-btn:active {
+
+transform: scale(0.9);
+
+}
+
+/* =========================================================
+33. LIBRARY TITLE
+========================================================= */
+
+.library-eyebrow {
+
+display: block;
+
+margin-bottom: 3px;
+
+color:
+    rgba(255, 255, 255, 0.35);
+
+font-size: 8px;
+font-weight: 600;
+
+letter-spacing: 1.5px;
+
+}
+
+.library-header h1 {
+
+margin: 0;
+
+color: #ffffff;
+
+font-size: 20px;
+font-weight: 700;
+
+line-height: 1.2;
+
+}
+
+.library-profile-btn {
+
+width: 38px;
+height: 38px;
+
+flex-shrink: 0;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.07);
+
+color: #ffffff;
+
+text-decoration: none;
+
+font-size: 18px;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+}
+
+.library-profile-btn:hover {
+
+background:
+    rgba(255, 255, 255, 0.12);
+
+}
+
+.library-profile-btn:active {
+
+transform: scale(0.9);
+
+}
+
+/* =========================================================
+34. LIBRARY PAGE
+========================================================= */
+
+.library-page {
+
+width: 100%;
+max-width: 1100px;
+
+margin: 0 auto;
+
+padding:
+    22px 16px 50px;
+
+box-sizing: border-box;
+
+}
+
+/* =========================================================
+35. LIBRARY SECTIONS
+========================================================= */
+
+.library-section {
+
+margin-bottom: 34px;
+
+}
+
+.library-section-heading {
+
+display: flex;
+
+align-items: flex-end;
+justify-content: space-between;
+
+gap: 12px;
+
+margin-bottom: 15px;
+
+}
+
+.library-section-heading h2 {
+
+margin: 0;
+
+color: #ffffff;
+
+font-size: 17px;
+font-weight: 700;
+
+line-height: 1.2;
+
+}
+
+.section-eyebrow {
+
+display: block;
+
+margin-bottom: 5px;
+
+color:
+    rgba(255, 255, 255, 0.32);
+
+font-size: 8px;
+font-weight: 600;
+
+letter-spacing: 1.3px;
+
+}
+
+.library-see-all {
+
+flex-shrink: 0;
+
+color:
+    rgba(255, 255, 255, 0.45);
+
+font-size: 10px;
+
+text-decoration: none;
+
+transition:
+    color 0.2s ease;
+
+}
+
+.library-see-all:hover {
+
+color: #ffffff;
+
+}
+
+.library-see-all:active {
+
+color: #ffffff;
+
+}
+
+/* =========================================================
+36. CONTINUE READING
+========================================================= */
+
+.continue-reading-list {
+
+width: 100%;
+
+display: flex;
+
+gap: 12px;
+
+overflow-x: auto;
+
+padding:
+    2px 2px 8px;
+
+scrollbar-width: none;
+
+}
+
+.continue-reading-list::-webkit-scrollbar {
+
+display: none;
+
+}
+
+.continue-card {
+
+position: relative;
+
+flex:
+    0 0 250px;
+
+min-height: 132px;
+
+overflow: hidden;
+
+display: flex;
+
+align-items: flex-end;
+
+border:
+    1px solid rgba(255, 255, 255, 0.06);
+
+border-radius: 13px;
+
+background: #111116;
+
+color: #ffffff;
+
+text-decoration: none;
+
+transition:
+    transform 0.2s ease;
+
+}
+
+.continue-card:active {
+
+transform: scale(0.98);
+
+}
+
+.continue-card::after {
+
+content: "";
+
+position: absolute;
+
+inset: 0;
+
+background:
+    linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.92),
+        rgba(0, 0, 0, 0.05) 70%
+    );
+
+}
+
+.continue-card img {
+
+position: absolute;
+
+inset: 0;
+
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+}
+
+.continue-card-content {
+
+position: relative;
+
+z-index: 2;
+
+width: 100%;
+
+padding:
+    14px;
+
+box-sizing: border-box;
+
+}
+
+.continue-card-title {
+
+display: block;
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap;
+
+font-size: 13px;
+font-weight: 700;
+
+}
+
+.continue-card-chapter {
+
+display: block;
+
+margin-top: 4px;
+
+color:
+    rgba(255, 255, 255, 0.58);
+
+font-size: 9px;
+
+}
+
+.continue-progress {
+
+width: 100%;
+height: 3px;
+
+margin-top: 10px;
+
+overflow: hidden;
+
+border-radius: 5px;
+
+background:
+    rgba(255, 255, 255, 0.16);
+
+}
+
+.continue-progress span {
+
+display: block;
+
+height: 100%;
+
+width: var(--progress, 0%);
+
+border-radius: inherit;
+
+background: #ffffff;
+
+}
+
+/* =========================================================
+37. LIBRARY GRID
+========================================================= */
+
+.library-grid {
+
+display: grid;
+
+grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+gap:
+    22px 10px;
+
+}
+
+/* =========================================================
+38. LIBRARY CARD========================================================= */
+
+.library-card {
+
+min-width: 0;
+
+color: #ffffff;
+
+text-decoration: none;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease;
+
+}
+
+.library-card {
+
+transform: scale(0.97);
+
+}
+
+/* =========================================================39. LIBRARY CARD COVER========================================================= */
+
+.library-card-cover {
+
+position: relative;
+
+width: 100%;
+
+aspect-ratio: 2 / 3;
+
+overflow: hidden;
+
+border-radius: 8px;
+
+background: #15151b;
+
+}
+
+.library-card-cover img {
+
+width: 100%;
+height: 100%;
+
+display: block;
+
+object-fit: cover;
+
+transition:
+    transform 0.3s ease;
+
+}
+
+.library-card.library-card-cover img {
+
+transform: scale(1.035);
+
+}
+
+/* =========================================================40. LIBRARY CARD INFORMATION========================================================= */
+
+.library-card-info {
+
+padding-top: 8px;
+
+}
+
+.library-card-title {
+
+display: -webkit-box;
+
+overflow: hidden;
+
+-webkit-box-orient: vertical;
+
+-webkit-line-clamp: 2;
+
+color: #ffffff;
+
+font-size: 11px;
+font-weight: 600;
+
+line-height: 1.35;
+
+}
+
+.library-card-meta {
+
+display: block;
+
+margin-top: 4px;
+
+overflow: hidden;
+
+text-overflow: ellipsis;
+
+white-space: nowrap;
+
+color:
+    rgba(255, 255, 255, 0.38);
+
+font-size: 9px;
+
+}
+
+/* =========================================================41. LIBRARY CARD BADGE========================================================= */
+
+.library-card-badge {
+
+position: absolute;
+
+top: 6px;
+left: 6px;
+
+padding:
+    4px 6px;
+
+border-radius: 5px;
+
+background:
+    rgba(0, 0, 0, 0.72);
+
+color: #ffffff;
+
+font-size: 8px;
+font-weight: 600;
+
+backdrop-filter:
+    blur(5px);
+
+}
+
+/* =========================================================42. LIBRARY BOOKMARK========================================================= */
+
+.library-card-bookmark {
+
+position: absolute;
+
+top: 6px;
+right: 6px;
+
+width: 26px;
+height: 26px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 0;
+
+border: none;
+border-radius: 50%;
+
+background:
+    rgba(0, 0, 0, 0.68);
+
+color: #ffffff;
+
+font-size: 12px;
+
+cursor: pointer;
+
+}
+
+/* =========================================================43. LIBRARY READING PROGRESS========================================================= */
+
+.library-progress {
+
+width: 100%;
+height: 3px;
+
+margin-top: 7px;
+
+overflow: hidden;
+
+border-radius: 5px;
+
+background:
+    rgba(255, 255, 255, 0.1);
+
+}
+
+.library-progress span {
+
+display: block;
+
+height: 100%;
+
+width: var(--progress, 0%);
+
+background: #ffffff;
+
+border-radius: inherit;
+
+}
+
+/* =========================================================44. BOOKMARK PREVIEW========================================================= */
+
+.bookmark-preview {
+
+width: 100%;
+min-height: 110px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+box-sizing: border-box;
+
+border:
+    1px solid rgba(255, 255, 255, 0.06);
+
+border-radius: 13px;
+
+background:
+    rgba(255, 255, 255, 0.025);
+
+}
+
+.bookmark-placeholder {
+
+display: flex;
+
+align-items: center;
+
+gap: 12px;
+
+padding: 20px;
+
+color:
+    rgba(255, 255, 255, 0.38);
+
+}
+
+.bookmark-placeholder span {
+
+font-size: 25px;
+
+}
+
+.bookmark-placeholder p {
+
+margin: 0;
+
+font-size: 10px;
+
+line-height: 1.5;
+
+}
+
+/* =========================================================45. LIBRARY EMPTY STATE========================================================= */
+
+.library-empty-state {
+
+padding:
+    45px 18px;
+
+text-align: center;
+
+border:
+    1px dashed rgba(255, 255, 255, 0.08);
+
+border-radius: 13px;
+
+background:
+    rgba(255, 255, 255, 0.02);
+
+}
+
+.library-empty-state[hidden] {
+
+display: none;
+
+}
+
+.library-empty-icon {
+
+width: 52px;
+height: 52px;
+
+margin:
+    0 auto 14px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.06);
+
+color:
+    rgba(255, 255, 255, 0.45);
+
+font-size: 22px;
+
+}
+
+.library-empty-state h3 {
+
+margin: 0;
+
+color: #ffffff;
+
+font-size: 14px;
+
+}
+
+.library-empty-state p {
+
+max-width: 280px;
+
+margin:
+    8px auto 17px;
+
+color:
+    rgba(255, 255, 255, 0.4);
+
+font-size: 10px;
+
+line-height: 1.6;
+
+}
+/* =========================================================
+   10. BOTTOM NAVIGATION
+   ========================================================= */
+
+
+/* =========================================================46. LIBRARY TABLET / LARGE MOBILE========================================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+.library-page {
+
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+
+.library-grid {
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:
+        24px 14px;
+}
+
+}
+
+/* =========================================================47. LIBRARY DESKTOP========================================================= */
+
+@media (min-width: 901px) {
+
+.library-page {
+
+    padding:
+        30px 24px 60px;
+}
+
+
+.library-grid {
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap:
+        28px 16px;
+}
+
+
+.continue-card {
+
+    flex-basis: 280px;
+
+    min-height: 150px;
+}
+
+}
+
+/* =========================================================48. REDUCED MOTION========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+.reader-loader {
+
+    animation: none;
+}
+
+
+.reader-menu,
+.reader-overlay,
+.reader-header-btn,
+.reader-control-btn,
+.reader-menu-close,
+.next-chapter-btn,
+.back-details-btn,
+.library-card,
+.continue-card,
+.library-card-cover img {
+
+    transition: none;
+}
+
+}
+/* =========================================================
+   EVER JOY COMICS
+   READER MODES
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE READER
+   ========================================================= */
+
+.reader-mode-page {
+
+    width: 100%;
+
+}
+
+
+/*
+   Traditional comic / manga / graphic novel pages.
+*/
+
+.reader-mode-page .comic-pages {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   2. VERTICAL / WEBTOON READER
+   ========================================================= */
+
+.reader-mode-vertical {
+
+    width: 100%;
+
+}
+
+
+/*
+   Webtoon pages should form one
+   continuous vertical reading flow.
+*/
+
+.reader-mode-vertical .comic-pages {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+}
+
+
+/*
+   Each image occupies the available
+   reading width.
+
+   This is deliberately separate from
+   the normal page-reader rule so we
+   can refine Webtoon behavior later.
+*/
+
+.reader-mode-vertical .comic-page {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+
+}
+
+
+/* =========================================================
+   3. MOTION READER
+   ========================================================= */
+
+.reader-mode-motion {
+
+    width: 100%;
+
+}
+
+
+.reader-mode-motion .comic-pages {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+}
+
+
+/*
+   Motion comics currently fall back
+   to normal chapter images.
+
+   The actual motion system will be
+   added when Ever Joy supports motion
+   comic content.
+*/
+
+.reader-mode-motion .comic-page {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+}
+
+
+/* =========================================================
+   4. MOBILE READER
+   ========================================================= */
+
+@media (
+    max-width: 600px
+) {
+
+    .reader-mode-page .comic-page {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+
+    .reader-mode-vertical .comic-page {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+
+    .reader-mode-motion .comic-page {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+}
+/* =========================================================
+   EVER JOY READER SECURITY
+   ========================================================= */
+
+.reader-security-blur {
+    filter: blur(18px);
+    transition: filter 0.15s ease;
+}
+
+.ever-joy-security-watermark {
+    position: absolute;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    color: rgba(255, 255, 255, 1);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    white-space: nowrap;
+
+    transform-origin: center;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.5);
+
+    transition:
+        top 0.8s ease,
+        left 0.8s ease,
+        transform 0.8s ease;
+
+}
+/* =========================================================
+   BOTTOM NAVIGATION
+   ========================================================= */
+
+.bottom-nav {
+    position: fixed;
+
+    z-index: 1000;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 62px;
+
+    padding:
+        6px 12px
+        calc(env(safe-area-inset-bottom) + 6px);
+
+    border-top: 1px solid var(--border);
+
+    background: rgba(11, 11, 15, 0.96);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+.bottom-nav-item {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    min-width: 0;
+    height: 100%;
+
+    color: var(--text-muted);
+
+    text-decoration: none;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+
+.bottom-nav-item span {
+    display: block;
+
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+.bottom-nav-item small {
+    display: block;
+
+    color: inherit;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+}
+
+
+.bottom-nav-item:hover,
+.bottom-nav-item.active {
+    color: var(--accent);
+}
+
+
+.bottom-nav-item:active {
+    transform: scale(0.94);
+}

@@ -1,0 +1,1227 @@
+/* =========================================================
+EVER JOY COMICS
+CREATOR STUDIO — MY COMICS
+========================================================= */
+
+/* =========================================================
+
+1. PAGE FOUNDATION
+   ========================================================= */
+
+.creator-dashboard-body {
+
+min-height: 100vh;
+
+margin: 0;
+
+background:
+    radial-gradient(
+        circle at 72% 0%,
+        rgba(255, 45, 70, 0.045),
+        transparent 30%
+    ),
+    #08090d;
+
+color: #f5f5f7;
+
+font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+-webkit-font-smoothing: antialiased;
+
+}
+
+/* =========================================================
+2. CREATOR STUDIO FOUNDATION
+========================================================= */
+
+.creator-studio {
+
+width: 100%;
+
+min-height: 100vh;
+
+display: flex;
+
+}
+
+/* =========================================================
+3. SIDEBAR
+========================================================= */
+
+.creator-sidebar {
+
+width: 220px;
+
+min-height: 100vh;
+
+flex: 0 0 220px;
+
+display: flex;
+
+flex-direction: column;
+
+box-sizing: border-box;
+
+padding: 22px 14px;
+
+background:
+    rgba(10, 11, 16, 0.96);
+
+border-right:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+position: sticky;
+
+top: 0;
+
+height: 100vh;
+
+}
+
+.creator-sidebar-brand {
+
+padding:
+    3px 9px 25px;
+
+}
+
+.creator-logo {
+
+display: block;
+
+color: #ffffff;
+
+font-size: 17px;
+
+font-weight: 750;
+
+letter-spacing: -0.5px;
+
+text-decoration: none;
+
+}
+
+.creator-studio-label {
+
+display: block;
+
+margin-top: 4px;
+
+color:
+    rgba(255, 255, 255, 0.27);
+
+font-size: 7px;
+
+font-weight: 750;
+
+letter-spacing: 1.4px;
+
+}
+
+/* =========================================================
+4. NAVIGATION
+========================================================= */
+
+.creator-navigation {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 4px;
+
+}
+
+.creator-nav-item {
+
+min-height: 38px;
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+padding:
+    0 10px;
+
+box-sizing: border-box;
+
+border:
+    1px solid transparent;
+
+border-radius: 9px;
+
+color:
+    rgba(255, 255, 255, 0.42);
+
+font-size: 9px;
+
+font-weight: 550;
+
+text-decoration: none;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.creator-nav-icon {
+
+width: 18px;
+
+flex: 0 0 18px;
+
+text-align: center;
+
+color:
+    rgba(255, 255, 255, 0.3);
+
+font-size: 13px;
+
+}
+
+.creator-nav-item:hover {
+
+color: #ffffff;
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+}
+
+.creator-nav-item:hover .creator-nav-icon {
+
+color: #ff3048;
+
+}
+
+.creator-nav-item.active {
+
+color: #ffffff;
+
+background:
+    rgba(255, 45, 70, 0.075);
+
+border-color:
+    rgba(255, 45, 70, 0.13);
+
+}
+
+.creator-nav-item.active .creator-nav-icon {
+
+color: #ff3048;
+
+}
+
+/* =========================================================
+5. SIDEBAR FOOTER
+========================================================= */
+
+.creator-sidebar-footer {
+
+margin-top: auto;
+
+padding:
+    16px 9px 4px;
+
+border-top:
+    1px solid
+    rgba(255, 255, 255, 0.045);
+
+}
+
+.creator-return-link {
+
+color:
+    rgba(255, 255, 255, 0.3);
+
+font-size: 8px;
+
+text-decoration: none;
+
+transition:
+    color 0.2s ease;
+
+}
+
+.creator-return-link:hover {
+
+color: #ff3048;
+
+}
+
+/* =========================================================
+6. MAIN AREA
+========================================================= */
+
+.creator-main {
+
+min-width: 0;
+
+flex: 1;
+
+box-sizing: border-box;
+
+padding:
+    0 34px 60px;
+
+}
+
+/* =========================================================
+7. TOP BAR
+========================================================= */
+
+.creator-topbar {
+
+min-height: 78px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 20px;
+
+border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.045);
+
+}
+
+.creator-page-heading h1 {
+
+margin: 3px 0 0;
+
+color: #ffffff;
+
+font-size: 22px;
+
+font-weight: 700;
+
+letter-spacing: -0.5px;
+
+}
+
+.creator-eyebrow {
+
+color:
+    rgba(255, 255, 255, 0.28);
+
+font-size: 7px;
+
+font-weight: 750;
+
+letter-spacing: 1.4px;
+
+}
+
+.creator-account-area {
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+}
+
+.creator-notification-button {
+
+width: 32px;
+
+height: 32px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 0;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+border-radius: 8px;
+
+background:
+    rgba(255, 255, 255, 0.025);
+
+color:
+    rgba(255, 255, 255, 0.45);
+
+cursor: pointer;
+
+}
+
+.creator-account {
+
+display: flex;
+
+align-items: center;
+
+gap: 8px;
+
+color: #ffffff;
+
+text-decoration: none;
+
+}
+
+.creator-avatar {
+
+width: 31px;
+
+height: 31px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border:
+    1px solid
+    rgba(255, 45, 70, 0.3);
+
+border-radius: 50%;
+
+background:
+    rgba(255, 45, 70, 0.08);
+
+color: #ff3048;
+
+font-size: 10px;
+
+font-weight: 750;
+
+}
+
+.creator-account-text {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 2px;
+
+}
+
+.creator-account-text strong {
+
+color:
+    rgba(255, 255, 255, 0.82);
+
+font-size: 9px;
+
+}
+
+.creator-account-text small {
+
+color:
+    rgba(255, 255, 255, 0.28);
+
+font-size: 7px;
+
+}
+
+/* =========================================================
+8. WELCOME PANEL
+========================================================= */
+
+.creator-welcome-panel {
+
+margin-top: 24px;
+
+padding:
+    25px;
+
+display: flex;
+
+align-items: flex-end;
+
+justify-content: space-between;
+
+gap: 25px;
+
+border:
+    1px solid
+    rgba(255, 45, 70, 0.11);
+
+border-radius: 15px;
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(255, 45, 70, 0.075),
+        rgba(255, 255, 255, 0.018)
+    );
+
+}
+
+.creator-welcome-content {
+
+max-width: 570px;
+
+}
+
+.creator-welcome-content h2 {
+
+margin: 7px 0 8px;
+
+color: #ffffff;
+
+font-size: 22px;
+
+font-weight: 700;
+
+letter-spacing: -0.6px;
+
+}
+
+.creator-welcome-content p {
+
+max-width: 540px;
+
+margin: 0;
+
+color:
+    rgba(255, 255, 255, 0.4);
+
+font-size: 9px;
+
+line-height: 1.65;
+
+}
+
+/* =========================================================
+9. BUTTONS
+========================================================= */
+
+.creator-primary-button,
+.creator-secondary-button {
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+box-sizing: border-box;
+
+border-radius: 8px;
+
+font-family: inherit;
+
+font-size: 8px;
+
+font-weight: 650;
+
+text-decoration: none;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+}
+
+.creator-primary-button {
+
+min-height: 35px;
+
+padding:
+    0 14px;
+
+white-space: nowrap;
+
+background: #ff3048;
+
+color: #ffffff;
+
+}
+
+.creator-primary-button:hover {
+
+background: #ff4056;
+
+transform: translateY(-1px);
+
+}
+
+.creator-secondary-button {
+
+min-height: 34px;
+
+padding:
+    0 13px;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+color:
+    rgba(255, 255, 255, 0.7);
+
+}
+
+.creator-secondary-button:hover {
+
+border-color:
+    rgba(255, 45, 70, 0.22);
+
+background:
+    rgba(255, 45, 70, 0.06);
+
+color: #ffffff;
+
+}
+
+/* =========================================================
+10. SECTIONS
+========================================================= */
+
+.creator-section {
+
+margin-top: 27px;
+
+}
+
+.creator-section-heading {
+
+display: flex;
+
+align-items: flex-end;
+
+justify-content: space-between;
+
+gap: 15px;
+
+margin-bottom: 12px;
+
+}
+
+.creator-section-heading h2 {
+
+margin: 4px 0 0;
+
+color:
+    rgba(255, 255, 255, 0.84);
+
+font-size: 14px;
+
+font-weight: 650;
+
+letter-spacing: -0.25px;
+
+}
+
+/* =========================================================
+11. SELECT
+========================================================= */
+
+.creator-select {
+
+min-height: 32px;
+
+padding:
+    0 9px;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+border-radius: 7px;
+
+outline: none;
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+color:
+    rgba(255, 255, 255, 0.58);
+
+font-family: inherit;
+
+font-size: 8px;
+
+cursor: pointer;
+
+}
+
+.creator-select:focus {
+
+border-color:
+    rgba(255, 45, 70, 0.25);
+
+}
+
+/* =========================================================
+12. COMICS EMPTY STATE
+========================================================= */
+
+.creator-comics-empty {
+
+min-height: 260px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+padding:
+    35px 20px;
+
+box-sizing: border-box;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+border-radius: 13px;
+
+background:
+    rgba(255, 255, 255, 0.018);
+
+text-align: center;
+
+}
+
+.creator-empty-icon {
+
+width: 45px;
+
+height: 45px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+margin-bottom: 13px;
+
+border:
+    1px solid
+    rgba(255, 45, 70, 0.13);
+
+border-radius: 12px;
+
+background:
+    rgba(255, 45, 70, 0.055);
+
+color: #ff3048;
+
+font-size: 17px;
+
+}
+
+.creator-comics-empty h3 {
+
+margin: 0;
+
+color:
+    rgba(255, 255, 255, 0.82);
+
+font-size: 12px;
+
+font-weight: 650;
+
+}
+
+.creator-comics-empty p {
+
+max-width: 350px;
+
+margin: 7px 0 16px;
+
+color:
+    rgba(255, 255, 255, 0.32);
+
+font-size: 8px;
+
+line-height: 1.55;
+
+}
+
+/* =========================================================
+13. FUTURE COMIC GRID
+========================================================= */
+
+.creator-comics-grid {
+
+display: grid;
+
+grid-template-columns:
+    repeat(
+        auto-fill,
+        minmax(190px, 1fr)
+    );
+
+gap: 13px;
+
+}
+
+.creator-comics-grid[hidden] {
+
+display: none;
+
+}
+
+/* =========================================================
+14. FUTURE COMIC CARD
+========================================================= */
+
+.creator-comic-card {
+
+overflow: hidden;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+border-radius: 12px;
+
+background:
+    rgba(255, 255, 255, 0.025);
+
+transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+
+}
+
+.creator-comic-card:hover {
+
+transform: translateY(-2px);
+
+border-color:
+    rgba(255, 45, 70, 0.18);
+
+}
+
+.creator-comic-cover {
+
+width: 100%;
+
+aspect-ratio: 3 / 4;
+
+object-fit: cover;
+
+display: block;
+
+background:
+    #11131a;
+
+}
+
+.creator-comic-content {
+
+padding: 12px;
+
+}
+
+.creator-comic-title {
+
+margin: 0;
+
+color:
+    rgba(255, 255, 255, 0.88);
+
+font-size: 10px;
+
+font-weight: 650;
+
+}
+
+.creator-comic-meta {
+
+margin-top: 5px;
+
+color:
+    rgba(255, 255, 255, 0.3);
+
+font-size: 7px;
+
+}
+
+.creator-comic-status {
+
+display: inline-flex;
+
+margin-top: 9px;
+
+padding:
+    4px 6px;
+
+border-radius: 5px;
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+color:
+    rgba(255, 255, 255, 0.48);
+
+font-size: 6px;
+
+font-weight: 700;
+
+letter-spacing: 0.5px;
+
+text-transform: uppercase;
+
+}
+
+/* =========================================================
+15. ACTION GRID
+========================================================= */
+
+.creator-action-grid {
+
+display: grid;
+
+grid-template-columns:
+    repeat(
+        3,
+        minmax(0, 1fr)
+    );
+
+gap: 10px;
+
+}
+
+.creator-action-card {
+
+min-height: 88px;
+
+display: flex;
+
+align-items: flex-start;
+
+gap: 10px;
+
+padding: 13px;
+
+box-sizing: border-box;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+border-radius: 11px;
+
+background:
+    rgba(255, 255, 255, 0.02);
+
+color: #ffffff;
+
+text-decoration: none;
+
+transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.creator-action-card:hover {
+
+transform: translateY(-1px);
+
+border-color:
+    rgba(255, 45, 70, 0.16);
+
+background:
+    rgba(255, 45, 70, 0.035);
+
+}
+
+.creator-action-icon {
+
+width: 29px;
+
+height: 29px;
+
+flex: 0 0 29px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border-radius: 7px;
+
+background:
+    rgba(255, 45, 70, 0.065);
+
+color: #ff3048;
+
+font-size: 12px;
+
+}
+
+.creator-action-card strong {
+
+display: block;
+
+color:
+    rgba(255, 255, 255, 0.78);
+
+font-size: 9px;
+
+}
+
+.creator-action-card p {
+
+margin: 4px 0 0;
+
+color:
+    rgba(255, 255, 255, 0.3);
+
+font-size: 7px;
+
+line-height: 1.45;
+
+}
+
+/* =========================================================
+16. CREATOR CHECK CARD
+========================================================= */
+
+.creator-check-card {
+
+display: flex;
+
+align-items: flex-start;
+
+gap: 11px;
+
+padding: 14px;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+border-radius: 11px;
+
+background:
+    rgba(255, 255, 255, 0.018);
+
+}
+
+.creator-check-icon {
+
+width: 30px;
+
+height: 30px;
+
+flex: 0 0 30px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border-radius: 8px;
+
+background:
+    rgba(255, 45, 70, 0.07);
+
+color: #ff3048;
+
+font-size: 12px;
+
+}
+
+.creator-check-card strong {
+
+display: block;
+
+color:
+    rgba(255, 255, 255, 0.78);
+
+font-size: 9px;
+
+}
+
+.creator-check-card p {
+
+margin: 4px 0 0;
+
+color:
+    rgba(255, 255, 255, 0.31);
+
+font-size: 8px;
+
+line-height: 1.55;
+
+}
+
+/* =========================================================
+17. MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+.creator-sidebar {
+
+    width: 70px;
+
+    flex-basis: 70px;
+
+    padding:
+        18px 8px;
+
+}
+
+
+.creator-sidebar-brand {
+
+    padding:
+        3px 0 20px;
+
+    text-align: center;
+
+}
+
+
+.creator-logo {
+
+    font-size: 13px;
+
+}
+
+
+.creator-studio-label {
+
+    display: none;
+
+}
+
+
+.creator-nav-item {
+
+    justify-content: center;
+
+    padding: 0;
+
+}
+
+
+.creator-nav-item > span:last-child {
+
+    display: none;
+
+}
+
+
+.creator-return-link {
+
+    display: none;
+
+}
+
+
+.creator-sidebar-footer {
+
+    text-align: center;
+
+}
+
+
+.creator-main {
+
+    padding:
+        0 16px 45px;
+
+}
+
+
+.creator-action-grid {
+
+    grid-template-columns:
+        1fr;
+
+}
+
+}
+
+@media (max-width: 520px) {
+
+.creator-topbar {
+
+    min-height: 68px;
+
+}
+
+
+.creator-account-text {
+
+    display: none;
+
+}
+
+
+.creator-welcome-panel {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 20px;
+
+}
+
+
+.creator-welcome-content h2 {
+
+    font-size: 18px;
+
+}
+
+
+.creator-section-heading {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+}
+
+
+.creator-select {
+
+    width: 100%;
+
+}
+
+
+.creator-comics-empty {
+
+    min-height: 230px;
+
+}
+
+}

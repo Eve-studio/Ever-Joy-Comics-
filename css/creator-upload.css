@@ -1,0 +1,613 @@
+/* =========================================================
+EVER JOY COMICS
+CREATOR STUDIO — UPLOAD PAGE
+
+Styles for:
+
+- Comic creation form
+- Form fields
+- Genre / status selectors
+- Cover input
+- Form messages
+- Form actions
+- Story builder notice
+
+Uses the Creator Studio visual language.
+========================================================= */
+
+/* =========================================================
+
+1. FORM FOUNDATION
+   ========================================================= */
+
+.creator-form {
+
+width: 100%;
+max-width: 920px;
+
+margin: 0 auto;
+
+padding: 34px;
+
+box-sizing: border-box;
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+border-radius:
+    24px;
+
+box-shadow:
+    0 18px 60px
+    rgba(0, 0, 0, 0.18);
+
+}
+
+/* =========================================================
+2. FORM GROUP
+========================================================= */
+
+.creator-form-group {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 9px;
+
+margin-bottom: 26px;
+
+}
+
+/* =========================================================
+3. LABEL
+========================================================= */
+
+.creator-form-label {
+
+display: block;
+
+font-size: 0.88rem;
+
+font-weight: 700;
+
+letter-spacing: 0.02em;
+
+color:
+    #f5f5f7;
+
+}
+
+/* =========================================================
+4. INPUT FOUNDATION
+========================================================= */
+
+.creator-input,
+.creator-textarea,
+.creator-form-select {
+
+width: 100%;
+
+box-sizing: border-box;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+
+border-radius:
+    14px;
+
+background:
+    rgba(8, 9, 13, 0.72);
+
+color:
+    #f5f5f7;
+
+font-family:
+    inherit;
+
+font-size:
+    0.95rem;
+
+outline:
+    none;
+
+transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+
+}
+
+/* =========================================================
+5. TEXT INPUT
+========================================================= */
+
+.creator-input {
+
+min-height:
+    52px;
+
+padding:
+    0 16px;
+
+}
+
+/* =========================================================
+6. TEXTAREA
+========================================================= */
+
+.creator-textarea {
+
+min-height:
+    170px;
+
+padding:
+    16px;
+
+line-height:
+    1.65;
+
+resize:
+    vertical;
+
+}
+
+/* =========================================================
+7. SELECT
+========================================================= */
+
+.creator-form-select {
+
+min-height:
+    52px;
+
+padding:
+    0 16px;
+
+cursor:
+    pointer;
+
+}
+
+/* =========================================================
+8. INPUT PLACEHOLDER
+========================================================= */
+
+.creator-input::placeholder,
+.creator-textarea::placeholder {
+
+color:
+    rgba(245, 245, 247, 0.38);
+
+}
+
+/* =========================================================
+9. FOCUS STATES
+========================================================= */
+
+.creator-input:focus,
+.creator-textarea:focus,
+.creator-form-select:focus {
+
+border-color:
+    rgba(255, 255, 255, 0.28);
+
+background:
+    rgba(12, 13, 19, 0.92);
+
+box-shadow:
+    0 0 0 4px
+    rgba(255, 255, 255, 0.045);
+
+}
+
+/* =========================================================
+10. HOVER
+========================================================= */
+
+.creator-input:hover,
+.creator-textarea:hover,
+.creator-form-select:hover {
+
+border-color:
+    rgba(255, 255, 255, 0.16);
+
+}
+
+/* =========================================================
+11. FORM GRID
+========================================================= */
+
+.creator-form-grid {
+
+display:
+    grid;
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap:
+    20px;
+
+}
+
+/* =========================================================
+12. FORM HELP TEXT
+========================================================= */
+
+.creator-form-help {
+
+display:
+    block;
+
+color:
+    rgba(245, 245, 247, 0.48);
+
+font-size:
+    0.78rem;
+
+line-height:
+    1.5;
+
+}
+
+/* =========================================================
+13. FORM MESSAGE
+========================================================= */
+
+.creator-form-message {
+
+min-height:
+    22px;
+
+margin:
+    4px 0 18px;
+
+font-size:
+    0.86rem;
+
+line-height:
+    1.5;
+
+}
+
+/* =========================================================
+14. SUCCESS MESSAGE
+========================================================= */
+
+.creator-form-message.success {
+
+color:
+    #b9f6d0;
+
+}
+
+/* =========================================================
+15. ERROR MESSAGE
+========================================================= */
+
+.creator-form-message.error {
+
+color:
+    #ff9b9b;
+
+}
+
+/* =========================================================
+16. FORM ACTIONS
+========================================================= */
+
+.creator-form-actions {
+
+display:
+    flex;
+
+align-items:
+    center;
+
+justify-content:
+    flex-end;
+
+gap:
+    12px;
+
+padding-top:
+    10px;
+
+}
+
+/* =========================================================
+17. BUTTON BASE
+========================================================= */
+
+.creator-form-actions
+.creator-primary-button,
+.creator-form-actions
+.creator-secondary-button {
+
+min-height:
+    48px;
+
+display:
+    inline-flex;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+box-sizing:
+    border-box;
+
+padding:
+    0 22px;
+
+border-radius:
+    12px;
+
+text-decoration:
+    none;
+
+font-size:
+    0.88rem;
+
+font-weight:
+    700;
+
+cursor:
+    pointer;
+
+transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    box-shadow 180ms ease;
+
+}
+
+/* =========================================================
+18. PRIMARY BUTTON
+========================================================= */
+
+.creator-form-actions
+.creator-primary-button {
+
+border:
+    0;
+
+background:
+    #f5f5f7;
+
+color:
+    #08090d;
+
+box-shadow:
+    0 10px 30px
+    rgba(255, 255, 255, 0.08);
+
+}
+
+/* =========================================================
+19. PRIMARY BUTTON HOVER
+========================================================= */
+
+.creator-form-actions
+.creator-primary-button:hover {
+
+transform:
+    translateY(-2px);
+
+box-shadow:
+    0 14px 34px
+    rgba(255, 255, 255, 0.12);
+
+}
+
+/* =========================================================
+20. SECONDARY BUTTON
+========================================================= */
+
+.creator-form-actions
+.creator-secondary-button {
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+color:
+    #f5f5f7;
+
+}
+
+/* =========================================================
+21. SECONDARY BUTTON HOVER
+========================================================= */
+
+.creator-form-actions
+.creator-secondary-button:hover {
+
+transform:
+    translateY(-2px);
+
+background:
+    rgba(255, 255, 255, 0.065);
+
+}
+
+/* =========================================================
+22. DISABLED SUBMIT
+========================================================= */
+
+.creator-form-actions
+.creator-primary-button:disabled {
+
+cursor:
+    not-allowed;
+
+opacity:
+    0.55;
+
+transform:
+    none;
+
+box-shadow:
+    none;
+
+}
+
+/* =========================================================
+23. STORY BUILDER NOTICE
+========================================================= */
+
+.creator-section
+.creator-check-card {
+
+max-width:
+    920px;
+
+margin-left:
+    auto;
+
+margin-right:
+    auto;
+
+}
+
+/* =========================================================
+24. SELECT OPTION
+========================================================= */
+
+.creator-form-select option {
+
+background:
+    #11131a;
+
+color:
+    #f5f5f7;
+
+}
+
+/* =========================================================
+25. INVALID FIELDS
+========================================================= */
+
+.creator-input.invalid,
+.creator-textarea.invalid,
+.creator-form-select.invalid {
+
+border-color:
+    rgba(255, 100, 100, 0.55);
+
+box-shadow:
+    0 0 0 4px
+    rgba(255, 100, 100, 0.045);
+
+}
+
+/* =========================================================
+26. RESPONSIVE — TABLET
+========================================================= */
+
+@media (
+max-width: 900px
+) {
+
+.creator-form {
+
+    padding:
+        28px;
+
+}
+
+}
+
+/* =========================================================
+27. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (
+max-width: 680px
+) {
+
+.creator-form {
+
+    padding:
+        22px;
+
+    border-radius:
+        20px;
+
+}
+
+
+.creator-form-grid {
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+        0;
+
+}
+
+
+.creator-form-actions {
+
+    flex-direction:
+        column-reverse;
+
+    align-items:
+        stretch;
+
+}
+
+
+.creator-form-actions
+.creator-primary-button,
+.creator-form-actions
+.creator-secondary-button {
+
+    width:
+        100%;
+
+}
+
+}
+
+/* =========================================================
+28. VERY SMALL SCREENS
+========================================================= */
+
+@media (
+max-width: 420px
+) {
+
+.creator-form {
+
+    padding:
+        18px;
+
+    border-radius:
+        17px;
+
+}
+
+
+.creator-input,
+.creator-textarea,
+.creator-form-select {
+
+    font-size:
+        0.9rem;
+
+}
+
+}

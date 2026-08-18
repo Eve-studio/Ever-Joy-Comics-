@@ -1,0 +1,995 @@
+/* =========================================================
+EVER JOY COMICS
+CREATOR STUDIO — SETTINGS
+DARK / RED PREMIUM THEME
+========================================================= */
+
+/* =========================================================
+
+1. SETTINGS FOUNDATION
+   ========================================================= */
+
+.creator-dashboard-body {
+background:
+radial-gradient(
+circle at top right,
+rgba(120, 0, 20, 0.14),
+transparent 32%
+),
+#08090c;
+color: #f5f5f7;
+}
+
+.creator-studio {
+background: transparent;
+}
+
+.creator-main {
+min-width: 0;
+background: transparent;
+}
+
+/* =========================================================
+2. CREATOR SIDEBAR
+========================================================= */
+
+.creator-sidebar {
+background:
+linear-gradient(
+180deg,
+rgba(18, 19, 24, 0.98),
+rgba(9, 10, 13, 0.98)
+);
+
+border-right: 1px solid rgba(255, 255, 255, 0.07);
+
+box-shadow:
+    12px 0 40px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Brand */
+
+.creator-sidebar-brand {
+padding-bottom: 28px;
+}
+
+.creator-logo {
+color: #ffffff;
+text-decoration: none;
+font-weight: 800;
+letter-spacing: -0.02em;
+}
+
+.creator-studio-label {
+display: block;
+margin-top: 5px;
+
+color: rgba(255, 255, 255, 0.42);
+
+font-size: 0.62rem;
+font-weight: 800;
+letter-spacing: 0.16em;
+
+}
+
+/* =========================================================
+3. SIDEBAR NAVIGATION
+========================================================= */
+
+.creator-navigation {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.creator-nav-item {
+display: flex;
+align-items: center;
+gap: 12px;
+
+min-height: 46px;
+padding: 0 14px;
+
+border: 1px solid transparent;
+border-radius: 13px;
+
+color: rgba(255, 255, 255, 0.58);
+background: transparent;
+
+text-decoration: none;
+
+font-size: 0.86rem;
+font-weight: 600;
+
+transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.creator-nav-item:hover {
+color: #ffffff;
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+border-color:
+    rgba(255, 255, 255, 0.07);
+
+transform: translateX(2px);
+
+}
+
+.creator-nav-item.active {
+color: #ffffff;
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(145, 15, 35, 0.28),
+        rgba(90, 8, 22, 0.16)
+    );
+
+border-color:
+    rgba(190, 35, 60, 0.38);
+
+box-shadow:
+    inset 3px 0 0 #b51f3c,
+    0 8px 24px rgba(120, 0, 25, 0.12);
+
+}
+
+.creator-nav-icon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+width: 28px;
+height: 28px;
+
+flex-shrink: 0;
+
+border-radius: 9px;
+
+color: rgba(255, 255, 255, 0.55);
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+font-size: 0.9rem;
+
+}
+
+.creator-nav-item.active .creator-nav-icon {
+color: #ffffff;
+
+background:
+    rgba(181, 31, 60, 0.22);
+
+}
+
+/* Sidebar footer */
+
+.creator-sidebar-footer {
+border-top:
+1px solid rgba(255, 255, 255, 0.06);
+
+padding-top: 18px;
+
+}
+
+.creator-return-link {
+color: rgba(255, 255, 255, 0.42);
+text-decoration: none;
+
+font-size: 0.78rem;
+
+transition: color 0.2s ease;
+
+}
+
+.creator-return-link:hover {
+color: #ffffff;
+}
+
+/* =========================================================
+4. TOP BAR
+========================================================= */
+
+.creator-topbar {
+background:
+rgba(8, 9, 12, 0.82);
+
+border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+
+}
+
+.creator-page-heading h1 {
+margin: 0;
+
+color: #ffffff;
+
+font-size: clamp(
+    1.55rem,
+    3vw,
+    2rem
+);
+
+line-height: 1.15;
+
+}
+
+/* =========================================================
+5. ACCOUNT AREA
+========================================================= */
+
+.creator-notification-button {
+appearance: none;
+-webkit-appearance: none;
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+width: 40px;
+height: 40px;
+
+padding: 0;
+
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 12px;
+
+color: rgba(255, 255, 255, 0.72);
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+cursor: pointer;
+
+font: inherit;
+
+transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+
+}
+
+.creator-notification-button:hover {
+color: #ffffff;
+
+border-color:
+    rgba(181, 31, 60, 0.45);
+
+background:
+    rgba(181, 31, 60, 0.12);
+
+}
+
+.creator-account {
+color: #ffffff;
+text-decoration: none;
+}
+
+.creator-account-text strong {
+color: #ffffff;
+}
+
+.creator-account-text small {
+color: rgba(255, 255, 255, 0.42);
+}
+
+/* =========================================================
+6. WELCOME PANEL
+========================================================= */
+
+.creator-welcome-panel {
+border:
+1px solid rgba(255, 255, 255, 0.07);
+
+border-radius: 22px;
+
+background:
+    radial-gradient(
+        circle at top right,
+        rgba(145, 15, 35, 0.20),
+        transparent 42%
+    ),
+    linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.055),
+        rgba(255, 255, 255, 0.018)
+    );
+
+box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.18);
+
+}
+
+.creator-welcome-content h2 {
+max-width: 620px;
+
+color: #ffffff;
+
+font-size: clamp(
+    1.35rem,
+    3vw,
+    1.85rem
+);
+
+line-height: 1.2;
+
+}
+
+.creator-welcome-content p {
+color:
+rgba(255, 255, 255, 0.58);
+}
+
+/* =========================================================
+7. SECTION HEADINGS
+========================================================= */
+
+/*
+This is intentionally smaller than the previous version.
+Long headings such as "Creator Studio Preferences"
+should never push outside the layout.
+*/
+
+.creator-section-heading {
+min-width: 0;
+}
+
+.creator-section-heading h2 {
+margin: 5px 0 0;
+
+max-width: 100%;
+
+color: #f7f7f8;
+
+font-size: clamp(
+    1.05rem,
+    2vw,
+    1.28rem
+);
+
+line-height: 1.3;
+
+overflow-wrap: anywhere;
+word-break: normal;
+
+}
+
+.creator-eyebrow {
+color:
+rgba(255, 255, 255, 0.40);
+
+font-size: 0.62rem;
+font-weight: 800;
+letter-spacing: 0.14em;
+
+}
+
+/* =========================================================
+8. SETTINGS CARDS
+========================================================= */
+
+.creator-settings-card {
+padding: 24px;
+
+border:
+    1px solid rgba(255, 255, 255, 0.075);
+
+border-radius: 20px;
+
+background:
+    linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.055),
+        rgba(255, 255, 255, 0.018)
+    );
+
+box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.18);
+
+}
+
+.creator-settings-card + .creator-settings-card {
+margin-top: 14px;
+}
+
+/* =========================================================
+9. PROFILE PREVIEW
+========================================================= */
+
+.creator-profile-preview {
+display: flex;
+align-items: center;
+gap: 16px;
+
+margin-bottom: 24px;
+padding-bottom: 20px;
+
+border-bottom:
+    1px solid rgba(255, 255, 255, 0.07);
+
+}
+
+.creator-settings-avatar {
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 58px;
+height: 58px;
+
+flex-shrink: 0;
+
+border:
+    1px solid rgba(181, 31, 60, 0.4);
+
+border-radius: 17px;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        145deg,
+        #771326,
+        #1a0b10
+    );
+
+font-size: 1.2rem;
+font-weight: 800;
+
+box-shadow:
+    0 10px 28px rgba(100, 0, 25, 0.25);
+
+}
+
+/* =========================================================
+10. FORMS
+========================================================= */
+
+.creator-settings-form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.creator-form-group {
+min-width: 0;
+}
+
+.creator-form-group label {
+display: block;
+
+margin-bottom: 8px;
+
+color: rgba(255, 255, 255, 0.84);
+
+font-size: 0.84rem;
+font-weight: 700;
+
+}
+
+.creator-form-group small {
+display: block;
+
+margin-top: 7px;
+
+color: rgba(255, 255, 255, 0.40);
+
+font-size: 0.72rem;
+line-height: 1.5;
+
+}
+
+/* Inputs */
+
+.creator-settings-card input[type="text"],
+.creator-settings-card input[type="url"],
+.creator-settings-card input[type="email"],
+.creator-settings-card input[type="password"],
+.creator-settings-card textarea,
+.creator-settings-card select {
+width: 100%;
+
+box-sizing: border-box;
+
+padding: 13px 14px;
+
+border:
+    1px solid rgba(255, 255, 255, 0.09);
+
+border-radius: 12px;
+
+outline: none;
+
+color: #ffffff;
+
+background:
+    rgba(0, 0, 0, 0.28);
+
+font: inherit;
+font-size: 0.86rem;
+
+transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+
+}
+
+.creator-settings-card textarea {
+min-height: 120px;
+resize: vertical;
+}
+
+.creator-settings-card input:focus,
+.creator-settings-card textarea:focus,
+.creator-settings-card select:focus {
+border-color:
+rgba(181, 31, 60, 0.75);
+
+background:
+    rgba(0, 0, 0, 0.38);
+
+box-shadow:
+    0 0 0 3px rgba(181, 31, 60, 0.10);
+
+}
+
+.creator-settings-card select option {
+color: #ffffff;
+background: #121318;
+}
+
+/* =========================================================
+11. SETTING ROWS
+========================================================= */
+
+.creator-setting-row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 22px;
+
+padding: 17px 0;
+
+border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+
+cursor: pointer;
+
+}
+
+.creator-setting-row:first-child {
+padding-top: 0;
+}
+
+.creator-setting-row:last-child {
+padding-bottom: 0;
+border-bottom: none;
+}
+
+.creator-setting-row > div {
+min-width: 0;
+}
+
+.creator-setting-row strong {
+display: block;
+
+color: #f5f5f6;
+
+font-size: 0.86rem;
+
+}
+
+.creator-setting-row p {
+margin: 5px 0 0;
+
+color:
+    rgba(255, 255, 255, 0.46);
+
+font-size: 0.76rem;
+line-height: 1.55;
+
+}
+
+/* =========================================================
+12. RED TOGGLES
+========================================================= */
+
+.creator-toggle {
+appearance: none;
+-webkit-appearance: none;
+
+position: relative;
+
+width: 46px;
+height: 26px;
+
+flex-shrink: 0;
+
+margin: 0;
+
+border: 1px solid rgba(255, 255, 255, 0.10);
+border-radius: 999px;
+
+background:
+    rgba(255, 255, 255, 0.10);
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+}
+
+.creator-toggle::after {
+content: "";
+
+position: absolute;
+
+top: 3px;
+left: 3px;
+
+width: 18px;
+height: 18px;
+
+border-radius: 50%;
+
+background: #ffffff;
+
+box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.35);
+
+transition:
+    transform 0.2s ease;
+
+}
+
+.creator-toggle:checked {
+border-color:
+rgba(181, 31, 60, 0.75);
+
+background:
+    #a71937;
+
+}
+
+.creator-toggle:checked::after {
+transform:
+translateX(20px);
+}
+
+/* =========================================================
+13. COLLABORATION STATUS
+========================================================= */
+
+.creator-collaboration-status {
+display: flex;
+align-items: center;
+gap: 14px;
+
+padding: 17px;
+
+border:
+    1px solid rgba(181, 31, 60, 0.22);
+
+border-radius: 15px;
+
+background:
+    rgba(181, 31, 60, 0.07);
+
+}
+
+.creator-status-dot {
+width: 9px;
+height: 9px;
+
+flex-shrink: 0;
+
+border-radius: 50%;
+
+background: #d52a4b;
+
+box-shadow:
+    0 0 0 5px rgba(213, 42, 75, 0.10),
+    0 0 16px rgba(213, 42, 75, 0.45);
+
+}
+
+.creator-setting-notice {
+margin-top: 16px;
+padding: 16px;
+
+border-radius: 14px;
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+}
+
+.creator-setting-notice strong {
+display: block;
+margin-bottom: 5px;
+
+color: #ffffff;
+
+font-size: 0.82rem;
+
+}
+
+.creator-setting-notice p {
+margin: 0;
+
+color:
+    rgba(255, 255, 255, 0.46);
+
+font-size: 0.75rem;
+line-height: 1.6;
+
+}
+
+/* =========================================================
+14. ALL CREATOR BUTTONS
+========================================================= */
+
+/*
+Explicit reset prevents browser/Acode defaults
+from leaking through.
+*/
+
+.creator-settings-card button,
+.creator-settings-card .creator-primary-button,
+.creator-settings-card .creator-secondary-button,
+.creator-settings-card .creator-danger-button,
+.creator-settings-card [type="button"],
+.creator-settings-card [type="submit"] {
+appearance: none;
+-webkit-appearance: none;
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+min-height: 44px;
+
+box-sizing: border-box;
+
+padding: 11px 17px;
+
+border-radius: 12px;
+
+font: inherit;
+font-size: 0.8rem;
+font-weight: 700;
+
+cursor: pointer;
+
+text-decoration: none;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+/* Primary */
+
+.creator-settings-card .creator-primary-button {
+border:
+1px solid rgba(210, 45, 75, 0.75);
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        135deg,
+        #b51f3c,
+        #7c1027
+    );
+
+box-shadow:
+    0 10px 24px rgba(120, 0, 25, 0.22);
+
+}
+
+.creator-settings-card .creator-primary-button:hover {
+transform: translateY(-1px);
+
+box-shadow:
+    0 13px 30px rgba(120, 0, 25, 0.32);
+
+}
+
+/* Secondary */
+
+.creator-settings-card .creator-secondary-button {
+margin-top: 16px;
+
+border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+color: rgba(255, 255, 255, 0.82);
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+}
+
+.creator-settings-card .creator-secondary-button:hover {
+color: #ffffff;
+
+border-color:
+    rgba(181, 31, 60, 0.45);
+
+background:
+    rgba(181, 31, 60, 0.10);
+
+transform: translateY(-1px);
+
+}
+
+/* =========================================================
+15. DANGER / DEACTIVATION BUTTON
+========================================================= */
+
+.creator-settings-card .creator-danger-button,
+#deactivateCreatorButton,
+#deactivateAccountButton,
+button[id*="deactivat"] {
+appearance: none;
+-webkit-appearance: none;
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+min-height: 44px;
+
+padding: 11px 17px;
+
+border:
+    1px solid rgba(220, 50, 75, 0.40);
+
+border-radius: 12px;
+
+color: #ff7189;
+
+background:
+    rgba(170, 15, 40, 0.08);
+
+font: inherit;
+font-size: 0.8rem;
+font-weight: 700;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.creator-settings-card .creator-danger-button:hover,
+#deactivateCreatorButton:hover,
+#deactivateAccountButton:hover,
+button[id*="deactivat"]:hover {
+color: #ffffff;
+
+border-color:
+    rgba(230, 55, 85, 0.70);
+
+background:
+    rgba(190, 20, 50, 0.18);
+
+transform: translateY(-1px);
+
+}
+
+/* =========================================================
+16. STATUS BADGE
+========================================================= */
+
+.creator-settings-status {
+display: inline-flex;
+align-items: center;
+
+padding: 8px 12px;
+
+border:
+    1px solid rgba(181, 31, 60, 0.30);
+
+border-radius: 999px;
+
+color: #ff7b91;
+
+background:
+    rgba(181, 31, 60, 0.10);
+
+font-size: 0.7rem;
+font-weight: 700;
+
+}
+
+/* =========================================================
+17. FORM MESSAGES
+========================================================= */
+
+.creator-form-message {
+min-height: 18px;
+
+margin: 8px 0 0;
+
+color: #d7d7db;
+
+font-size: 0.76rem;
+
+}
+
+/* =========================================================
+18. MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+.creator-setting-row {
+    gap: 14px;
+}
+
+.creator-settings-card {
+    padding: 20px;
+}
+
+}
+
+@media (max-width: 650px) {
+
+.creator-section-heading h2 {
+    font-size: 1.08rem;
+}
+
+.creator-welcome-panel {
+    border-radius: 18px;
+}
+
+.creator-settings-card {
+    padding: 17px;
+    border-radius: 17px;
+}
+
+.creator-profile-preview {
+    align-items: flex-start;
+}
+
+.creator-setting-row {
+    align-items: flex-start;
+}
+
+.creator-toggle {
+    margin-top: 2px;
+}
+
+.creator-settings-card button,
+.creator-settings-card .creator-primary-button,
+.creator-settings-card .creator-secondary-button,
+.creator-settings-card .creator-danger-button {
+    width: 100%;
+}
+
+}

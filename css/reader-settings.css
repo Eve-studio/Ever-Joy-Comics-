@@ -1,0 +1,958 @@
+ /* =========================================================
+   EVER JOY COMICS
+   READER SETTINGS
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE
+   ========================================================= */
+
+.reader-settings-page {
+
+    min-height: 100vh;
+
+    background: var(--bg-primary);
+
+    color: var(--text-primary);
+
+    padding-bottom: 50px;
+
+}
+
+
+/* =========================================================
+   2. HEADER
+   ========================================================= */
+
+.reader-settings-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    background:
+        rgba(11, 11, 15, 0.96);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+
+}
+
+
+.reader-settings-back {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 40px;
+
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--bg-card);
+
+    color: var(--text-primary);
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+
+.reader-settings-back:hover {
+
+    background: var(--bg-elevated);
+
+}
+
+
+.reader-settings-back:active {
+
+    transform: scale(0.93);
+
+}
+
+
+.reader-settings-header-title {
+
+    min-width: 0;
+
+}
+
+
+.reader-settings-header-title span {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--accent);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.reader-settings-header-title h1 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 19px;
+
+    font-weight: 750;
+
+    letter-spacing: -0.3px;
+
+}
+
+
+/* =========================================================
+   3. MAIN CONTAINER
+   ========================================================= */
+
+.reader-settings-container {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin-inline: auto;
+
+    padding:
+        24px 16px 60px;
+
+}
+
+
+/* =========================================================
+   4. SETTINGS SECTION
+   ========================================================= */
+
+.reader-settings-section {
+
+    margin-bottom: 28px;
+
+    padding: 20px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius-medium);
+
+    background: var(--bg-card);
+
+}
+
+
+.reader-settings-section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.reader-settings-eyebrow {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--accent);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+}
+
+
+.reader-settings-section-heading h2 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+.reader-settings-value {
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   5. DESCRIPTION
+   ========================================================= */
+
+.reader-settings-description {
+
+    margin: 12px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   6. BRIGHTNESS
+   ========================================================= */
+
+.brightness-control {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+}
+
+
+.brightness-icon {
+
+    flex-shrink: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 18px;
+
+    line-height: 1;
+
+}
+
+
+.brightness-high {
+
+    color: var(--text-primary);
+
+}
+
+
+/* Range */
+
+#brightnessSlider {
+
+    flex: 1;
+
+    width: 100%;
+
+    height: 4px;
+
+    margin: 0;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    border-radius: var(--radius-pill);
+
+    outline: none;
+
+    background: var(--bg-elevated);
+
+    cursor: pointer;
+
+}
+
+
+/* Chrome / Android */
+
+#brightnessSlider::-webkit-slider-thumb {
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    width: 18px;
+
+    height: 18px;
+
+    border: 3px solid var(--bg-card);
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow:
+        0 0 0 1px rgba(230, 57, 70, 0.4);
+
+    cursor: pointer;
+
+}
+
+
+/* Firefox */
+
+#brightnessSlider::-moz-range-thumb {
+
+    width: 18px;
+
+    height: 18px;
+
+    border: 3px solid var(--bg-card);
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow:
+        0 0 0 1px rgba(230, 57, 70, 0.4);
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   7. READER APPEARANCE
+   ========================================================= */
+
+.reader-appearance-options {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.reader-appearance-option {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+
+    min-height: 68px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius-small);
+
+    background: var(--bg-secondary);
+
+    color: var(--text-primary);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+
+.reader-appearance-option:hover {
+
+    background: var(--bg-elevated);
+
+}
+
+
+.reader-appearance-option:active {
+
+    transform: scale(0.99);
+
+}
+
+
+.reader-appearance-option.active {
+
+    border-color:
+        rgba(230, 57, 70, 0.55);
+
+    background:
+        rgba(230, 57, 70, 0.06);
+
+}
+
+
+/* Appearance preview */
+
+.appearance-preview {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+}
+
+
+.appearance-dark {
+
+    background: #0b0b0f;
+
+}
+
+
+.appearance-dim {
+
+    background: #15151c;
+
+}
+
+
+.appearance-light {
+
+    background: #eeeeee;
+
+}
+
+
+/* Appearance text */
+
+.appearance-option-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.appearance-option-content strong {
+
+    color: var(--text-primary);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.appearance-option-content small {
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+
+    line-height: 1.35;
+
+}
+
+
+/* Check */
+
+.appearance-check {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 20px;
+
+    height: 20px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    opacity: 0;
+
+    transform: scale(0.7);
+
+    transition:
+        opacity var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+
+.reader-appearance-option.active .appearance-check {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+
+/* =========================================================
+   8. READER SETTINGS LIST
+   ========================================================= */
+
+.reader-settings-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.reader-setting-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    min-height: 66px;
+
+    padding: 12px 0;
+
+}
+
+
+.reader-setting-row + .reader-setting-row {
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.reader-setting-row-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+
+}
+
+
+.reader-setting-row-content strong {
+
+    color: var(--text-primary);
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+}
+
+
+.reader-setting-row-content span {
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   9. SWITCH
+   ========================================================= */
+
+.settings-switch {
+
+    position: relative;
+
+    display: block;
+
+    width: 44px;
+
+    height: 25px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+}
+
+
+.settings-switch input {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 1px;
+
+    opacity: 0;
+
+}
+
+
+.settings-switch-slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--bg-elevated);
+
+    border:
+        1px solid var(--border);
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast);
+
+}
+
+
+.settings-switch-slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+
+    left: 3px;
+
+    width: 17px;
+
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: var(--text-secondary);
+
+    transition:
+        transform var(--transition-fast),
+        background var(--transition-fast);
+
+}
+
+
+.settings-switch input:checked
++ .settings-switch-slider {
+
+    background:
+        rgba(230, 57, 70, 0.25);
+
+    border-color:
+        rgba(230, 57, 70, 0.55);
+
+}
+
+
+.settings-switch input:checked
++ .settings-switch-slider::before {
+
+    transform: translateX(19px);
+
+    background: var(--accent);
+
+}
+
+
+/* =========================================================
+   10. RESET
+   ========================================================= */
+
+.reader-settings-reset-section {
+
+    padding:
+        4px 4px 20px;
+
+    text-align: center;
+
+}
+
+
+.reader-settings-reset {
+
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 10px 16px;
+
+    border:
+        1px solid rgba(230, 57, 70, 0.35);
+
+    border-radius: var(--radius-small);
+
+    background:
+        transparent;
+
+    color:
+        var(--accent);
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast);
+
+}
+
+
+.reader-settings-reset:hover {
+
+    background:
+        rgba(230, 57, 70, 0.07);
+
+    border-color:
+        rgba(230, 57, 70, 0.55);
+
+}
+
+
+.reader-settings-reset-section p {
+
+    margin: 8px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   11. FOCUS STATES
+   ========================================================= */
+
+.reader-settings-back:focus-visible,
+.reader-appearance-option:focus-visible,
+.reader-settings-reset:focus-visible,
+#brightnessSlider:focus-visible,
+.settings-switch input:focus-visible
++ .settings-switch-slider {
+
+    outline:
+        2px solid var(--accent);
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   12. TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .reader-settings-header {
+
+        padding-inline: 24px;
+
+    }
+
+
+    .reader-settings-container {
+
+        padding:
+            32px 24px 70px;
+
+    }
+
+
+    .reader-settings-section {
+
+        padding: 24px;
+
+    }
+
+
+    .reader-settings-section-heading h2 {
+
+        font-size: 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   13. DESKTOP
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .reader-settings-header {
+
+        padding-inline: 32px;
+
+    }
+
+
+    .reader-settings-container {
+
+        padding-top: 40px;
+
+    }
+
+
+    .reader-settings-section {
+
+        padding: 26px;
+
+    }
+
+
+    .reader-settings-reset {
+
+        max-width: 300px;
+
+    }
+
+}
+
+
+/* =========================================================
+   14. SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .reader-settings-container {
+
+        padding-inline: 10px;
+
+    }
+
+
+    .reader-settings-section {
+
+        padding: 16px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .reader-settings-section-heading h2 {
+
+        font-size: 16px;
+
+    }
+
+
+    .reader-setting-row {
+
+        gap: 10px;
+
+    }
+
+
+    .reader-setting-row-content strong {
+
+        font-size: 12px;
+
+    }
+
+
+    .reader-setting-row-content span {
+
+        font-size: 9px;
+
+    }
+
+}

@@ -1,0 +1,706 @@
+/* =========================================================
+EVER JOY COMICS
+READING HISTORY
+========================================================= */
+
+/* =========================================================
+
+1. PAGE FOUNDATION
+   ========================================================= */
+
+.history-page {
+min-height: 100vh;
+
+background: #08090d;
+
+color: #f5f5f7;
+
+}
+
+/* =========================================================
+2. HISTORY HEADER
+========================================================= */
+
+.history-header {
+position: sticky;
+
+top: 0;
+
+z-index: 100;
+
+min-height: 62px;
+
+display: flex;
+
+align-items: center;
+
+gap: 12px;
+
+padding: 10px 16px;
+
+background:
+    rgba(8, 9, 13, 0.88);
+
+backdrop-filter: blur(18px);
+
+-webkit-backdrop-filter: blur(18px);
+
+border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+
+}
+
+.history-back-btn {
+flex: 0 0 38px;
+
+width: 38px;
+
+height: 38px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border: none;
+
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.07);
+
+color: #ffffff;
+
+font-size: 20px;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+}
+
+.history-back-btn:active {
+transform: scale(0.9);
+
+background:
+    rgba(255, 255, 255, 0.12);
+
+}
+
+/* =========================================================
+3. HEADER TITLE
+========================================================= */
+
+.history-header-title {
+min-width: 0;
+
+flex: 1;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 2px;
+
+}
+
+.history-header-title h1 {
+margin: 0;
+
+font-size: 16px;
+
+line-height: 1.2;
+
+font-weight: 650;
+
+letter-spacing: -0.2px;
+
+}
+
+.history-header-title span {
+color:
+rgba(255, 255, 255, 0.42);
+
+font-size: 10px;
+
+line-height: 1.3;
+
+}
+
+/* =========================================================
+4. CLEAR BUTTON
+========================================================= */
+
+.history-clear-btn {
+flex: 0 0 auto;
+
+padding: 7px 10px;
+
+border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+border-radius: 8px;
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+color:
+    rgba(255, 255, 255, 0.62);
+
+font-size: 10px;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+
+}
+
+.history-clear-btn:active {
+transform: scale(0.95);
+
+background:
+    rgba(255, 255, 255, 0.09);
+
+color: #ffffff;
+
+}
+
+/* =========================================================
+5. MAIN CONTAINER
+========================================================= */
+
+.history-container {
+width: 100%;
+
+max-width: 760px;
+
+margin: 0 auto;
+
+padding:
+    18px 16px 40px;
+
+}
+
+/* =========================================================
+6. HISTORY SUMMARY
+========================================================= */
+
+.history-summary {
+margin-bottom: 16px;
+
+padding:
+    14px 15px;
+
+border-radius: 12px;
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+}
+
+.history-summary-text {
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 12px;
+
+}
+
+.history-summary-label {
+color:
+rgba(255, 255, 255, 0.48);
+
+font-size: 11px;
+
+}
+
+.history-summary-text strong {
+color: #ffffff;
+
+font-size: 12px;
+
+font-weight: 600;
+
+}
+
+/* =========================================================
+7. HISTORY LIST
+========================================================= */
+
+.history-list {
+display: flex;
+
+flex-direction: column;
+
+gap: 9px;
+
+}
+
+/* =========================================================
+8. HISTORY CARD
+========================================================= */
+
+.history-card {
+display: flex;
+
+align-items: center;
+
+gap: 12px;
+
+min-height: 88px;
+
+padding: 10px;
+
+overflow: hidden;
+
+border-radius: 12px;
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+cursor: pointer;
+
+transition:
+    transform 0.18s ease,
+    background 0.18s ease;
+
+}
+
+.history-card:active {
+transform: scale(0.985);
+
+background:
+    rgba(255, 255, 255, 0.075);
+
+}
+
+/* =========================================================
+9. COVER
+========================================================= */
+
+.history-cover {
+flex: 0 0 58px;
+
+width: 58px;
+
+height: 76px;
+
+overflow: hidden;
+
+border-radius: 7px;
+
+background: #151821;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+}
+
+.history-cover img {
+width: 100%;
+
+height: 100%;
+
+display: block;
+
+object-fit: cover;
+
+}
+
+/* =========================================================
+10. HISTORY INFORMATION
+========================================================= */
+
+.history-info {
+min-width: 0;
+
+flex: 1;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 5px;
+
+}
+
+.history-comic-title {
+overflow: hidden;
+
+color: #ffffff;
+
+font-size: 13px;
+
+font-weight: 600;
+
+line-height: 1.3;
+
+white-space: nowrap;
+
+text-overflow: ellipsis;
+
+}
+
+.history-chapter-title {
+overflow: hidden;
+
+color:
+    rgba(255, 255, 255, 0.56);
+
+font-size: 11px;
+
+line-height: 1.3;
+
+white-space: nowrap;
+
+text-overflow: ellipsis;
+
+}
+
+.history-meta {
+display: flex;
+
+align-items: center;
+
+gap: 7px;
+
+color:
+    rgba(255, 255, 255, 0.36);
+
+font-size: 9px;
+
+}
+
+/* =========================================================
+11. PROGRESS
+========================================================= */
+
+.history-progress {
+width: 100%;
+
+height: 3px;
+
+overflow: hidden;
+
+margin-top: 2px;
+
+border-radius: 999px;
+
+background:
+    rgba(255, 255, 255, 0.08);
+
+}
+
+.history-progress-bar {
+width: 0%;
+
+height: 100%;
+
+border-radius: inherit;
+
+background:
+    linear-gradient(
+        90deg,
+        #ffffff,
+        #9ca8ff
+    );
+
+transition:
+    width 0.3s ease;
+
+}
+
+.history-progress-text {
+color:
+rgba(255, 255, 255, 0.42);
+
+font-size: 9px;
+
+white-space: nowrap;
+
+}
+
+/* =========================================================
+12. CONTINUE BUTTON
+========================================================= */
+
+.history-continue {
+flex: 0 0 auto;
+
+min-width: 30px;
+
+height: 30px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.07);
+
+color: #ffffff;
+
+font-size: 13px;
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+}
+
+.history-card:active
+.history-continue {
+transform: scale(0.9);
+
+background:
+    rgba(255, 255, 255, 0.12);
+
+}
+
+/* =========================================================
+13. EMPTY STATE
+========================================================= */
+
+.history-empty {
+min-height: 55vh;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+padding:
+    30px 20px;
+
+text-align: center;
+
+}
+
+.history-empty-icon {
+width: 58px;
+
+height: 58px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+margin-bottom: 16px;
+
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.06);
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+color:
+    rgba(255, 255, 255, 0.55);
+
+font-size: 24px;
+
+}
+
+.history-empty h2 {
+margin:
+0 0 8px;
+
+color: #ffffff;
+
+font-size: 17px;
+
+font-weight: 650;
+
+}
+
+.history-empty p {
+max-width: 270px;
+
+margin:
+    0 0 20px;
+
+color:
+    rgba(255, 255, 255, 0.45);
+
+font-size: 12px;
+
+line-height: 1.6;
+
+}
+
+/* =========================================================
+14. BROWSE BUTTON
+========================================================= */
+
+.history-browse-btn {
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+min-height: 42px;
+
+padding:
+    0 18px;
+
+border-radius: 10px;
+
+background: #ffffff;
+
+color: #08090d;
+
+font-size: 12px;
+
+font-weight: 700;
+
+text-decoration: none;
+
+transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+
+}
+
+.history-browse-btn:active {
+transform: scale(0.97);
+
+opacity: 0.86;
+
+}
+
+/* =========================================================
+15. LOADING STATE
+========================================================= */
+
+.history-loading {
+padding: 30px;
+
+text-align: center;
+
+color:
+    rgba(255, 255, 255, 0.4);
+
+font-size: 12px;
+
+}
+
+/* =========================================================
+16. COMPLETED CHAPTER
+========================================================= */
+
+.history-card.completed
+.history-progress-bar {
+width: 100%;
+}
+
+.history-card.completed
+.history-progress-text {
+color:
+rgba(255, 255, 255, 0.55);
+}
+
+/* =========================================================
+17. SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+.history-container {
+    padding-left: 13px;
+
+    padding-right: 13px;
+}
+
+
+.history-header {
+    padding-left: 13px;
+
+    padding-right: 13px;
+}
+
+
+.history-card {
+    gap: 9px;
+
+    padding: 9px;
+}
+
+
+.history-cover {
+    flex-basis: 54px;
+
+    width: 54px;
+
+    height: 72px;
+}
+
+
+.history-comic-title {
+    font-size: 12px;
+}
+
+
+.history-chapter-title {
+    font-size: 10px;
+}
+
+}
+
+/* =========================================================
+18. LARGER SCREENS
+========================================================= */
+
+@media (min-width: 700px) {
+
+.history-container {
+    padding-left: 22px;
+
+    padding-right: 22px;
+}
+
+
+.history-card {
+    min-height: 96px;
+}
+
+
+.history-cover {
+    flex-basis: 64px;
+
+    width: 64px;
+
+    height: 82px;
+}
+
+}

@@ -1,0 +1,1785 @@
+/* =========================================================
+EVER JOY COMICS
+CREATOR STUDIO DASHBOARD
+========================================================= */
+
+/* =========================================================
+
+1. PAGE FOUNDATION
+   ========================================================= */
+
+.creator-dashboard-body {
+
+min-height: 100vh;
+
+margin: 0;
+
+background:
+    radial-gradient(
+        circle at 72% 0%,
+        rgba(255, 48, 72, 0.055),
+        transparent 28%
+    ),
+    #08090d;
+
+color: #f5f5f7;
+
+font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+-webkit-font-smoothing: antialiased;
+
+}
+
+/* =========================================================
+2. CREATOR STUDIO FOUNDATION
+========================================================= */
+
+.creator-studio {
+
+min-height: 100vh;
+
+display: flex;
+
+}
+
+/* =========================================================
+3. SIDEBAR
+========================================================= */
+
+.creator-sidebar {
+
+position: fixed;
+
+top: 0;
+left: 0;
+bottom: 0;
+
+z-index: 50;
+
+width: 225px;
+
+display: flex;
+
+flex-direction: column;
+
+box-sizing: border-box;
+
+padding: 24px 14px;
+
+background:
+    rgba(9, 10, 14, 0.96);
+
+border-right:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+}
+
+/* =========================================================
+4. SIDEBAR BRAND
+========================================================= */
+
+.creator-sidebar-brand {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 4px;
+
+padding:
+    2px 11px
+    25px;
+
+}
+
+.creator-logo {
+
+color: #ffffff;
+
+font-size: 17px;
+
+font-weight: 750;
+
+letter-spacing: -0.5px;
+
+text-decoration: none;
+
+}
+
+.creator-studio-label {
+
+color:
+    rgba(255, 48, 72, 0.72);
+
+font-size: 7px;
+
+font-weight: 750;
+
+letter-spacing: 1.6px;
+
+}
+
+/* =========================================================
+5. NAVIGATION
+========================================================= */
+
+.creator-navigation {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 3px;
+
+}
+
+.creator-nav-item {
+
+min-height: 39px;
+
+display: flex;
+
+align-items: center;
+
+gap: 11px;
+
+padding:
+    0 11px;
+
+box-sizing: border-box;
+
+border:
+    1px solid
+    transparent;
+
+border-radius: 9px;
+
+color:
+    rgba(255, 255, 255, 0.42);
+
+font-size: 9px;
+
+font-weight: 550;
+
+text-decoration: none;
+
+transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.creator-nav-icon {
+
+width: 20px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+color:
+    rgba(255, 255, 255, 0.32);
+
+font-size: 14px;
+
+transition:
+    color 0.2s ease;
+
+}
+
+.creator-nav-item:hover {
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+color:
+    rgba(255, 255, 255, 0.78);
+
+}
+
+.creator-nav-item:hover .creator-nav-icon {
+
+color:
+    rgba(255, 48, 72, 0.85);
+
+}
+
+.creator-nav-item.active {
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(255, 48, 72, 0.105),
+        rgba(255, 255, 255, 0.025)
+    );
+
+border-color:
+    rgba(255, 48, 72, 0.12);
+
+color: #ffffff;
+
+}
+
+.creator-nav-item.active .creator-nav-icon {
+
+color: #ff3048;
+
+}
+
+/* =========================================================
+6. SIDEBAR FOOTER
+========================================================= */
+
+.creator-sidebar-footer {
+
+margin-top: auto;
+
+padding:
+    18px 11px 4px;
+
+border-top:
+    1px solid
+    rgba(255, 255, 255, 0.045);
+
+}
+
+.creator-return-link {
+
+color:
+    rgba(255, 255, 255, 0.32);
+
+font-size: 8px;
+
+text-decoration: none;
+
+transition:
+    color 0.2s ease;
+
+}
+
+.creator-return-link:hover {
+
+color:
+    #ff3048;
+
+}
+
+/* =========================================================
+7. MAIN CONTENT
+========================================================= */
+
+.creator-main {
+
+width: calc(100% - 225px);
+
+min-width: 0;
+
+margin-left: 225px;
+
+box-sizing: border-box;
+
+padding:
+    0 34px
+    55px;
+
+}
+
+/* =========================================================
+8. TOP BAR
+========================================================= */
+
+.creator-topbar {
+
+min-height: 82px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 20px;
+
+border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.045);
+
+}
+
+.creator-page-heading {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 4px;
+
+}
+
+.creator-eyebrow {
+
+color:
+    rgba(255, 48, 72, 0.68);
+
+font-size: 7px;
+
+font-weight: 750;
+
+letter-spacing: 1.5px;
+
+text-transform: uppercase;
+
+}
+
+.creator-page-heading h1 {
+
+margin: 0;
+
+color: #ffffff;
+
+font-size: 21px;
+
+font-weight: 700;
+
+letter-spacing: -0.55px;
+
+}
+
+/* =========================================================
+9. CREATOR ACCOUNT AREA
+========================================================= */
+
+.creator-account-area {
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+}
+
+.creator-notification-button {
+
+width: 34px;
+
+height: 34px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 0;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+border-radius: 9px;
+
+background:
+    rgba(255, 255, 255, 0.025);
+
+color:
+    rgba(255, 255, 255, 0.45);
+
+font-family: inherit;
+
+font-size: 16px;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+}
+
+.creator-notification-button:hover {
+
+background:
+    rgba(255, 48, 72, 0.07);
+
+border-color:
+    rgba(255, 48, 72, 0.18);
+
+color:
+    #ff3048;
+
+}
+
+.creator-account {
+
+display: flex;
+
+align-items: center;
+
+gap: 9px;
+
+padding:
+    5px 7px;
+
+border-radius: 10px;
+
+text-decoration: none;
+
+transition:
+    background 0.2s ease;
+
+}
+
+.creator-account:hover {
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+}
+
+.creator-avatar {
+
+width: 31px;
+
+height: 31px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+flex: 0 0 31px;
+
+border:
+    1px solid
+    rgba(255, 48, 72, 0.28);
+
+border-radius: 50%;
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(255, 48, 72, 0.16),
+        rgba(255, 255, 255, 0.035)
+    );
+
+color:
+    rgba(255, 255, 255, 0.85);
+
+font-size: 10px;
+
+font-weight: 700;
+
+}
+
+.creator-account-text {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 1px;
+
+}
+
+.creator-account-text strong {
+
+color:
+    rgba(255, 255, 255, 0.82);
+
+font-size: 8px;
+
+}
+
+.creator-account-text small {
+
+color:
+    rgba(255, 255, 255, 0.3);
+
+font-size: 7px;
+
+}
+
+/* =========================================================
+10. WELCOME PANEL
+========================================================= */
+
+.creator-welcome-panel {
+
+min-height: 170px;
+
+display: flex;
+
+align-items: flex-end;
+
+justify-content: space-between;
+
+gap: 30px;
+
+margin-top: 26px;
+
+padding:
+    28px 30px;
+
+box-sizing: border-box;
+
+overflow: hidden;
+
+position: relative;
+
+border:
+    1px solid
+    rgba(255, 48, 72, 0.11);
+
+border-radius: 15px;
+
+background:
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(255, 48, 72, 0.12),
+        transparent 32%
+    ),
+    linear-gradient(
+        135deg,
+        rgba(255, 48, 72, 0.065),
+        rgba(255, 255, 255, 0.018)
+    );
+
+}
+
+.creator-welcome-panel::after {
+
+content: "";
+
+position: absolute;
+
+width: 180px;
+
+height: 180px;
+
+right: -80px;
+
+bottom: -100px;
+
+border:
+    1px solid
+    rgba(255, 48, 72, 0.12);
+
+border-radius: 50%;
+
+}
+
+.creator-welcome-content {
+
+position: relative;
+
+z-index: 1;
+
+max-width: 560px;
+
+}
+
+.creator-welcome-content h2 {
+
+margin:
+    7px 0 8px;
+
+color: #ffffff;
+
+font-size: 24px;
+
+line-height: 1.15;
+
+letter-spacing: -0.8px;
+
+}
+
+.creator-welcome-content p {
+
+max-width: 530px;
+
+margin: 0;
+
+color:
+    rgba(255, 255, 255, 0.4);
+
+font-size: 9px;
+
+line-height: 1.65;
+
+}
+
+/* =========================================================
+11. PRIMARY BUTTON
+========================================================= */
+
+.creator-primary-button {
+
+position: relative;
+
+z-index: 2;
+
+min-height: 36px;
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding:
+    0 16px;
+
+border:
+    1px solid
+    rgba(255, 48, 72, 0.35);
+
+border-radius: 8px;
+
+background:
+    #ff3048;
+
+color: #ffffff;
+
+font-size: 8px;
+
+font-weight: 700;
+
+text-decoration: none;
+
+white-space: nowrap;
+
+box-shadow:
+    0 7px 22px
+    rgba(255, 48, 72, 0.12);
+
+transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+.creator-primary-button:hover {
+
+background:
+    #ff4157;
+
+transform:
+    translateY(-1px);
+
+box-shadow:
+    0 9px 26px
+    rgba(255, 48, 72, 0.2);
+
+}
+
+/* =========================================================
+12. SECTIONS
+========================================================= */
+
+.creator-section {
+
+margin-top: 34px;
+
+}
+
+.creator-section-heading {
+
+display: flex;
+
+align-items: flex-end;
+
+justify-content: space-between;
+
+gap: 20px;
+
+margin-bottom: 14px;
+
+}
+
+.creator-section-heading h2 {
+
+margin:
+    5px 0 0;
+
+color:
+    rgba(255, 255, 255, 0.86);
+
+font-size: 14px;
+
+font-weight: 650;
+
+letter-spacing: -0.25px;
+
+}
+
+/* =========================================================
+13. STAT GRID
+========================================================= */
+
+.creator-stat-grid {
+
+display: grid;
+
+grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+gap: 10px;
+
+}
+
+.creator-stat-card {
+
+min-height: 125px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+padding:
+    14px;
+
+box-sizing: border-box;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+border-radius: 12px;
+
+background:
+    rgba(255, 255, 255, 0.023);
+
+transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.creator-stat-card:hover {
+
+border-color:
+    rgba(255, 48, 72, 0.14);
+
+background:
+    rgba(255, 48, 72, 0.025);
+
+transform:
+    translateY(-1px);
+
+}
+
+.creator-stat-top {
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 10px;
+
+color:
+    rgba(255, 255, 255, 0.32);
+
+font-size: 8px;
+
+}
+
+.creator-stat-icon {
+
+width: 25px;
+
+height: 25px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border-radius: 7px;
+
+background:
+    rgba(255, 48, 72, 0.065);
+
+color:
+    rgba(255, 48, 72, 0.72);
+
+font-size: 11px;
+
+}
+
+.creator-stat-card > strong {
+
+margin-top: 8px;
+
+color: #ffffff;
+
+font-size: 21px;
+
+font-weight: 700;
+
+letter-spacing: -0.6px;
+
+}
+
+.creator-stat-card > small {
+
+color:
+    rgba(255, 255, 255, 0.26);
+
+font-size: 7px;
+
+}
+
+/* =========================================================
+14. PERFORMANCE SELECT
+========================================================= */
+
+.creator-select {
+
+min-height: 31px;
+
+padding:
+    0 9px;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+border-radius: 7px;
+
+outline: none;
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+color:
+    rgba(255, 255, 255, 0.55);
+
+font-family: inherit;
+
+font-size: 8px;
+
+cursor: pointer;
+
+}
+
+.creator-select:focus {
+
+border-color:
+    rgba(255, 48, 72, 0.24);
+
+}
+
+.creator-select option {
+
+background:
+    #111218;
+
+color:
+    #ffffff;
+
+}
+
+/* =========================================================
+15. CHART CARD
+========================================================= */
+
+.creator-chart-card {
+
+min-height: 260px;
+
+padding:
+    17px;
+
+box-sizing: border-box;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+border-radius: 13px;
+
+background:
+    rgba(255, 255, 255, 0.022);
+
+}
+
+.creator-chart-header {
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 15px;
+
+}
+
+.creator-chart-header div {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 3px;
+
+}
+
+.creator-chart-header span {
+
+color:
+    rgba(255, 255, 255, 0.3);
+
+font-size: 7px;
+
+}
+
+.creator-chart-header strong {
+
+color:
+    #ffffff;
+
+font-size: 18px;
+
+}
+
+.creator-chart-empty-label {
+
+color:
+    rgba(255, 255, 255, 0.22) !important;
+
+font-size: 7px !important;
+
+}
+
+.creator-chart {
+
+min-height: 185px;
+
+position: relative;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+margin-top: 10px;
+
+overflow: hidden;
+
+border-radius: 9px;
+
+background:
+    repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.025) 0,
+        rgba(255, 255, 255, 0.025) 1px,
+        transparent 1px,
+        transparent 46px
+    );
+
+}
+
+.creator-chart-line {
+
+position: absolute;
+
+left: 0;
+right: 0;
+
+bottom: 24px;
+
+height: 1px;
+
+background:
+    rgba(255, 255, 255, 0.045);
+
+}
+
+.creator-chart-message {
+
+max-width: 270px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+gap: 8px;
+
+text-align: center;
+
+}
+
+.creator-chart-message span {
+
+width: 29px;
+
+height: 29px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border-radius: 8px;
+
+background:
+    rgba(255, 48, 72, 0.07);
+
+color:
+    rgba(255, 48, 72, 0.65);
+
+}
+
+.creator-chart-message p {
+
+margin: 0;
+
+color:
+    rgba(255, 255, 255, 0.25);
+
+font-size: 8px;
+
+line-height: 1.55;
+
+}
+
+/* =========================================================
+16. VIEW ALL
+========================================================= */
+
+.creator-view-link {
+
+color:
+    rgba(255, 48, 72, 0.72);
+
+font-size: 8px;
+
+font-weight: 600;
+
+text-decoration: none;
+
+}
+
+.creator-view-link:hover {
+
+color:
+    #ff3048;
+
+}
+
+/* =========================================================
+17. EMPTY COMICS
+========================================================= */
+
+.creator-comics-empty,
+.creator-activity-empty {
+
+min-height: 190px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+padding:
+    25px;
+
+box-sizing: border-box;
+
+border:
+    1px dashed
+    rgba(255, 255, 255, 0.07);
+
+border-radius: 13px;
+
+background:
+    rgba(255, 255, 255, 0.018);
+
+text-align: center;
+
+}
+
+.creator-empty-icon {
+
+width: 38px;
+
+height: 38px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+margin-bottom: 10px;
+
+border-radius: 10px;
+
+background:
+    rgba(255, 48, 72, 0.065);
+
+color:
+    rgba(255, 48, 72, 0.62);
+
+font-size: 16px;
+
+}
+
+.creator-comics-empty h3,
+.creator-activity-empty h3 {
+
+margin:
+    0 0 5px;
+
+color:
+    rgba(255, 255, 255, 0.72);
+
+font-size: 11px;
+
+}
+
+.creator-comics-empty p,
+.creator-activity-empty p {
+
+max-width: 350px;
+
+margin:
+    0 0 14px;
+
+color:
+    rgba(255, 255, 255, 0.28);
+
+font-size: 8px;
+
+line-height: 1.55;
+
+}
+
+/* =========================================================
+18. SECONDARY BUTTON
+========================================================= */
+
+.creator-secondary-button {
+
+min-height: 31px;
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding:
+    0 12px;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+border-radius: 7px;
+
+background:
+    rgba(255, 255, 255, 0.035);
+
+color:
+    rgba(255, 255, 255, 0.58);
+
+font-size: 8px;
+
+font-weight: 600;
+
+text-decoration: none;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+}
+
+.creator-secondary-button:hover {
+
+border-color:
+    rgba(255, 48, 72, 0.2);
+
+background:
+    rgba(255, 48, 72, 0.06);
+
+color:
+    #ff3048;
+
+}
+
+/* =========================================================
+19. QUICK ACTIONS
+========================================================= */
+
+.creator-action-grid {
+
+display: grid;
+
+grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+gap: 10px;
+
+}
+
+.creator-action-card {
+
+min-height: 105px;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 12px;
+
+padding:
+    14px;
+
+box-sizing: border-box;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+border-radius: 11px;
+
+background:
+    rgba(255, 255, 255, 0.022);
+
+text-decoration: none;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.creator-action-card:hover {
+
+background:
+    rgba(255, 48, 72, 0.035);
+
+border-color:
+    rgba(255, 48, 72, 0.14);
+
+transform:
+    translateY(-2px);
+
+}
+
+.creator-action-icon {
+
+width: 27px;
+
+height: 27px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border-radius: 7px;
+
+background:
+    rgba(255, 48, 72, 0.07);
+
+color:
+    rgba(255, 48, 72, 0.72);
+
+font-size: 13px;
+
+}
+
+.creator-action-card strong {
+
+color:
+    rgba(255, 255, 255, 0.78);
+
+font-size: 9px;
+
+}
+
+.creator-action-card p {
+
+margin:
+    4px 0 0;
+
+color:
+    rgba(255, 255, 255, 0.27);
+
+font-size: 7px;
+
+line-height: 1.45;
+
+}
+
+/* =========================================================
+20. CREATOR CHECK
+========================================================= */
+
+.creator-check-card {
+
+display: flex;
+
+align-items: flex-start;
+
+gap: 12px;
+
+padding:
+    15px;
+
+box-sizing: border-box;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+border-radius: 11px;
+
+background:
+    rgba(255, 255, 255, 0.022);
+
+}
+
+.creator-check-icon {
+
+width: 29px;
+
+height: 29px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+flex: 0 0 29px;
+
+border-radius: 8px;
+
+background:
+    rgba(70, 200, 130, 0.08);
+
+color:
+    rgba(100, 220, 155, 0.78);
+
+font-size: 13px;
+
+font-weight: 700;
+
+}
+
+.creator-check-card strong {
+
+color:
+    rgba(255, 255, 255, 0.76);
+
+font-size: 9px;
+
+}
+
+.creator-check-card p {
+
+max-width: 650px;
+
+margin:
+    4px 0 0;
+
+color:
+    rgba(255, 255, 255, 0.28);
+
+font-size: 8px;
+
+line-height: 1.55;
+
+}
+
+/* =========================================================
+21. TEMPORARY NOTIFICATION
+========================================================= */
+
+.creator-temporary-notice {
+
+position: fixed;
+
+right: 22px;
+bottom: 22px;
+
+z-index: 200;
+
+max-width: 240px;
+
+padding:
+    11px 14px;
+
+border:
+    1px solid
+    rgba(255, 48, 72, 0.16);
+
+border-radius: 9px;
+
+background:
+    rgba(17, 18, 24, 0.96);
+
+color:
+    rgba(255, 255, 255, 0.68);
+
+font-size: 8px;
+
+box-shadow:
+    0 12px 35px
+    rgba(0, 0, 0, 0.35);
+
+backdrop-filter:
+    blur(15px);
+
+}
+
+/* =========================================================
+22. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+.creator-sidebar {
+
+    width: 190px;
+
+}
+
+
+.creator-main {
+
+    width: calc(100% - 190px);
+
+    margin-left: 190px;
+
+    padding:
+        0 24px
+        45px;
+
+}
+
+
+.creator-stat-grid {
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+}
+
+
+.creator-action-grid {
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+}
+
+}
+
+/* =========================================================
+23. MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+.creator-studio {
+
+    display: block;
+
+}
+
+
+.creator-sidebar {
+
+    position: relative;
+
+    width: 100%;
+
+    height: auto;
+
+    padding:
+        15px 12px;
+
+    border-right: none;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.055);
+
+}
+
+
+.creator-sidebar-brand {
+
+    padding:
+        2px 7px
+        15px;
+
+}
+
+
+.creator-navigation {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 4px;
+
+}
+
+
+.creator-nav-item {
+
+    min-height: 42px;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    padding: 4px;
+
+    font-size: 7px;
+
+    text-align: center;
+
+}
+
+
+.creator-nav-icon {
+
+    width: auto;
+
+    font-size: 12px;
+
+}
+
+
+.creator-sidebar-footer {
+
+    display: none;
+
+}
+
+
+.creator-main {
+
+    width: 100%;
+
+    margin-left: 0;
+
+    padding:
+        0 12px
+        35px;
+
+}
+
+
+.creator-topbar {
+
+    min-height: 70px;
+
+}
+
+
+.creator-page-heading h1 {
+
+    font-size: 18px;
+
+}
+
+
+.creator-account-text {
+
+    display: none;
+
+}
+
+
+.creator-welcome-panel {
+
+    min-height: 230px;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    margin-top: 17px;
+
+    padding:
+        22px 20px;
+
+}
+
+
+.creator-welcome-content h2 {
+
+    font-size: 21px;
+
+}
+
+
+.creator-welcome-content p {
+
+    font-size: 8px;
+
+}
+
+
+.creator-stat-grid {
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+}
+
+
+.creator-stat-card {
+
+    min-height: 115px;
+
+}
+
+
+.creator-action-grid {
+
+    grid-template-columns:
+        1fr;
+
+}
+
+
+.creator-section {
+
+    margin-top: 27px;
+
+}
+
+}
+
+/* =========================================================24. SMALL PHONES========================================================= */
+
+@media (max-width: 420px) {
+
+.creator-navigation {
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+}
+
+
+.creator-nav-item {
+
+    font-size: 6.5px;
+
+}
+
+
+.creator-stat-card {
+
+    padding: 12px;
+
+}
+
+
+.creator-stat-card > strong {
+
+    font-size: 18px;
+
+}
+
+
+.creator-chart-card {
+
+    padding: 13px;
+
+}
+
+
+.creator-welcome-content h2 {
+
+    font-size: 19px;
+
+}
+
+
+.creator-primary-button {
+
+    width: 100%;
+
+}
+
+
+.creator-welcome-panel {
+
+    min-height: 245px;
+
+}
+
+}
+
+/* =========================================================25. REDUCED MOTION========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+*,
+*::before,
+*::after {
+
+    scroll-behavior: auto !important;
+
+    transition-duration:
+        0.01ms !important;
+
+    animation-duration:
+        0.01ms !important;
+
+    animation-iteration-count:
+        1 !important;
+
+}
+
+}

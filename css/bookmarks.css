@@ -1,0 +1,558 @@
+/* =========================================================
+   EVER JOY COMICS
+   BOOKMARKS PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE FOUNDATION
+   ========================================================= */
+
+.bookmarks-page {
+    min-height: 100vh;
+
+    background: #08090d;
+
+    color: #f5f5f7;
+
+    padding-bottom: 90px;
+}
+
+
+/* =========================================================
+   2. BOOKMARKS HEADER
+   ========================================================= */
+
+.bookmarks-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    min-height: 58px;
+
+    padding: 0 18px;
+
+    background: rgba(8, 9, 13, 0.88);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.bookmarks-header h1 {
+    margin: 0;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.2px;
+}
+
+
+.bookmarks-header-count {
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   3. MAIN CONTAINER
+   ========================================================= */
+
+.bookmarks-container {
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 20px 16px 40px;
+}
+
+
+/* =========================================================
+   4. BOOKMARK LIST
+   ========================================================= */
+
+.bookmark-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   5. BOOKMARK CARD
+   ========================================================= */
+
+.bookmark-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 92px;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.055);
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease;
+}
+
+
+.bookmark-card:active {
+    transform: scale(0.985);
+
+    background: rgba(255, 255, 255, 0.075);
+
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================================
+   6. BOOKMARK COVER
+   ========================================================= */
+
+.bookmark-cover {
+    flex: 0 0 58px;
+
+    width: 58px;
+
+    height: 76px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #151821;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.bookmark-cover img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   7. BOOKMARK INFORMATION
+   ========================================================= */
+
+.bookmark-info {
+    flex: 1;
+
+    min-width: 0;
+
+    padding-right: 4px;
+}
+
+
+.bookmark-comic-title {
+    margin: 0 0 5px;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    line-height: 1.25;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+.bookmark-chapter-title {
+    margin: 0 0 5px;
+
+    overflow: hidden;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 12px;
+
+    line-height: 1.35;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+.bookmark-page-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+}
+
+
+.bookmark-page-divider {
+    opacity: 0.45;
+}
+
+
+/* =========================================================
+   8. BOOKMARK ACTIONS
+   ========================================================= */
+
+.bookmark-actions {
+    flex: 0 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.bookmark-open-btn,
+.bookmark-remove-btn {
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.bookmark-open-btn:active,
+.bookmark-remove-btn:active {
+    transform: scale(0.88);
+
+    background: rgba(255, 255, 255, 0.11);
+}
+
+
+.bookmark-remove-btn {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+
+.bookmark-remove-btn:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   9. BOOKMARKED INDICATOR
+   ========================================================= */
+
+.bookmark-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 12px;
+
+    bottom: 12px;
+
+    width: 2px;
+
+    border-radius: 0 4px 4px 0;
+
+    background: rgba(255, 255, 255, 0.28);
+}
+
+
+/* =========================================================
+   10. EMPTY STATE
+   ========================================================= */
+
+.bookmarks-empty {
+    min-height: 55vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 24px;
+
+    text-align: center;
+}
+
+
+.bookmarks-empty-icon {
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 27px;
+}
+
+
+.bookmarks-empty h2 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 650;
+}
+
+
+.bookmarks-empty p {
+    max-width: 280px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   11. EMPTY STATE BUTTON
+   ========================================================= */
+
+.bookmarks-empty-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 42px;
+
+    margin-top: 20px;
+
+    padding: 0 18px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #08090d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.18s ease,
+        opacity 0.18s ease;
+}
+
+
+.bookmarks-empty-btn:active {
+    transform: scale(0.97);
+
+    opacity: 0.86;
+}
+
+
+/* =========================================================
+   12. LOADING STATE
+   ========================================================= */
+
+.bookmarks-loading {
+    min-height: 40vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   13. ERROR STATE
+   ========================================================= */
+
+.bookmarks-error {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   14. SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .bookmarks-container {
+        padding-left: 13px;
+
+        padding-right: 13px;
+    }
+
+
+    .bookmark-card {
+        gap: 10px;
+
+        padding: 9px;
+    }
+
+
+    .bookmark-cover {
+        flex-basis: 52px;
+
+        width: 52px;
+
+        height: 70px;
+    }
+
+
+    .bookmark-comic-title {
+        font-size: 13px;
+    }
+
+
+    .bookmark-chapter-title {
+        font-size: 11px;
+    }
+
+
+    .bookmark-open-btn,
+    .bookmark-remove-btn {
+        width: 31px;
+
+        height: 31px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   15. LARGER SCREENS
+   ========================================================= */
+
+@media (min-width: 700px) {
+
+    .bookmarks-container {
+        padding-left: 22px;
+
+        padding-right: 22px;
+    }
+
+
+    .bookmark-card {
+        min-height: 100px;
+
+        padding: 11px;
+    }
+
+
+    .bookmark-cover {
+        flex-basis: 64px;
+
+        width: 64px;
+
+        height: 84px;
+    }
+
+
+    .bookmark-comic-title {
+        font-size: 15px;
+    }
+
+}

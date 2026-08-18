@@ -1,0 +1,2725 @@
+/* =========================================================
+   EVER JOY COMICS
+   COMIC DETAILS PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE FOUNDATION
+   ========================================================= */
+
+body {
+    background: #08090d;
+    color: #f5f5f7;
+}
+
+
+/* =========================================================
+   2. COMIC HEADER
+   ========================================================= */
+
+.comic-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 16px;
+
+    background: rgba(8, 9, 13, 0.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.back-btn,
+.header-action {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.back-btn:active,
+.header-action:active {
+    transform: scale(0.9);
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+.comic-header-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   3. MAIN CONTAINER
+   ========================================================= */
+
+.comic-details {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding-bottom: 40px;
+}
+
+
+/* =========================================================
+   4. HERO AREA
+   ========================================================= */
+
+.comic-hero {
+    position: relative;
+}
+
+
+/* =========================================================
+   5. BANNER
+   ========================================================= */
+
+.comic-banner {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: #12141b;
+}
+
+
+.comic-banner img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.comic-banner-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(8, 9, 13, 0.05) 0%,
+            rgba(8, 9, 13, 0.18) 40%,
+            rgba(8, 9, 13, 0.95) 100%
+        );
+}
+
+
+/* =========================================================
+   6. COMIC INTRO
+   ========================================================= */
+
+.comic-intro {
+    position: relative;
+
+    display: flex;
+    gap: 16px;
+
+    padding: 0 18px;
+
+    margin-top: -72px;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   7. LARGE COVER
+   ========================================================= */
+
+.comic-cover-large {
+    flex: 0 0 120px;
+
+    width: 120px;
+    height: 170px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #151821;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+.comic-cover-large img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   8. BASIC INFORMATION
+   ========================================================= */
+
+.comic-basic-info {
+    align-self: flex-end;
+
+    padding-bottom: 4px;
+
+    min-width: 0;
+}
+
+
+.comic-basic-info h1 {
+    margin: 0 0 9px;
+
+    font-size: 24px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* =========================================================
+   9. HERO RATING
+   SMALL RATING SHOWN BESIDE THE COMIC INFORMATION
+   ========================================================= */
+
+.comic-rating-summary {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-right: 7px;
+
+    vertical-align: middle;
+}
+
+
+.comic-rating-score {
+    color: #f1eee8;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    font-weight: 650;
+
+    letter-spacing: -0.1px;
+}
+
+
+.comic-rating-stars {
+    color: #b89455;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 8px rgba(184, 148, 85, 0.14);
+}
+
+
+.comic-rating-count {
+    display: none;
+}
+
+
+/* =========================================================
+   10. COMIC STATUS
+   ========================================================= */
+
+.comic-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 4px 9px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 11px;
+
+    text-transform: capitalize;
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   11. GENERAL SECTIONS
+   ========================================================= */
+
+.comic-section {
+    padding: 22px 18px 0;
+}
+
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   12. GENRE TAGS
+   ========================================================= */
+
+.genre-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.genre-tag {
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 11px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.genre-tag:active {
+    transform: scale(0.96);
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   13. CREATORS
+   ========================================================= */
+
+.creator-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.creator-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 48px;
+
+    padding: 10px 13px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+
+.creator-role {
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+}
+
+
+.creator-name {
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 550;
+}
+
+
+/* =========================================================
+   14. SYNOPSIS
+   ========================================================= */
+
+.comic-description {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   15. CHAPTER SECTION
+   ========================================================= */
+
+.chapters-section {
+    padding-top: 26px;
+}
+
+
+.chapter-count {
+    display: block;
+
+    margin-top: 3px;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 11px;
+}
+
+
+.sort-chapters {
+    padding: 7px 11px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   16. CHAPTER LIST
+   ========================================================= */
+
+.chapter-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.chapter-item {
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.055);
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease;
+}
+
+
+.chapter-item:active {
+    transform: scale(0.985);
+
+    background: rgba(255, 255, 255, 0.075);
+}
+
+
+.chapter-item a {
+    display: block;
+
+    padding: 14px;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+.chapter-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+
+.chapter-number {
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 550;
+}
+
+
+.chapter-price {
+    color: rgba(255, 255, 255, 0.52);
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+.chapter-more {
+    padding: 13px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 11px;
+}
+
+
+.chapter-loading,
+.chapter-empty {
+    padding: 22px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   17. START READING
+   ========================================================= */
+
+.comic-action-section {
+    padding: 28px 18px 10px;
+}
+
+
+.read-first-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #08090d;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.read-first-btn:active {
+    transform: scale(0.98);
+
+    opacity: 0.86;
+}
+
+
+/* =========================================================
+   18. ERROR STATE
+   ========================================================= */
+
+.comic-error {
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+
+.comic-error h1 {
+    margin-bottom: 8px;
+
+    font-size: 25px;
+}
+
+
+.comic-error p {
+    margin-bottom: 22px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   19. SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .comic-intro {
+        gap: 12px;
+
+        padding: 0 14px;
+    }
+
+
+    .comic-cover-large {
+        flex-basis: 105px;
+
+        width: 105px;
+        height: 150px;
+    }
+
+
+    .comic-basic-info h1 {
+        font-size: 20px;
+    }
+
+
+    .comic-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .comic-action-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .comic-rating-summary {
+        gap: 5px;
+    }
+
+
+    .comic-rating-score {
+        font-size: 12px;
+    }
+
+
+    .comic-rating-stars {
+        font-size: 9px;
+
+        letter-spacing: 0.8px;
+    }
+
+}
+
+
+/* =========================================================
+   20. TABLET / LARGER SCREENS
+   ========================================================= */
+
+@media (min-width: 700px) {
+
+    .comic-banner {
+        height: 300px;
+    }
+
+
+    .comic-cover-large {
+        flex-basis: 145px;
+
+        width: 145px;
+        height: 205px;
+    }
+
+
+    .comic-basic-info h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   21. COMIC ACTION BUTTONS
+   ========================================================= */
+
+.comic-action-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 48px;
+
+    gap: 9px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   22. SAVE TO LIBRARY BUTTON
+   ========================================================= */
+
+.save-library-btn {
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 0 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.save-library-btn:first-letter {
+    font-size: 18px;
+}
+
+
+.save-library-btn:active {
+    transform: scale(0.96);
+
+    background: rgba(255, 255, 255, 0.11);
+}
+
+
+/* =========================================================
+   23. SAVED STATE
+   ========================================================= */
+
+.save-library-btn.saved {
+    background: rgba(255, 255, 255, 0.12);
+
+    border-color: rgba(255, 255, 255, 0.18);
+
+    color: #ffffff;
+}
+
+
+.save-library-btn.saved:first-letter {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   24. SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .comic-action-buttons {
+        grid-template-columns: 1fr 46px;
+
+        gap: 7px;
+    }
+
+
+    .save-library-btn {
+        padding: 0 6px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   25. READER BOOKMARK BUTTON
+   ========================================================= */
+
+.ever-joy-bookmark-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 38px;
+
+    padding: 0 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 999px;
+
+    background: rgba(18, 20, 28, 0.88);
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.ever-joy-bookmark-btn:active {
+    transform: scale(0.94);
+}
+
+
+.ever-joy-bookmark-btn:hover {
+    background: rgba(255, 255, 255, 0.09);
+
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+
+.ever-joy-bookmark-btn .bookmark-icon {
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+.ever-joy-bookmark-btn .bookmark-label {
+    line-height: 1;
+}
+
+
+/* =========================================================
+   26. BOOKMARKED STATE
+   ========================================================= */
+
+.ever-joy-bookmark-btn.bookmarked {
+    background: rgba(255, 255, 255, 0.10);
+
+    border-color: rgba(255, 255, 255, 0.20);
+
+    color: #ffffff;
+}
+
+
+.ever-joy-bookmark-btn.bookmarked .bookmark-icon {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   27. SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .ever-joy-bookmark-btn {
+        min-height: 36px;
+
+        padding: 0 11px;
+
+        font-size: 11px;
+    }
+
+
+    .ever-joy-bookmark-btn .bookmark-icon {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   28. PREMIUM RATINGS & REVIEWS
+   ========================================================= */
+
+
+/* =========================================================
+   COMIC RATING SECTION
+   ========================================================= */
+
+.comic-rating-section {
+    padding-top: 24px;
+}
+
+
+/* =========================================================
+   COMPACT OVERALL RATING PANEL
+   ========================================================= */
+
+.comic-rating-panel {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 14px 16px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 24, 31, 0.96),
+            rgba(10, 11, 16, 0.96)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   PREMIUM RED GLOW
+   ========================================================= */
+
+.comic-rating-panel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: -105px;
+    top: -75px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(151, 29, 44, 0.18) 0%,
+            rgba(151, 29, 44, 0.07) 38%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SUBTLE TOP GLOSS
+   ========================================================= */
+
+.comic-rating-panel::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 18px;
+    right: 18px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.09),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   RATING MAIN
+   ========================================================= */
+
+.comic-rating-main {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-width: 82px;
+}
+
+
+/* =========================================================
+   OVERALL SCORE
+   ========================================================= */
+
+.comic-rating-value {
+    color: #f4f0e8;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.7px;
+}
+
+
+/* =========================================================
+   BURNT GOLD STARS
+   ========================================================= */
+
+.comic-rating-main .comic-rating-stars {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #b89455;
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    letter-spacing: 1.4px;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 8px rgba(184, 148, 85, 0.13);
+}
+
+
+/* =========================================================
+   RATING LABEL
+   ========================================================= */
+
+.comic-rating-label {
+    margin-top: 6px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   RATING DIVIDER
+   ========================================================= */
+
+.comic-rating-divider {
+    position: relative;
+
+    z-index: 1;
+
+    width: 1px;
+
+    height: 46px;
+
+    flex: 0 0 1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255, 255, 255, 0.12),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   RATING SUMMARY
+   ========================================================= */
+
+.comic-rating-panel .comic-rating-summary {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    min-width: 0;
+}
+
+
+.comic-rating-summary-title {
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 12px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+}
+
+
+.comic-rating-summary-text {
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   29. REVIEWS SECTION
+   ========================================================= */
+
+.reviews-section {
+    padding-top: 30px;
+}
+
+
+.reviews-heading {
+    margin-bottom: 15px;
+}
+
+
+.reviews-heading h2 {
+    margin: 0;
+
+    color: #f5f5f7;
+
+    font-size: 18px;
+
+    font-weight: 650;
+}
+
+
+.reviews-subtitle {
+    display: block;
+
+    margin-top: 4px;
+
+    color: rgba(255, 255, 255, 0.36);
+
+    font-size: 10px;
+}
+
+/* =========================================================
+   30. REVIEWS OVERALL CARD
+   ========================================================= */
+
+.reviews-overall-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-height: 78px;
+
+    padding: 13px 15px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+}
+
+
+.reviews-overall-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    left: -85px;
+    top: -55px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(151, 29, 44, 0.14),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   31. REVIEW OVERALL SCORE
+   ========================================================= */
+
+.reviews-overall-score {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    min-width: 88px;
+}
+
+
+.reviews-score-number {
+    color: #f3efe7;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+.reviews-stars {
+    margin-top: 6px;
+
+    color: #b89455;
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    letter-spacing: 1.2px;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 8px rgba(184, 148, 85, 0.14);
+}
+
+
+.reviews-total-count {
+    margin-top: 6px;
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 9px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   32. RATING BREAKDOWN
+   ========================================================= */
+
+.reviews-rating-breakdown {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.rating-breakdown-row {
+    display: grid;
+
+    grid-template-columns: 12px 1fr 24px;
+
+    align-items: center;
+
+    gap: 6px;
+
+    width: 100%;
+}
+
+
+.rating-breakdown-star {
+    color: #b89455;
+
+    font-size: 9px;
+
+    line-height: 1;
+}
+
+
+.rating-breakdown-bar {
+    height: 4px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.07);
+}
+
+
+.rating-breakdown-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8e6532,
+            #b89455
+        );
+}
+
+
+.rating-breakdown-count {
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 8px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   33. REVIEW PREVIEW HEADER
+   ========================================================= */
+
+.reviews-preview-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    margin-bottom: 12px;
+}
+
+
+.reviews-preview-header h3 {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    font-size: 14px;
+
+    font-weight: 650;
+}
+
+
+.view-all-reviews,
+.view-all-reviews-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    min-height: 32px;
+
+    padding: 0 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.view-all-reviews:hover,
+.view-all-reviews-btn:hover {
+    background: rgba(255, 255, 255, 0.065);
+
+    border-color: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+}
+
+
+.view-all-reviews:active,
+.view-all-reviews-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================================================
+   34. REVIEW LIST
+   ========================================================= */
+
+.reviews-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   35. PREMIUM REVIEW CARD
+   ========================================================= */
+
+.review-card {
+    position: relative;
+
+    padding: 14px 15px 15px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+.review-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(151, 29, 44, 0.75),
+            rgba(151, 29, 44, 0.08),
+            transparent
+        );
+
+    opacity: 0.65;
+}
+
+
+.review-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 18px;
+    right: 18px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.075),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   36. REVIEW HEADER
+   ========================================================= */
+
+.review-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+
+.review-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+}
+
+
+.review-avatar {
+    width: 31px;
+    height: 31px;
+
+    flex: 0 0 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.045)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 11px;
+
+    font-weight: 650;
+}
+
+
+.review-avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.review-user-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+
+.review-username {
+    overflow: hidden;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.review-date {
+    color: rgba(255, 255, 255, 0.30);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   37. REVIEW STARS
+   ========================================================= */
+
+.review-stars {
+    flex-shrink: 0;
+
+    color: #b89455;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 8px rgba(184, 148, 85, 0.13);
+}
+
+
+/* =========================================================
+   38. REVIEW TEXT
+   ========================================================= */
+
+.review-text {
+    margin: 12px 0 0;
+
+    color: rgba(255, 255, 255, 0.64);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   39. REVIEW LOADING / EMPTY STATE
+   ========================================================= */
+
+.review-loading,
+.review-empty {
+    padding: 22px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   40. VIEW ALL REVIEWS BUTTON
+   ========================================================= */
+
+.view-all-reviews-btn {
+    width: 100%;
+
+    min-height: 43px;
+
+    margin-top: 13px;
+
+    padding: 0 15px;
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 11px;
+}
+
+
+.view-all-reviews-arrow {
+    font-size: 13px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.view-all-reviews-btn:hover
+.view-all-reviews-arrow {
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   41. REVIEW RESPONSIVE ADJUSTMENTS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .comic-rating-panel {
+        gap: 12px;
+
+        padding: 13px 14px;
+    }
+
+
+    .comic-rating-main {
+        min-width: 78px;
+    }
+
+
+    .comic-rating-value {
+        font-size: 25px;
+    }
+
+
+    .comic-rating-panel
+    .comic-rating-stars {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .comic-rating-divider {
+        height: 43px;
+    }
+
+
+    .comic-rating-summary-title {
+        font-size: 11px;
+    }
+
+
+    .comic-rating-summary-text {
+        font-size: 9px;
+    }
+
+
+    .reviews-overall-card {
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+
+    .reviews-overall-score {
+        min-width: 78px;
+    }
+
+
+    .reviews-score-number {
+        font-size: 23px;
+    }
+
+
+    .reviews-stars {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+}
+
+
+/* =========================================================
+   42. VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .comic-rating-panel {
+        gap: 10px;
+
+        min-height: 76px;
+
+        padding: 12px;
+    }
+
+
+    .comic-rating-main {
+        min-width: 70px;
+    }
+
+
+    .comic-rating-value {
+        font-size: 23px;
+    }
+
+
+    .comic-rating-main
+    .comic-rating-stars {
+        font-size: 9px;
+
+        letter-spacing: 0.8px;
+    }
+
+
+    .comic-rating-label {
+        font-size: 8px;
+    }
+
+
+    .comic-rating-divider {
+        height: 40px;
+    }
+
+
+    .comic-rating-summary-title {
+        font-size: 10px;
+    }
+
+
+    .comic-rating-summary-text {
+        font-size: 8px;
+    }
+
+
+    .reviews-overall-card {
+        gap: 9px;
+
+        padding: 11px;
+    }
+
+
+    .reviews-overall-score {
+        min-width: 70px;
+    }
+
+
+    .reviews-score-number {
+        font-size: 21px;
+    }
+
+
+    .reviews-stars {
+        font-size: 9px;
+
+        letter-spacing: 0.8px;
+    }
+
+
+    .reviews-total-count {
+        font-size: 8px;
+    }
+
+
+    .rating-breakdown-row {
+        grid-template-columns: 10px 1fr 20px;
+
+        gap: 5px;
+    }
+
+
+    .review-card {
+        padding: 13px 13px 14px;
+    }
+
+}
+/* =========================================================
+   EVER JOY COMICS
+   RATE & REVIEW ADD-ON
+   ========================================================= */
+
+
+/* =========================================================
+   RATE & REVIEW BUTTON
+   ========================================================= */
+
+.everjoy-rate-review-button {
+
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 2px 0 16px;
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.035)
+        );
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease;
+
+}
+
+
+.everjoy-rate-review-button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.075);
+
+    border-color:
+        rgba(255, 255, 255, 0.15);
+
+}
+
+
+.everjoy-rate-review-button:active {
+
+    transform:
+        scale(0.98);
+
+}
+
+
+.everjoy-rate-review-icon {
+
+    color: #c5a66a;
+
+    font-size: 16px;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   REVIEW PANEL
+   ========================================================= */
+
+.everjoy-review-panel {
+
+    margin-top: 4px;
+
+    overflow: hidden;
+
+    max-height: 0;
+
+    opacity: 0;
+
+    transform: translateY(-6px);
+
+    transition:
+        max-height 0.25s ease,
+        opacity 0.2s ease,
+        transform 0.25s ease;
+
+}
+
+
+.everjoy-review-panel.visible {
+
+    max-height: 500px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.everjoy-review-panel-inner {
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.065),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.075);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+}
+
+
+/* =========================================================
+   PANEL HEADER
+   ========================================================= */
+
+.everjoy-review-panel-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+}
+
+
+.everjoy-review-eyebrow {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+
+}
+
+
+.everjoy-review-panel-header h3 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 650;
+
+}
+
+
+.everjoy-review-close {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   STAR PICKER
+   ========================================================= */
+
+.everjoy-star-picker {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-top: 17px;
+
+}
+
+
+.everjoy-star {
+
+    width: 31px;
+
+    height: 31px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.20);
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        color 0.15s ease;
+
+}
+
+
+.everjoy-star:hover {
+
+    transform:
+        scale(1.12);
+
+}
+
+
+.everjoy-star.selected {
+
+    color: #c5a66a;
+
+    text-shadow:
+        0 0 10px rgba(197, 166, 106, 0.18);
+
+}
+
+
+.everjoy-selected-rating {
+
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   REVIEW TEXTAREA
+   ========================================================= */
+
+.everjoy-review-label {
+
+    display: block;
+
+    margin-top: 17px;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.everjoy-review-textarea {
+
+    width: 100%;
+
+    min-height: 88px;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+    padding: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.075);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, 0.18);
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.everjoy-review-textarea::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.25);
+
+}
+
+
+.everjoy-review-textarea:focus {
+
+    border-color:
+        rgba(197, 166, 106, 0.35);
+
+    background:
+        rgba(0, 0, 0, 0.24);
+
+}
+
+
+/* =========================================================
+   REVIEW FOOTER
+   ========================================================= */
+
+.everjoy-review-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 9px;
+
+}
+
+
+.everjoy-review-counter {
+
+    color:
+        rgba(255, 255, 255, 0.25);
+
+    font-size: 9px;
+
+}
+
+
+.everjoy-submit-review {
+
+    min-height: 37px;
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(197, 166, 106, 0.20);
+
+    border-radius: 9px;
+
+    background:
+        rgba(197, 166, 106, 0.10);
+
+    color: #d8c18d;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease;
+
+}
+
+
+.everjoy-submit-review:hover {
+
+    background:
+        rgba(197, 166, 106, 0.16);
+
+}
+
+
+.everjoy-submit-review:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.everjoy-review-message {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    margin-top: 0;
+
+    color: #c5a66a;
+
+    font-size: 10px;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.2s ease,
+        opacity 0.2s ease,
+        margin-top 0.2s ease;
+
+}
+
+
+.everjoy-review-message.show {
+
+    max-height: 40px;
+
+    margin-top: 10px;
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+   SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .everjoy-review-panel-inner {
+
+        padding: 15px;
+
+    }
+
+
+    .everjoy-star {
+
+        width: 29px;
+
+        height: 29px;
+
+        font-size: 23px;
+
+    }
+
+
+    .everjoy-submit-review {
+
+        padding: 0 12px;
+
+        font-size: 9px;
+
+    }
+
+}
+/* =========================================================
+   EVER JOY COMICS
+   FOLLOW BUTTON — TOP POSITION
+   ========================================================= */
+
+#followComicBtn {
+
+    /* Remove browser / Acode default button styling */
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    /* Force our own layout */
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    /* Size */
+    width: auto !important;
+    min-width: 105px !important;
+    height: 38px !important;
+
+    padding: 0 16px !important;
+
+    /* Shape */
+    border: 1px solid rgba(212, 175, 55, 0.45) !important;
+    border-radius: 999px !important;
+
+    /* Appearance */
+    background: rgba(8, 9, 13, 0.88) !important;
+
+    color: #d4af37 !important;
+
+    font-family: inherit !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+
+    line-height: 1 !important;
+
+    cursor: pointer !important;
+
+    /* =====================================================
+       THE IMPORTANT PART
+       ===================================================== */
+
+    position: absolute !important;
+
+    top: 18px !important;
+    right: 18px !important;
+
+    bottom: auto !important;
+    left: auto !important;
+
+    z-index: 9999 !important;
+
+    /* Prevent it from affecting Save / Start Reading */
+    margin: 0 !important;
+
+    /* Remove inherited button positioning */
+    float: none !important;
+
+    transform: none !important;
+
+}
+
+
+/* =========================================================
+   FOLLOW ICON
+   ========================================================= */
+
+#followComicBtn::before {
+
+    content: "♡" !important;
+
+    display: inline-block !important;
+
+    margin-right: 7px !important;
+
+    font-size: 17px !important;
+
+    line-height: 1 !important;
+
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+#followComicBtn:hover {
+
+    background: rgba(212, 175, 55, 0.10) !important;
+
+    border-color: #d4af37 !important;
+
+    color: #f0c95c !important;
+
+}
+
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+#followComicBtn:active {
+
+    transform: scale(0.96) !important;
+
+}
+
+
+/* =========================================================
+   FOLLOWING STATE
+   ========================================================= */
+
+#followComicBtn.following {
+
+    background: rgba(170, 35, 45, 0.14) !important;
+
+    border-color: rgba(170, 35, 45, 0.55) !important;
+
+    color: #e7b95c !important;
+
+}
+
+
+#followComicBtn.following::before {
+
+    content: "♥" !important;
+
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   REMOVE IT FROM THE BOTTOM ACTION FLOW
+   ========================================================= */
+
+.comic-action-buttons #followComicBtn {
+
+    position: absolute !important;
+
+    top: 18px !important;
+
+    right: 18px !important;
+
+    bottom: auto !important;
+
+    left: auto !important;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    #followComicBtn {
+
+        top: 12px !important;
+
+        right: 12px !important;
+
+        min-width: 95px !important;
+
+        height: 36px !important;
+
+        padding: 0 13px !important;
+
+        font-size: 12px !important;
+
+    }
+
+}
+.comic-action-section {
+
+    position: relative !important;
+
+}
+/* =========================================================
+   FOLLOW BUTTON — BLACK & WHITE THEME
+   ========================================================= */
+
+#followComicBtn {
+
+    background: #08090d !important;
+
+    border-color: rgba(255, 255, 255, 0.35) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* Heart */
+
+#followComicBtn::before {
+
+    color: #ffffff !important;
+
+}
+
+
+/* Hover */
+
+#followComicBtn:hover {
+
+    background: rgba(255, 255, 255, 0.08) !important;
+
+    border-color: rgba(255, 255, 255, 0.65) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* Following */
+
+#followComicBtn.following {
+
+    background: rgba(255, 255, 255, 0.10) !important;
+
+    border-color: rgba(255, 255, 255, 0.55) !important;
+
+    color: #ffffff !important;
+
+}
+
+
+#followComicBtn.following::before {
+
+    color: #ffffff !important;
+
+}

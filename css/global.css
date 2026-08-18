@@ -1,0 +1,535 @@
+/* =========================================================
+   EVER JOY COMICS
+   GLOBAL STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   1. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --bg-primary: #0b0b0f;
+    --bg-secondary: #121219;
+    --bg-card: #181820;
+    --bg-elevated: #20202a;
+
+    --text-primary: #ffffff;
+    --text-secondary: #b7b7c2;
+    --text-muted: #777783;
+
+    --accent: #e63946;
+    --accent-hover: #ff4d5a;
+
+    --border: rgba(255, 255, 255, 0.08);
+
+    --radius-small: 8px;
+    --radius-medium: 14px;
+    --radius-large: 22px;
+    --radius-pill: 999px;
+
+    --content-width: 1400px;
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.5;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   3. TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+small {
+    color: var(--text-secondary);
+}
+
+strong {
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   4. LINKS
+   ========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    transition:
+        color var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   5. BUTTONS
+   ========================================================= */
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   6. IMAGES
+   ========================================================= */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+button,
+input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   7. FORMS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    border: none;
+    outline: none;
+
+    color: var(--text-primary);
+    background: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   8. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #34343f;
+    border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a4a57;
+}
+
+
+/* =========================================================
+   9. SELECTION
+   ========================================================= */
+
+::selection {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   10. UTILITY CLASSES
+   ========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+/* =========================================================
+   11. CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(
+        calc(100% - 32px),
+        var(--content-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   12. PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 10px 20px;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--accent);
+    color: #ffffff;
+
+    font-weight: 600;
+
+    transition:
+        background var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   13. SECONDARY BUTTON
+   ========================================================= */
+
+.btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 10px 20px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-pill);
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: var(--text-primary);
+
+    font-weight: 600;
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+
+/* =========================================================
+   14. RESPONSIVE FOUNDATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    :root {
+        --content-width: 100%;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        width: calc(100% - 20px);
+    }
+
+}
+/* =========================================================
+   EVER JOY — ACTIVITY / FIRE INDICATOR
+   ========================================================= */
+
+.ej-activity-fire {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+
+    font-size: 14px;
+    line-height: 1;
+
+    border-radius: 50%;
+
+    background: rgba(230, 57, 70, 0.10);
+
+    animation: ejFirePulse 1.8s ease-in-out infinite;
+}
+
+
+/* Small fire */
+
+.ej-activity-fire.small {
+    width: 18px;
+    height: 18px;
+
+    font-size: 11px;
+}
+
+
+/* Large fire */
+
+.ej-activity-fire.large {
+    width: 28px;
+    height: 28px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   FIRE PULSE
+   ========================================================= */
+
+@keyframes ejFirePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+}
+/* =========================================================
+   EVER JOY
+   CURATED COMIC LABELS
+   ========================================================= */
+
+.ej-curated-labels {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    margin-top: 6px;
+
+}
+
+
+.ej-curated-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 20px;
+
+    padding:
+        3px
+        7px;
+
+    border:
+        1px solid
+        rgba(230, 57, 70, 0.25);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(230, 57, 70, 0.08);
+
+    color:
+        var(--accent, #e63946);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   STAFF PICK
+   ========================================================= */
+
+.ej-curated-label.staff-pick {
+
+    border-color:
+        rgba(230, 57, 70, 0.30);
+
+}
+
+
+/* =========================================================
+   EDITOR'S PICK
+   ========================================================= */
+
+.ej-curated-label.editor-pick {
+
+    background:
+        rgba(230, 57, 70, 0.13);
+
+    border-color:
+        rgba(230, 57, 70, 0.40);
+
+}
+
+
+/* =========================================================
+   FEATURED
+   ========================================================= */
+
+.ej-curated-label.featured {
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+
+    color:
+        var(--text-primary, #ffffff);
+
+}
+
+
+/* =========================================================
+   RISING
+   ========================================================= */
+
+.ej-curated-label.rising {
+
+    background:
+        rgba(230, 57, 70, 0.10);
+
+}
+
+
+/* =========================================================
+   HIDDEN GEM
+   ========================================================= */
+
+.ej-curated-label.hidden-gem {
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    border-color:
+        rgba(255, 255, 255, 0.10);
+
+    color:
+        var(--text-secondary, #b7b7c2);
+
+}

@@ -1,0 +1,586 @@
+/* =========================================================
+EVER JOY COMICS
+CREATOR STUDIO — EARNINGS
+========================================================= */
+
+/* =========================================================
+
+1. EARNINGS HERO
+   ========================================================= */
+
+.creator-earnings-hero {
+position: relative;
+overflow: hidden;
+}
+
+.creator-earnings-hero::after {
+content: "$";
+position: absolute;
+right: 6%;
+bottom: -45px;
+
+font-size: 180px;
+font-weight: 700;
+
+color: rgba(255, 255, 255, 0.035);
+
+pointer-events: none;
+
+}
+
+/* =========================================================
+2. EARNINGS STAT GRID
+========================================================= */
+
+.creator-earnings-stat-grid {
+display: grid;
+
+grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+gap: 18px;
+
+}
+
+.creator-earnings-stat-card {
+position: relative;
+
+padding: 24px;
+
+min-height: 165px;
+
+border-radius: 20px;
+
+background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.055),
+        rgba(255,255,255,0.018)
+    );
+
+border: 1px solid rgba(255,255,255,0.08);
+
+box-shadow:
+    0 18px 45px rgba(0,0,0,0.12);
+
+transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+.creator-earnings-stat-card:hover {
+transform: translateY(-3px);
+
+border-color:
+    rgba(255,255,255,0.16);
+
+box-shadow:
+    0 22px 55px rgba(0,0,0,0.18);
+
+}
+
+.creator-earnings-stat-card.featured {
+border-color:
+rgba(255,255,255,0.18);
+
+background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.09),
+        rgba(255,255,255,0.025)
+    );
+
+}
+
+.creator-earnings-stat-card .creator-stat-top {
+display: flex;
+
+align-items: center;
+justify-content: space-between;
+
+gap: 12px;
+
+margin-bottom: 24px;
+
+}
+
+.creator-earnings-stat-card .creator-stat-top > span:first-child {
+font-size: 0.78rem;
+
+text-transform: uppercase;
+
+letter-spacing: 0.09em;
+
+opacity: 0.65;
+
+}
+
+.creator-earnings-stat-card > strong {
+display: block;
+
+margin-bottom: 8px;
+
+font-size: clamp(1.7rem, 3vw, 2.25rem);
+
+line-height: 1.05;
+
+letter-spacing: -0.03em;
+
+}
+
+.creator-earnings-stat-card > small {
+display: block;
+
+font-size: 0.78rem;
+
+opacity: 0.55;
+
+line-height: 1.5;
+
+}
+
+/* =========================================================
+3. REVENUE VALUE
+========================================================= */
+
+.creator-revenue-value {
+display: inline-block;
+
+margin-top: 12px;
+
+font-size: 1rem;
+
+font-weight: 700;
+
+letter-spacing: 0.01em;
+
+opacity: 0.85;
+
+}
+
+/* =========================================================
+4. EARNINGS CHART
+========================================================= */
+
+.creator-earnings-chart-card {
+min-height: 340px;
+}
+
+.creator-earnings-chart-card .creator-chart {
+min-height: 250px;
+
+position: relative;
+
+overflow: hidden;
+
+border-radius: 16px;
+
+}
+
+.creator-earnings-chart-card .creator-chart::before {
+content: "";
+
+position: absolute;
+
+inset: 0;
+
+background-image:
+    linear-gradient(
+        rgba(255,255,255,0.035) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,0.035) 1px,
+        transparent 1px
+    );
+
+background-size:
+    100% 50px,
+    80px 100%;
+
+pointer-events: none;
+
+}
+
+.creator-earnings-chart-card .creator-chart-line {
+position: absolute;
+
+left: 7%;
+right: 7%;
+bottom: 25%;
+
+height: 1px;
+
+background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.18),
+        transparent
+    );
+
+opacity: 0.5;
+
+}
+
+/* =========================================================
+5. CHART EMPTY MESSAGE
+========================================================= */
+
+#earningsChartMessage {
+position: absolute;
+
+inset: 0;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+
+padding: 30px;
+
+text-align: center;
+
+z-index: 2;
+
+}
+
+#earningsChartMessage span {
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+width: 46px;
+height: 46px;
+
+margin-bottom: 15px;
+
+border-radius: 50%;
+
+border: 1px solid rgba(255,255,255,0.1);
+
+background:
+    rgba(255,255,255,0.035);
+
+font-size: 1rem;
+
+opacity: 0.75;
+
+}
+
+#earningsChartMessage p {
+max-width: 420px;
+
+margin: 0;
+
+font-size: 0.88rem;
+
+line-height: 1.7;
+
+opacity: 0.55;
+
+}
+
+/* =========================================================
+6. ACTIVITY
+========================================================= */
+
+.creator-earnings-activity {
+width: 100%;
+}
+
+.creator-earnings-activity .creator-activity-empty {
+min-height: 250px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+justify-content: center;
+
+padding: 40px;
+
+text-align: center;
+
+border-radius: 20px;
+
+border: 1px dashed rgba(255,255,255,0.1);
+
+background:
+    rgba(255,255,255,0.018);
+
+}
+
+.creator-earnings-activity .creator-activity-empty h3 {
+margin: 15px 0 8px;
+}
+
+.creator-earnings-activity .creator-activity-empty p {
+max-width: 430px;
+
+margin: 0;
+
+line-height: 1.7;
+
+opacity: 0.55;
+
+}
+
+/* =========================================================
+7. REAL EARNINGS ACTIVITY ITEMS
+========================================================= */
+
+.creator-earning-item {
+display: flex;
+
+align-items: center;
+
+gap: 16px;
+
+padding: 18px 20px;
+
+margin-bottom: 10px;
+
+border-radius: 16px;
+
+border: 1px solid rgba(255,255,255,0.07);
+
+background:
+    rgba(255,255,255,0.025);
+
+}
+
+.creator-earning-item:last-child {
+margin-bottom: 0;
+}
+
+.creator-earning-item-icon {
+flex: 0 0 auto;
+
+width: 44px;
+height: 44px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background:
+    rgba(255,255,255,0.055);
+
+border: 1px solid rgba(255,255,255,0.08);
+
+}
+
+.creator-earning-item-content {
+flex: 1;
+
+min-width: 0;
+
+}
+
+.creator-earning-item-content strong {
+display: block;
+
+margin-bottom: 4px;
+
+}
+
+.creator-earning-item-content small {
+opacity: 0.5;
+}
+
+.creator-earning-item-amount {
+font-weight: 700;
+
+white-space: nowrap;
+
+}
+
+/* =========================================================
+8. PAYOUT CARD
+========================================================= */
+
+.creator-payout-card {
+align-items: flex-start;
+}
+
+.creator-payout-card .creator-secondary-button {
+margin-top: 16px;
+}
+
+.creator-payout-status {
+display: inline-flex;
+
+align-items: center;
+
+gap: 7px;
+
+margin-top: 8px;
+
+padding: 6px 10px;
+
+border-radius: 999px;
+
+font-size: 0.72rem;
+
+background:
+    rgba(255,255,255,0.05);
+
+border: 1px solid rgba(255,255,255,0.08);
+
+opacity: 0.7;
+
+}
+
+/* =========================================================
+9. PAYOUT HISTORY
+========================================================= */
+
+.creator-payout-history {
+min-height: 230px;
+}
+
+.creator-payout-history h3 {
+margin-bottom: 8px;
+}
+
+/* =========================================================
+10. TEMPORARY NOTICE
+========================================================= */
+
+.creator-earnings-notice {
+position: fixed;
+
+right: 24px;
+bottom: 24px;
+
+z-index: 9999;
+
+max-width: 320px;
+
+padding: 15px 18px;
+
+border-radius: 14px;
+
+background:
+    rgba(20,20,24,0.96);
+
+border: 1px solid rgba(255,255,255,0.12);
+
+box-shadow:
+    0 18px 50px rgba(0,0,0,0.3);
+
+font-size: 0.85rem;
+
+line-height: 1.5;
+
+animation:
+    creatorEarningsNoticeIn
+    0.25s ease both;
+
+}
+
+@keyframes creatorEarningsNoticeIn {
+
+from {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+/* =========================================================
+11. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+.creator-earnings-stat-grid {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+}
+
+/* =========================================================
+12. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+.creator-earnings-stat-grid {
+    grid-template-columns:
+        1fr;
+}
+
+
+.creator-earnings-stat-card {
+    min-height: 145px;
+
+    padding: 20px;
+}
+
+
+.creator-earnings-chart-card {
+    min-height: 300px;
+}
+
+
+.creator-earnings-chart-card .creator-chart {
+    min-height: 220px;
+}
+
+
+.creator-earning-item {
+    align-items: flex-start;
+
+    padding: 15px;
+}
+
+
+.creator-earning-item-amount {
+    font-size: 0.9rem;
+}
+
+
+.creator-earnings-notice {
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+
+    max-width: none;
+}
+
+}
+
+/* =========================================================
+13. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+.creator-earnings-stat-card > strong {
+    font-size: 1.7rem;
+}
+
+
+.creator-earnings-hero::after {
+    font-size: 120px;
+}
+
+}
