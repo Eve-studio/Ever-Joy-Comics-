@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Your Ever Joy Comics profile."
+    >
+
+    <title>Profile | Ever Joy Comics</title>
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================================
+         PROFILE CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/profile.css"
+    >
+
+</head>
+
+
+<body class="profile-body">
+
+
+<!-- =====================================================
+     AUTHENTICATION CHECK
+     ===================================================== -->
+
+<script src="../js/auth.js"></script>
+
+<script>
+
+    if (
+        !isEverJoyLoggedIn()
+    ) {
+
+        window.location.replace(
+            "../account/auth.html"
+        );
+
+    }
+
+</script>
+
+
+
+<!-- =====================================================
+     PROFILE HEADER
+     ===================================================== -->
+
+<header class="profile-header">
+
+
+    <button
+        class="profile-header-btn"
+        id="profileBackButton"
+        aria-label="Go back"
+    >
+        ←
+    </button>
+
+
+    <h1>
+        Profile
+    </h1>
+
+
+    <button
+        class="profile-header-btn"
+        id="profileMenuButton"
+        aria-label="Profile menu"
+    >
+        ⋮
+    </button>
+
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN PROFILE
+     ===================================================== -->
+
+<main class="profile-container">
+
+
+    <!-- =================================================
+         PROFILE IDENTITY
+         ================================================= -->
+
+    <section class="profile-identity">
+
+
+        <!-- COVER -->
+
+        <div class="profile-cover">
+
+            <img
+                id="profileCover"
+                src="../assets/images/profile-cover-placeholder.jpg"
+                alt=""
+            >
+
+            <div class="profile-cover-overlay"></div>
+
+        </div>
+
+
+
+        <!-- PROFILE INFORMATION -->
+
+        <div class="profile-info">
+
+
+            <!-- AVATAR -->
+
+            <div class="profile-avatar-wrapper">
+
+                <div
+                    class="profile-avatar-frame"
+                    id="profileAvatarFrame"
+                >
+
+                    <img
+                        id="profileAvatar"
+                        src="../assets/images/profile-placeholder.jpg"
+                        alt="Profile picture"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- IDENTITY -->
+
+            <div class="profile-identity-text">
+
+                <div class="profile-name-row">
+
+                    <h2 id="profileName">
+                        Eve Kitsune
+                    </h2>
+
+
+                    <span
+                        class="profile-level"
+                        id="profileLevel"
+                    >
+                        Lv. 1
+                    </span>
+
+                </div>
+
+
+                <p
+                    class="profile-username"
+                    id="profileUsername"
+                >
+                    @username
+                </p>
+
+
+                <p
+                    class="profile-bio"
+                    id="profileBio"
+                >
+                    Welcome to Ever Joy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- EDIT PROFILE -->
+
+        <div class="profile-main-action">
+
+            <button
+                class="edit-profile-btn"
+                id="editProfileButton"
+            >
+                Edit Profile
+            </button>
+
+        </div>
+
+
+
+        <!-- MEMBERSHIP -->
+
+        <a
+            href="../membership/membership.html"
+            class="membership-card"
+            id="membershipCard"
+        >
+
+            <div class="membership-icon">
+                ✦
+            </div>
+
+
+            <div class="membership-content">
+
+                <span class="membership-label">
+                    MEMBERSHIP
+                </span>
+
+
+                <strong id="membershipName">
+                    Ever Joy Premium
+                </strong>
+
+
+                <span id="membershipDescription">
+                    Unlock exclusive profile benefits
+                </span>
+
+            </div>
+
+
+            <span class="membership-arrow">
+                ›
+            </span>
+
+        </a>
+
+
+
+        <!-- =================================================
+             CREATOR STUDIO
+             
+             Hidden by default.
+             profile.js reveals this only when:
+             currentUser.creator.enabled === true
+             ================================================= -->
+
+        <div
+            class="creator-profile-entry"
+            id="creatorProfileEntry"
+            hidden
+        >
+
+            <button
+                class="creator-studio-card"
+                id="creatorStudioButton"
+                type="button"
+            >
+
+                <span class="creator-studio-icon">
+                    ✦
+                </span>
+
+
+                <span class="creator-studio-content">
+
+                    <span class="creator-studio-label">
+                        CREATOR
+                    </span>
+
+
+                    <strong>
+                        Creator Studio
+                    </strong>
+
+
+                    <span>
+                        Publish and manage your Ever Joy stories
+                    </span>
+
+                </span>
+
+
+                <span class="creator-studio-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+
+            <!-- =================================================
+                 COLLAB POOL
+                 
+                 Creator-only feature.
+                 Inherits creator visibility from:
+                 #creatorProfileEntry
+                 ================================================= -->
+
+            <a
+    href="../creator-studio/collab-pool.html"
+    class="creator-studio-card creator-collab-pool-card"
+>
+                <span class="creator-studio-icon">
+                    ◇
+                </span>
+
+
+                <span class="creator-studio-content">
+
+                    <span class="creator-studio-label">
+                        CREATOR
+                    </span>
+
+
+                    <strong>
+                        Collab Pool
+                    </strong>
+
+
+                    <span>
+                        Discover creators, collaborations, and opportunities
+                    </span>
+
+                </span>
+
+
+                <span class="creator-studio-arrow">
+                    ›
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ACCOUNT INFORMATION
+         ================================================= -->
+
+    <section class="profile-section account-section">
+
+        <div class="profile-section-heading">
+
+            <h2>
+                Account Information
+            </h2>
+
+        </div>
+
+
+        <div class="account-list">
+
+            <div class="account-row">
+
+                <span class="account-label">
+                    Username
+                </span>
+
+                <span
+                    class="account-value"
+                    id="accountUsername"
+                >
+                    @username
+                </span>
+
+            </div>
+
+
+            <div class="account-row">
+
+                <span class="account-label">
+                    Email
+                </span>
+
+                <span
+                    class="account-value"
+                    id="accountEmail"
+                >
+                    Not connected
+                </span>
+
+            </div>
+
+
+            <div class="account-row">
+
+                <span class="account-label">
+                    Member since
+                </span>
+
+                <span
+                    class="account-value"
+                    id="accountMemberSince"
+                >
+                    --
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BALANCE
+         ================================================= -->
+
+    <section class="profile-section balance-section">
+
+        <div class="profile-section-heading">
+
+            <h2>
+                Balance
+            </h2>
+
+        </div>
+
+
+        <div class="balance-list">
+
+
+            <button
+                class="balance-row"
+                id="gemsBalanceButton"
+                type="button"
+            >
+
+                <span class="balance-icon gems-icon">
+                    💎
+                </span>
+
+
+                <span class="balance-content">
+
+                    <strong>
+                        Gems
+                    </strong>
+
+                    <span>
+                        Premium currency
+                    </span>
+
+                </span>
+
+
+                <span
+                    class="balance-value"
+                    id="gemsBalance"
+                >
+                    0
+                </span>
+
+
+                <span class="balance-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROFILE CUSTOMIZATION
+         ================================================= -->
+
+    <section class="profile-section customization-section">
+
+        <div class="profile-section-heading">
+
+            <h2>
+                Profile Customization
+            </h2>
+
+        </div>
+
+
+        <div class="customization-list">
+
+
+            <button
+                class="customization-row"
+                id="changeAvatarButton"
+                type="button"
+            >
+
+                <span class="customization-icon">
+                    ◉
+                </span>
+
+
+                <span class="customization-content">
+
+                    <strong>
+                        Profile Picture
+                    </strong>
+
+                    <span>
+                        Change your avatar
+                    </span>
+
+                </span>
+
+
+                <span class="customization-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="customization-row"
+                id="profileFrameButton"
+                type="button"
+            >
+
+                <span class="customization-icon">
+                    ◇
+                </span>
+
+
+                <span class="customization-content">
+
+                    <strong>
+                        Profile Frame
+                    </strong>
+
+                    <span>
+                        Customize your avatar frame
+                    </span>
+
+                </span>
+
+
+                <span class="customization-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="customization-row"
+                id="profileBannerButton"
+                type="button"
+            >
+
+                <span class="customization-icon">
+                    ▧
+                </span>
+
+
+                <span class="customization-content">
+
+                    <strong>
+                        Profile Banner
+                    </strong>
+
+                    <span>
+                        Customize your profile cover
+                    </span>
+
+                </span>
+
+
+                <span class="customization-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SETTINGS
+         ================================================= -->
+
+    <section class="profile-section settings-section">
+
+        <div class="profile-section-heading">
+
+            <h2>
+                Settings
+            </h2>
+
+        </div>
+
+
+        <div class="settings-list">
+
+
+            <button
+                class="settings-row"
+                id="readerSettingsButton"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    ⚙
+                </span>
+
+
+                <span class="settings-content">
+
+                    <strong>
+                        Reader Settings
+                    </strong>
+
+                    <span>
+                        Customize your reading experience
+                    </span>
+
+                </span>
+
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="settings-row"
+                id="notificationsButton"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    ♧
+                </span>
+
+
+                <span class="settings-content">
+
+                    <strong>
+                        Notifications
+                    </strong>
+
+                    <span>
+                        Manage your notifications
+                    </span>
+
+                </span>
+
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="settings-row"
+                id="appearanceButton"
+                type="button"
+            >
+
+                <span class="settings-icon">
+                    ◐
+                </span>
+
+
+                <span class="settings-content">
+
+                    <strong>
+                        Appearance
+                    </strong>
+
+                    <span>
+                        Customize Ever Joy
+                    </span>
+
+                </span>
+
+
+                <span class="settings-arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ABOUT EVER JOY
+         ================================================= -->
+
+    <section class="profile-section about-section">
+
+        <div class="profile-section-heading">
+
+            <h2>
+                About Ever Joy
+            </h2>
+
+        </div>
+
+
+        <div class="about-list">
+
+            <a
+                href="../about.html"
+                class="about-row"
+            >
+
+                <span>
+                    About Ever Joy
+                </span>
+
+                <span>
+                    ›
+                </span>
+
+            </a>
+
+
+            <a
+                href="../terms.html"
+                class="about-row"
+            >
+
+                <span>
+                    Terms of Service
+                </span>
+
+                <span>
+                    ›
+                </span>
+
+            </a>
+
+
+            <a
+                href="../privacy.html"
+                class="about-row"
+            >
+
+                <span>
+                    Privacy Policy
+                </span>
+
+                <span>
+                    ›
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- =================================================
+         FOOTER
+         ================================================= -->
+
+    <footer class="profile-footer">
+
+        <span>
+            Ever Joy Comics
+        </span>
+
+        <span>
+            Version 1.0.0
+        </span>
+
+    </footer>
+
+</main>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="/js/script.js"></script>
+<script src="../js/comics.js"></script>
+<script src="../js/profile.js"></script>
+
+
+</body>
+
+</html>

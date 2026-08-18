@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Your reading history on Ever Joy Comics."
+>
+
+<title>Reading History | Ever Joy Comics</title>
+
+
+<!-- =====================================================
+     GLOBAL CSS
+     ===================================================== -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- =====================================================
+     HISTORY CSS
+     ===================================================== -->
+
+<link
+    rel="stylesheet"
+    href="../css/history.css"
+>
+
+</head><body class="history-page"><!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="history-header">
+
+    <button
+        class="history-back-btn"
+        onclick="history.back()"
+        aria-label="Go back"
+    >
+
+        ←
+
+    </button>
+
+
+    <div class="history-header-title">
+
+        <h1>
+            Reading History
+        </h1>
+
+        <span>
+            Your recently read chapters
+        </span>
+
+    </div>
+
+
+    <button
+        class="history-clear-btn"
+        id="clearHistoryButton"
+        aria-label="Clear reading history"
+    >
+
+        Clear
+
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+
+<main class="history-container">
+
+
+    <!-- =================================================
+         HISTORY SUMMARY
+         ================================================= -->
+
+    <section class="history-summary">
+
+        <div class="history-summary-text">
+
+            <span class="history-summary-label">
+                Reading History
+            </span>
+
+            <strong id="historyCount">
+                0 chapters
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         HISTORY LIST
+         ================================================= -->
+
+    <section
+        class="history-list-section"
+        aria-label="Recently read chapters"
+    >
+
+        <div
+            class="history-list"
+            id="historyList"
+        >
+
+            <!--
+
+                Reading history entries
+                will be inserted here
+                by JavaScript.
+
+            -->
+
+        </div>
+
+
+        <!-- =============================================
+             EMPTY STATE
+             ============================================= -->
+
+        <div
+            class="history-empty"
+            id="historyEmpty"
+            hidden
+        >
+
+            <div class="history-empty-icon">
+                ◷
+            </div>
+
+
+            <h2>
+                No reading history yet
+            </h2>
+
+
+            <p>
+                Chapters you read will appear here.
+            </p>
+
+
+            <a
+                href="../index.html"
+                class="history-browse-btn"
+            >
+
+                Start Reading
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     GLOBAL JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/script.js"
+></script>
+
+
+<!-- =====================================================
+     COMIC DATA / SYSTEM
+     ===================================================== -->
+
+<script
+    src="../js/comics.js"
+></script>
+
+
+<!-- =====================================================
+     HISTORY JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/history.js"
+></script>
+
+</body>
+
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Customize your Ever Joy Comics reading experience."
+    >
+
+    <title>Reader Settings | Ever Joy Comics</title>
+
+
+    <!-- GLOBAL CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- READER CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/reader.css"
+    >
+
+
+    <!-- READER SETTINGS CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/reader-settings.css"
+    >
+
+</head>
+
+
+<body class="reader-settings-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="reader-settings-header">
+
+        <button
+            type="button"
+            class="reader-settings-back"
+            id="readerSettingsBack"
+            aria-label="Go back"
+        >
+            ←
+        </button>
+
+
+        <div class="reader-settings-header-title">
+
+            <span>
+                READING
+            </span>
+
+            <h1>
+                Reader Settings
+            </h1>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="reader-settings-container">
+
+
+        <!-- =================================================
+             BRIGHTNESS
+        ================================================== -->
+
+        <section class="reader-settings-section">
+
+            <div class="reader-settings-section-heading">
+
+                <div>
+
+                    <span class="reader-settings-eyebrow">
+                        DISPLAY
+                    </span>
+
+                    <h2>
+                        Brightness
+                    </h2>
+
+                </div>
+
+                <span
+                    class="reader-settings-value"
+                    id="brightnessValue"
+                >
+                    100%
+                </span>
+
+            </div>
+
+
+            <div class="brightness-control">
+
+                <span
+                    class="brightness-icon brightness-low"
+                    aria-hidden="true"
+                >
+                    ◐
+                </span>
+
+
+                <input
+                    type="range"
+                    id="brightnessSlider"
+                    min="30"
+                    max="100"
+                    value="100"
+                    step="1"
+                    aria-label="Reader brightness"
+                >
+
+
+                <span
+                    class="brightness-icon brightness-high"
+                    aria-hidden="true"
+                >
+                    ◑
+                </span>
+
+            </div>
+
+
+            <p class="reader-settings-description">
+                Adjust the brightness of the reading screen.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             READING APPEARANCE
+        ================================================== -->
+
+        <section class="reader-settings-section">
+
+            <div class="reader-settings-section-heading">
+
+                <div>
+
+                    <span class="reader-settings-eyebrow">
+                        READING ENVIRONMENT
+                    </span>
+
+                    <h2>
+                        Reading Appearance
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="reader-appearance-options"
+                id="readerAppearanceOptions"
+            >
+
+
+                <button
+                    type="button"
+                    class="reader-appearance-option active"
+                    data-reader-theme="dark"
+                >
+
+                    <span class="appearance-preview appearance-dark">
+                    </span>
+
+                    <span class="appearance-option-content">
+
+                        <strong>
+                            Dark
+                        </strong>
+
+                        <small>
+                            Default reading environment
+                        </small>
+
+                    </span>
+
+                    <span class="appearance-check">
+                        ✓
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="reader-appearance-option"
+                    data-reader-theme="dim"
+                >
+
+                    <span class="appearance-preview appearance-dim">
+                    </span>
+
+                    <span class="appearance-option-content">
+
+                        <strong>
+                            Dim
+                        </strong>
+
+                        <small>
+                            Softer for low-light reading
+                        </small>
+
+                    </span>
+
+                    <span class="appearance-check">
+                        ✓
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="reader-appearance-option"
+                    data-reader-theme="light"
+                >
+
+                    <span class="appearance-preview appearance-light">
+                    </span>
+
+                    <span class="appearance-option-content">
+
+                        <strong>
+                            Light
+                        </strong>
+
+                        <small>
+                            Bright reading environment
+                        </small>
+
+                    </span>
+
+                    <span class="appearance-check">
+                        ✓
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             READER CONTROLS
+        ================================================== -->
+
+        <section class="reader-settings-section">
+
+            <div class="reader-settings-section-heading">
+
+                <div>
+
+                    <span class="reader-settings-eyebrow">
+                        CONTROLS
+                    </span>
+
+                    <h2>
+                        Reader Controls
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="reader-settings-list">
+
+
+                <div class="reader-setting-row">
+
+                    <div class="reader-setting-row-content">
+
+                        <strong>
+                            Auto-hide controls
+                        </strong>
+
+                        <span>
+                            Hide the reader controls while reading.
+                        </span>
+
+                    </div>
+
+
+                    <label class="settings-switch">
+
+                        <input
+                            type="checkbox"
+                            id="autoHideControls"
+                            checked
+                        >
+
+                        <span class="settings-switch-slider">
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <div class="reader-setting-row">
+
+                    <div class="reader-setting-row-content">
+
+                        <strong>
+                            Tap to show controls
+                        </strong>
+
+                        <span>
+                            Tap the screen to bring reader controls back.
+                        </span>
+
+                    </div>
+
+
+                    <label class="settings-switch">
+
+                        <input
+                            type="checkbox"
+                            id="tapToShowControls"
+                            checked
+                        >
+
+                        <span class="settings-switch-slider">
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             READING BEHAVIOUR
+        ================================================== -->
+
+        <section class="reader-settings-section">
+
+            <div class="reader-settings-section-heading">
+
+                <div>
+
+                    <span class="reader-settings-eyebrow">
+                        READING
+                    </span>
+
+                    <h2>
+                        Reading Behaviour
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="reader-settings-list">
+
+
+                <div class="reader-setting-row">
+
+                    <div class="reader-setting-row-content">
+
+                        <strong>
+                            Save reading progress
+                        </strong>
+
+                        <span>
+                            Remember your position when you leave a chapter.
+                        </span>
+
+                    </div>
+
+
+                    <label class="settings-switch">
+
+                        <input
+                            type="checkbox"
+                            id="saveReadingProgress"
+                            checked
+                        >
+
+                        <span class="settings-switch-slider">
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESET
+        ================================================== -->
+
+        <section class="reader-settings-reset-section">
+
+            <button
+                type="button"
+                class="reader-settings-reset"
+                id="resetReaderSettings"
+            >
+                Reset Reader Settings
+            </button>
+
+            <p>
+                Restore all reader preferences to their defaults.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="../js/app.js"
+    ></script>
+
+    <script
+        src="../js/reader-settings.js"
+    ></script>
+
+
+</body>
+
+</html>

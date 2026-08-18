@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Library | Ever Joy Comics</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/reader.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         LIBRARY HEADER
+         ===================================================== -->
+
+    <header class="library-header">
+
+        <div class="library-header-left">
+
+            <button
+                class="library-menu-btn"
+                id="libraryMenuButton"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+            <div>
+
+                <span class="library-eyebrow">
+                    YOUR SPACE
+                </span>
+
+                <h1>
+                    My Library
+                </h1>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="../reader/profile.html"
+            class="library-profile-btn"
+            aria-label="Profile"
+        >
+            ♡
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN LIBRARY
+         ===================================================== -->
+
+    <main class="library-page">
+
+
+        <!-- =================================================
+             CONTINUE READING
+             ================================================= -->
+
+        <section
+            class="library-section continue-section"
+        >
+
+            <div class="library-section-heading">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        PICK UP WHERE YOU LEFT OFF
+                    </span>
+
+                    <h2>
+                        Continue Reading
+                    </h2>
+
+                </div>
+
+                <a
+                    href="history.html"
+                    class="library-see-all"
+                >
+                    See all
+                </a>
+
+            </div>
+
+
+            <div
+                class="continue-reading-list"
+                id="continueReadingList"
+            >
+
+                <!--
+                    Continue-reading cards
+                    will be created by JavaScript.
+                -->
+
+            </div>
+
+
+            <div
+                class="library-empty-state"
+                id="continueEmpty"
+                hidden
+            >
+
+                <div class="library-empty-icon">
+                    ◌
+                </div>
+
+                <h3>
+                    Your reading journey starts here
+                </h3>
+
+                <p>
+                    Start reading a comic and your
+                    progress will appear here.
+                </p>
+
+                <a
+                    href="../discover.html"
+                    class="library-action-button"
+                >
+                    Discover Comics
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MY COMICS
+             ================================================= -->
+
+        <section
+            class="library-section"
+        >
+
+            <div class="library-section-heading">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        YOUR COLLECTION
+                    </span>
+
+                    <h2>
+                        My Comics
+                    </h2>
+
+                </div>
+
+                <a
+                    href="bookmarks.html"
+                    class="library-see-all"
+                >
+                    See all
+                </a>
+
+            </div>
+
+
+            <div
+                class="library-grid"
+                id="libraryGrid"
+            >
+
+                <!--
+                    Saved comics will be rendered here.
+                -->
+
+            </div>
+
+
+            <div
+                class="library-empty-state"
+                id="libraryEmpty"
+                hidden
+            >
+
+                <div class="library-empty-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Your library is empty
+                </h3>
+
+                <p>
+                    Save comics you love and they'll
+                    appear here for easy access.
+                </p>
+
+                <a
+                    href="../discover.html"
+                    class="library-action-button"
+                >
+                    Explore Comics
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECENTLY READ
+             ================================================= -->
+
+        <section
+            class="library-section"
+        >
+
+            <div class="library-section-heading">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        YOUR ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recently Read
+                    </h2>
+
+                </div>
+
+                <a
+                    href="history.html"
+                    class="library-see-all"
+                >
+                    View history
+                </a>
+
+            </div>
+
+
+            <div
+                class="library-grid"
+                id="recentlyReadGrid"
+            >
+
+                <!--
+                    Recently read works will be rendered
+                    by JavaScript.
+                -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOOKMARKS
+             ================================================= -->
+
+        <section
+            class="library-section"
+        >
+
+            <div class="library-section-heading">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        SAVED FOR LATER
+                    </span>
+
+                    <h2>
+                        Bookmarks
+                    </h2>
+
+                </div>
+
+                <a
+                    href="bookmarks.html"
+                    class="library-see-all"
+                >
+                    View all
+                </a>
+
+            </div>
+
+
+            <div
+                class="bookmark-preview"
+                id="bookmarkPreview"
+            >
+
+                <div class="bookmark-placeholder">
+
+                    <span>
+                        🔖
+                    </span>
+
+                    <p>
+                        Your bookmarked chapters will
+                        appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         BOTTOM NAVIGATION
+         ===================================================== -->
+
+    <nav class="bottom-nav">
+
+        <a
+            href="../index.html"
+            class="bottom-nav-item"
+        >
+
+            <span>
+                ⌂
+            </span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="../discover.html"
+            class="bottom-nav-item"
+        >
+
+            <span>
+                ◇
+            </span>
+
+            <small>
+                Discover
+            </small>
+
+        </a>
+        
+        <a href="../p-creator/creators.html" class="bottom-nav-item">
+        <span>♙</span>
+        <small>Creators</small>
+    </a>
+
+
+
+        <a
+            href="library.html"
+            class="bottom-nav-item active"
+        >
+
+            <span>
+                ♡
+            </span>
+
+            <small>
+                Library
+            </small>
+
+        </a>
+
+
+        <a
+            href="profile.html"
+            class="bottom-nav-item"
+        >
+
+            <span>
+                ◯
+            </span>
+
+            <small>
+                Profile
+            </small>
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="../js/app.js"
+    ></script>
+
+    <script
+        src="../js/reader.js"
+    ></script>
+
+
+</body>
+
+</html>
