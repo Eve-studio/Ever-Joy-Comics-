@@ -1,0 +1,956 @@
+/* =========================================================
+   EVER JOY COMICS
+   CENTRALIZED REPORT PAGE
+   report.html
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE
+   ========================================================= */
+
+.report-page {
+    min-height: 100vh;
+
+    background: var(--bg-primary, #0b0b0f);
+    color: var(--text-primary, #ffffff);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   2. HEADER
+   ========================================================= */
+
+.report-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    background: rgba(11, 11, 15, 0.96);
+
+    border-bottom: 1px solid var(--border, rgba(255,255,255,0.07));
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+.report-back-button {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 12px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: var(--bg-card, #181820);
+    color: var(--text-primary, #ffffff);
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.report-back-button:hover {
+    background: var(--bg-elevated, #20202a);
+}
+
+
+.report-back-button:active {
+    transform: scale(0.94);
+}
+
+
+.report-header-title {
+    min-width: 0;
+}
+
+
+.report-header-eyebrow {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--accent, #e63946);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.report-header h1 {
+    margin: 0;
+
+    color: var(--text-primary, #ffffff);
+
+    font-size: 20px;
+    font-weight: 750;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   3. MAIN CONTAINER
+   ========================================================= */
+
+.report-container {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding:
+        30px 18px
+        70px;
+}
+
+
+/* =========================================================
+   4. INTRO
+   ========================================================= */
+
+.report-intro {
+    margin-bottom: 34px;
+}
+
+
+.report-intro h2 {
+    margin: 0 0 8px;
+
+    font-size: 25px;
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+
+.report-intro p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: var(--text-secondary, #b7b7c2);
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   5. REPORT STEPS
+   ========================================================= */
+
+.report-step {
+    margin-bottom: 28px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 18px;
+
+    background: var(--bg-card, #181820);
+}
+
+
+.report-step-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.report-step-number {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(230, 57, 70, 0.12);
+
+    color: var(--accent, #e63946);
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+.report-step-eyebrow {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--accent, #e63946);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.report-step-heading h2 {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   6. CATEGORY GRID
+   ========================================================= */
+
+.report-category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+
+.report-category-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    background: var(--bg-secondary, #121219);
+
+    color: var(--text-primary, #ffffff);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.report-category-card:hover {
+    border-color: rgba(230, 57, 70, 0.4);
+
+    background: var(--bg-elevated, #20202a);
+
+    transform: translateY(-1px);
+}
+
+
+.report-category-card.active {
+    border-color: var(--accent, #e63946);
+
+    background:
+        rgba(230, 57, 70, 0.08);
+
+    box-shadow:
+        0 0 0 1px rgba(230, 57, 70, 0.12);
+}
+
+
+.report-category-icon {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--accent, #e63946);
+
+    font-size: 20px;
+}
+
+
+.report-category-title {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.report-category-description {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-muted, #777783);
+
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   7. SUBCATEGORY
+   ========================================================= */
+
+.report-subcategory-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.report-subcategory-option {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 12px;
+
+    background: var(--bg-secondary, #121219);
+
+    color: var(--text-secondary, #b7b7c2);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.report-subcategory-option:hover {
+    color: var(--text-primary, #ffffff);
+
+    border-color: rgba(230, 57, 70, 0.3);
+}
+
+
+.report-subcategory-option.active {
+    color: var(--text-primary, #ffffff);
+
+    border-color: var(--accent, #e63946);
+
+    background: rgba(230, 57, 70, 0.08);
+}
+
+
+/* =========================================================
+   8. FORM FIELDS
+   ========================================================= */
+
+.report-target-fields {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 12px;
+}
+
+
+.report-field {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 14px;
+}
+
+
+.report-field:last-child {
+    margin-bottom: 0;
+}
+
+
+.report-field label {
+    color: var(--text-secondary, #b7b7c2);
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+
+.report-field input,
+.report-field select,
+.report-field textarea {
+    width: 100%;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 12px;
+
+    background: var(--bg-secondary, #121219);
+
+    color: var(--text-primary, #ffffff);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.report-field input,
+.report-field select {
+    min-height: 46px;
+
+    padding: 0 13px;
+}
+
+
+.report-field textarea {
+    min-height: 130px;
+
+    padding: 13px;
+
+    resize: vertical;
+
+    line-height: 1.55;
+}
+
+
+.report-field input::placeholder,
+.report-field textarea::placeholder {
+    color: var(--text-muted, #777783);
+}
+
+
+.report-field input:focus,
+.report-field select:focus,
+.report-field textarea:focus {
+    border-color: var(--accent, #e63946);
+
+    background: var(--bg-card, #181820);
+
+    box-shadow:
+        0 0 0 3px rgba(230, 57, 70, 0.08);
+}
+
+
+.report-field select {
+    appearance: auto;
+}
+
+
+.report-character-count {
+    align-self: flex-end;
+
+    margin-top: -2px;
+
+    color: var(--text-muted, #777783);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   9. CONTACT NOTE
+   ========================================================= */
+
+.report-contact-note {
+    margin-bottom: 18px;
+
+    padding: 12px 14px;
+
+    border-left: 3px solid var(--accent, #e63946);
+
+    border-radius: 8px;
+
+    background: rgba(230, 57, 70, 0.06);
+}
+
+
+.report-contact-note p {
+    margin: 0;
+
+    color: var(--text-secondary, #b7b7c2);
+
+    font-size: 11px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   10. CONFIRMATION
+   ========================================================= */
+
+.report-confirmation {
+    padding: 2px 0;
+}
+
+
+.report-checkbox {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: var(--text-secondary, #b7b7c2);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+.report-checkbox input {
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    accent-color: var(--accent, #e63946);
+}
+
+
+/* =========================================================
+   11. FORM ERROR
+   ========================================================= */
+
+.report-form-error {
+    margin-bottom: 18px;
+
+    padding: 12px 14px;
+
+    border: 1px solid rgba(230, 57, 70, 0.3);
+
+    border-radius: 12px;
+
+    background: rgba(230, 57, 70, 0.08);
+
+    color: #ff9aa2;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   12. SUBMIT
+   ========================================================= */
+
+.report-submit-section {
+    text-align: center;
+
+    padding: 4px 0 10px;
+}
+
+
+.report-submit-button {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: var(--accent, #e63946);
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.report-submit-button:hover {
+    background: var(--accent-hover, #ff4d5a);
+
+    box-shadow:
+        0 8px 25px rgba(230, 57, 70, 0.18);
+}
+
+
+.report-submit-button:active {
+    transform: scale(0.985);
+}
+
+
+.report-submit-button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+.report-submit-note {
+    margin: 9px 0 0;
+
+    color: var(--text-muted, #777783);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   13. SUCCESS STATE
+   ========================================================= */
+
+.report-success {
+    padding: 55px 20px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    border-radius: 20px;
+
+    background: var(--bg-card, #181820);
+}
+
+
+.report-success-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(230, 57, 70, 0.1);
+
+    color: var(--accent, #e63946);
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+
+.report-success-eyebrow {
+    color: var(--accent, #e63946);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.report-success h2 {
+    margin: 8px 0;
+
+    font-size: 22px;
+}
+
+
+.report-success p {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: var(--text-secondary, #b7b7c2);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.report-success-actions {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+
+.report-success-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 9px 16px;
+
+    border-radius: 11px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.report-success-button.primary {
+    background: var(--accent, #e63946);
+
+    color: #ffffff;
+}
+
+
+.report-success-button.secondary {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: var(--bg-secondary, #121219);
+
+    color: var(--text-secondary, #b7b7c2);
+}
+
+
+.report-success-button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   14. FOOTER
+   ========================================================= */
+
+.report-footer {
+    margin-top: auto;
+
+    padding:
+        30px
+        20px
+        90px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    text-align: center;
+}
+
+
+.report-footer p {
+    margin: 0 0 4px;
+
+    color: var(--text-primary, #ffffff);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.report-footer span {
+    color: var(--text-muted, #777783);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   15. TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .report-container {
+        padding:
+            40px 28px
+            70px;
+    }
+
+
+    .report-category-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+
+    .report-step {
+        padding: 26px;
+    }
+
+}
+
+
+/* =========================================================
+   16. DESKTOP
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .report-header {
+        padding-inline: 32px;
+    }
+
+
+    .report-container {
+        max-width: 820px;
+
+        padding-top: 48px;
+    }
+
+
+    .report-intro h2 {
+        font-size: 29px;
+    }
+
+
+    .report-category-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+
+
+    .report-step {
+        padding: 28px;
+    }
+
+
+    .report-submit-button {
+        width: auto;
+
+        min-width: 260px;
+    }
+
+}
+
+
+/* =========================================================
+   17. SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .report-container {
+        padding-inline: 12px;
+    }
+
+
+    .report-header {
+        padding-inline: 12px;
+    }
+
+
+    .report-intro h2 {
+        font-size: 22px;
+    }
+
+
+    .report-step {
+        padding: 17px;
+
+        border-radius: 15px;
+    }
+
+
+    .report-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .report-target-fields {
+        grid-template-columns: 1fr;
+    }
+
+
+    .report-success-actions {
+        flex-direction: column;
+    }
+
+
+    .report-success-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   18. ACCESSIBILITY
+   ========================================================= */
+
+.report-back-button:focus-visible,
+.report-category-card:focus-visible,
+.report-subcategory-option:focus-visible,
+.report-field input:focus-visible,
+.report-field select:focus-visible,
+.report-field textarea:focus-visible,
+.report-submit-button:focus-visible,
+.report-success-button:focus-visible {
+
+    outline:
+        2px solid
+        var(--accent, #e63946);
+
+    outline-offset: 3px;
+}

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Report a problem or violation on Ever Joy Comics."
+    >
+
+    <title>Report | Ever Joy Comics</title>
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================================
+         REPORT PAGE CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../reports/report.css"
+    >
+
+</head>
+
+
+<body class="report-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="report-header">
+
+        <button
+            type="button"
+            class="report-back-button"
+            id="reportBackButton"
+            aria-label="Go back"
+        >
+            ←
+        </button>
+
+
+        <div class="report-header-title">
+
+            <span class="report-header-eyebrow">
+                EVER JOY COMICS
+            </span>
+
+            <h1>
+                Report a Problem
+            </h1>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="report-container">
+
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
+
+        <section class="report-intro">
+
+            <h2>
+                What would you like to report?
+            </h2>
+
+            <p>
+                Help us keep Ever Joy Comics safe, original,
+                and enjoyable for everyone. Choose the option
+                that best describes the issue you're reporting.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT FORM
+        ================================================== -->
+
+        <form
+            class="report-form"
+            id="reportForm"
+            novalidate
+        >
+
+
+            <!-- =============================================
+                 STEP 1 — REPORT CATEGORY
+            ============================================== -->
+
+            <section
+                class="report-step"
+                id="reportCategoryStep"
+            >
+
+                <div class="report-step-heading">
+
+                    <span class="report-step-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <span class="report-step-eyebrow">
+                            CATEGORY
+                        </span>
+
+                        <h2>
+                            What is the issue?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="report-category-grid"
+                    id="reportCategoryGrid"
+                >
+
+                    <!--
+                        Categories will be generated
+                        by report.js.
+
+                        Examples:
+
+                        Copyright / Ownership
+                        Plagiarism / Stolen Work
+                        AI-Generated Content
+                        Inappropriate Content
+                        Harassment / Bullying
+                        Scam / Fraud
+                        Spam
+                        Privacy
+                        Security
+                        Payment / Gems
+                        Bug / Technical Problem
+                        Other
+                    -->
+
+                </div>
+
+                <input
+                    type="hidden"
+                    id="reportType"
+                    name="reportType"
+                >
+
+            </section>
+
+
+
+            <!-- =============================================
+                 STEP 2 — SPECIFIC ISSUE
+            ============================================== -->
+
+            <section
+                class="report-step"
+                id="reportSubcategoryStep"
+                
+            >
+
+                <div class="report-step-heading">
+
+                    <span class="report-step-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <span class="report-step-eyebrow">
+                            DETAILS
+                        </span>
+
+                        <h2>
+                            Tell us more
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="report-subcategory-list"
+                    id="reportSubcategoryList"
+                >
+
+                    <!--
+                        Subcategories will be generated
+                        dynamically according to the
+                        selected report category.
+                    -->
+
+                </div>
+
+                <input
+                    type="hidden"
+                    id="reportSubType"
+                    name="reportSubType"
+                >
+
+            </section>
+
+
+
+            <!-- =============================================
+                 STEP 3 — TARGET
+            ============================================== -->
+
+            <section
+                class="report-step"
+                id="reportTargetStep"
+                
+            >
+
+                <div class="report-step-heading">
+
+                    <span class="report-step-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <span class="report-step-eyebrow">
+                            TARGET
+                        </span>
+
+                        <h2>
+                            What are you reporting?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-target-fields">
+
+
+                    <div class="report-field">
+
+                        <label
+                            for="reportTargetType"
+                        >
+                            Target type
+                        </label>
+
+                        <select
+                            id="reportTargetType"
+                            name="targetType"
+                        >
+
+                            <option value="">
+                                Select target
+                            </option>
+
+                            <option value="comic">
+                                Comic / Work
+                            </option>
+
+                            <option value="chapter">
+                                Chapter / Episode
+                            </option>
+
+                            <option value="creator">
+                                Creator
+                            </option>
+
+                            <option value="comment">
+                                Comment
+                            </option>
+
+                            <option value="review">
+                                Review
+                            </option>
+
+                            <option value="account">
+                                Account
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="report-field">
+
+                        <label
+                            for="reportTargetId"
+                        >
+                            Link or ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="reportTargetId"
+                            name="targetId"
+                            placeholder="Paste the relevant link or ID"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 STEP 4 — DESCRIPTION
+            ============================================== -->
+
+            <section
+                class="report-step"
+                id="reportDescriptionStep"
+                
+            >
+
+                <div class="report-step-heading">
+
+                    <span class="report-step-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <span class="report-step-eyebrow">
+                            EXPLANATION
+                        </span>
+
+                        <h2>
+                            Tell us what happened
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-field">
+
+                    <label
+                        for="reportDescription"
+                    >
+                        Description
+                    </label>
+
+                    <textarea
+                        id="reportDescription"
+                        name="description"
+                        rows="7"
+                        maxlength="3000"
+                        placeholder="Please describe the issue clearly and include any information that may help us investigate."
+                    ></textarea>
+
+                    <span
+                        class="report-character-count"
+                        id="reportCharacterCount"
+                    >
+                        0 / 3000
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 STEP 5 — EVIDENCE
+            ============================================== -->
+
+            <section
+                class="report-step"
+                id="reportEvidenceStep"
+                
+            >
+
+                <div class="report-step-heading">
+
+                    <span class="report-step-number">
+                        05
+                    </span>
+
+                    <div>
+
+                        <span class="report-step-eyebrow">
+                            EVIDENCE
+                        </span>
+
+                        <h2>
+                            Supporting information
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-field">
+
+                    <label
+                        for="reportEvidence"
+                    >
+                        Evidence or additional links
+                    </label>
+
+                    <textarea
+                        id="reportEvidence"
+                        name="evidence"
+                        rows="5"
+                        maxlength="2000"
+                        placeholder="Add relevant links, references, or other information if available."
+                    ></textarea>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 STEP 6 — CONTACT
+            ============================================== -->
+
+            <section
+                class="report-step"
+                id="reportContactStep"
+                
+            >
+
+                <div class="report-step-heading">
+
+                    <span class="report-step-number">
+                        06
+                    </span>
+
+                    <div>
+
+                        <span class="report-step-eyebrow">
+                            CONTACT
+                        </span>
+
+                        <h2>
+                            How can we reach you?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-contact-note">
+
+                    <p>
+                        If you're signed in, we'll associate
+                        this report with your Ever Joy account.
+                        You may also provide an email address
+                        if needed.
+                    </p>
+
+                </div>
+
+
+                <div class="report-field">
+
+                    <label
+                        for="reportEmail"
+                    >
+                        Email address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="reportEmail"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 CONSENT / CONFIRMATION
+            ============================================== -->
+
+            <section
+                class="report-step"
+                id="reportConfirmationStep"
+                
+            >
+
+                <div class="report-confirmation">
+
+                    <label class="report-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="reportConfirmation"
+                            name="confirmation"
+                        >
+
+                        <span>
+                            I confirm that the information
+                            provided is accurate to the best
+                            of my knowledge.
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 FORM ERROR
+            ============================================== -->
+
+            <div
+                class="report-form-error"
+                id="reportFormError"
+                role="alert"
+                
+            >
+            </div>
+
+
+
+            <!-- =============================================
+                 SUBMIT
+            ============================================== -->
+
+            <div
+                class="report-submit-section"
+                id="reportSubmitSection"
+                
+            >
+
+                <button
+                    type="submit"
+                    class="report-submit-button"
+                    id="reportSubmitButton"
+                >
+                    Submit Report
+                </button>
+
+                <p class="report-submit-note">
+                    Reports are reviewed according to
+                    Ever Joy Comics' policies.
+                </p>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =================================================
+             SUCCESS STATE
+        ================================================== -->
+
+        <section
+            class="report-success"
+            id="reportSuccess"
+            hidden
+        >
+
+            <div class="report-success-icon">
+                ✓
+            </div>
+
+            <span class="report-success-eyebrow">
+                REPORT RECEIVED
+            </span>
+
+            <h2>
+                Thank you for letting us know.
+            </h2>
+
+            <p>
+                Your report has been submitted successfully.
+                Our team will review the information and take
+                appropriate action if necessary.
+            </p>
+
+            <div class="report-success-actions">
+
+                <a
+                    href="../index.html"
+                    class="report-success-button primary"
+                >
+                    Return Home
+                </a>
+
+                <a
+                    href="report.html"
+                    class="report-success-button secondary"
+                >
+                    Submit Another Report
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="report-footer">
+
+        <p>
+            Ever Joy Comics
+        </p>
+
+        <span>
+            Original stories. Original creators.
+        </span>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/script.js"></script>
+
+    <script src="reports/report.js"></script>
+
+</body>
+
+</html>
