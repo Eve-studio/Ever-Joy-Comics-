@@ -1,0 +1,128 @@
+{
+    "readerProtection": {
+        "enabled": true,
+
+        "interactionProtection": {
+            "disableContextMenu": true,
+            "disableImageDragging": true,
+            "disableTextSelection": true,
+            "disableImageSaving": true,
+            "disableCopy": true
+        },
+
+        "screenProtection": {
+            "enabled": true,
+            "blurOnVisibilityLoss": true,
+            "blurOnWindowBlur": true
+        },
+
+        "watermark": {
+            "enabled": true,
+            "opacity": 0.12,
+            "position": "center",
+            "dynamic": true
+        },
+
+        "scrapingProtection": {
+            "enabled": true,
+            "detectRapidRequests": true,
+            "detectAbnormalReading": true,
+            "rateLimit": true
+        }
+    },
+
+    "aiContentProtection": {
+        "enabled": true,
+        "creatorDisclosure": true,
+        "readerReporting": true,
+        "humanReviewRequired": true
+    },
+
+    "copyrightProtection": {
+        "enabled": true,
+        "readerReporting": true,
+        "creatorTakedownRequests": true
+    }
+}
+{
+    "security": {
+        "enabled": true,
+
+        "contentProtection": {
+            "enabled": true,
+            "disableContextMenu": true,
+            "disableCopy": true,
+            "disableImageDragging": true,
+            "disablePrint": true,
+            "disableSelection": true
+        },
+
+        "readerProtection": {
+            "enabled": true,
+            "protectReaderInterface": true,
+            "protectComicPages": true,
+            "protectPageUrls": true
+        },
+
+        "watermark": {
+            "enabled": true,
+            "dynamic": true,
+            "platform": true,
+            "creator": true,
+            "comic": true
+        },
+
+        "assetProtection": {
+            "enabled": true,
+            "requireAuthentication": true,
+            "requireChapterAccess": true,
+            "preventDirectAccess": true
+        },
+
+        "abuseDetection": {
+            "enabled": true,
+            "rapidPageRequests": true,
+            "rapidChapterRequests": true,
+            "abnormalReadingSpeed": true
+        }
+    }
+}
+{
+    "contentModeration": {
+        "enabled": true,
+
+        "statuses": [
+            "pending",
+            "under_review",
+            "confirmed",
+            "cleared",
+            "rejected"
+        ],
+
+        "flagReasons": [
+            "suspected_ai_generated",
+            "copyright_concern",
+            "stolen_content",
+            "unauthorized_upload",
+            "inappropriate_content",
+            "misleading_content",
+            "other"
+        ],
+
+        "defaultStatus": "pending",
+
+        "requireManualReview": true
+    },
+
+    "assetProtection": {
+        "enabled": true
+    },
+
+    "contentProtection": {
+        "enabled": true
+    },
+
+    "watermark": {
+        "enabled": true
+    }
+}

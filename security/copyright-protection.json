@@ -1,0 +1,93 @@
+{
+    "contentProtection": {
+        "enabled": true,
+
+        "reader": {
+            "protected": true,
+            "allowDirectPageAccess": false,
+            "allowImageDragging": false,
+            "allowContextMenu": false,
+            "allowCopy": false,
+            "allowDownload": false,
+            "allowPrint": false
+        },
+
+        "images": {
+            "protected": true,
+            "disableDragging": true,
+            "disableSaving": true,
+            "disableHotlinking": true,
+            "requireReaderAccess": true
+        },
+
+        "watermark": {
+            "enabled": true,
+            "showPlatformName": true,
+            "showCreatorName": true,
+            "showComicTitle": true,
+            "showUserIdentifier": false,
+            "dynamicPosition": true
+        },
+
+        "accessControl": {
+            "requireValidComic": true,
+            "requireValidChapter": true,
+            "requireValidPage": true,
+            "verifyComicOwnership": true,
+            "verifyChapterOwnership": true
+        },
+
+        "scraping": {
+            "enabled": true,
+            "detectRapidPageLoading": true,
+            "detectSequentialPageRequests": true,
+            "detectAbnormalReadingSpeed": true,
+            "detectRepeatedRequests": true,
+            "flagSuspiciousActivity": true
+        },
+
+        "copyright": {
+            "protectionNotice": true,
+            "creatorAttribution": true,
+            "platformAttribution": true,
+            "takedownSupport": true
+        },
+
+        "futureFirebase": {
+            "enabled": false,
+            "storageRulesRequired": true,
+            "authenticatedAccessRequired": true,
+            "serverSideValidationRequired": true
+        }
+    }
+}
+{
+    "contentProtection": {
+        "enabled": true,
+
+        "reader": {
+            "allowContextMenu": false,
+            "allowCopy": false,
+            "allowImageDragging": false,
+            "allowPrint": false
+        },
+
+        "images": {
+            "disableDragging": true
+        },
+
+        "watermark": {
+            "enabled": true,
+            "showPlatformName": true,
+            "showCreatorName": true,
+            "showComicTitle": true,
+            "dynamicPosition": true
+        },
+
+        "scraping": {
+            "enabled": true,
+            "detectRapidPageLoading": true,
+            "detectAbnormalReadingSpeed": true
+        }
+    }
+}
