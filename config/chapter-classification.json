@@ -1,0 +1,81 @@
+{
+    "system": {
+        "name": "Ever Joy Chapter Classification",
+        "version": 1,
+        "enabled": true,
+        "classificationMethod": "panel_count"
+    },
+
+    "supportedFormats": {
+        "traditional": true,
+        "vertical": true,
+        "webtoon": true,
+        "otherSupportedComicFormats": true
+    },
+
+    "panelCounting": {
+        "enabled": true,
+        "unit": "panel",
+        "countAllComicPanels": true,
+        "excludeNonComicAssets": true,
+        "creatorControlsPrice": false
+    },
+
+    "classificationTiers": {
+
+        "extraShort": {
+            "minimumPanels": 1,
+            "maximumPanels": 20,
+            "priceGems": 10,
+            "accountingValueUsd": 0.10
+        },
+
+        "short": {
+            "minimumPanels": 21,
+            "maximumPanels": 45,
+            "priceGems": 20,
+            "accountingValueUsd": 0.20
+        },
+
+        "standard": {
+            "minimumPanels": 46,
+            "maximumPanels": 80,
+            "priceGems": 30,
+            "accountingValueUsd": 0.30
+        },
+
+        "long": {
+            "minimumPanels": 81,
+            "maximumPanels": 120,
+            "priceGems": 40,
+            "accountingValueUsd": 0.40
+        },
+
+        "extraLong": {
+            "minimumPanels": 121,
+            "maximumPanels": null,
+            "priceGems": 50,
+            "accountingValueUsd": 0.50
+        }
+    },
+
+    "specialChapters": {
+        "enabled": true,
+        "useStandardPricingTiers": true,
+        "creatorCanSetSpecialPrice": false,
+        "adminOverrideAllowed": true
+    },
+
+    "pricingLimits": {
+        "minimumPaidChapterPriceGems": 10,
+        "maximumPaidChapterPriceGems": 50
+    },
+
+    "classificationRules": {
+        "automaticClassification": true,
+        "basedOnPanelCount": true,
+        "creatorCanOverride": false,
+        "adminCanOverride": true,
+        "manualReviewAvailable": true
+    }
+}

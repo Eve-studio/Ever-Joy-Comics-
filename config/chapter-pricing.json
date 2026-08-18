@@ -1,0 +1,85 @@
+{
+    "currency": "Ever Gems",
+
+    "accountingValue": {
+        "gemsPerDollar": 100,
+        "oneGemUsdValue": 0.01
+    },
+
+    "freeChapterRule": {
+        "enabled": true,
+
+        "chapterRange": {
+            "minimum": 1,
+            "maximum": 18
+        },
+
+        "gemCost": 0,
+
+        "accessMethod": "ad_supported",
+
+        "adsRequired": true,
+
+        "creatorGemRevenue": false,
+
+        "adMonetization": {
+            "enabled": true,
+            "creatorSharePercentage": 50,
+            "everJoySharePercentage": 50
+        }
+    },
+
+    "paidChapterPricing": {
+
+        "extraShort": {
+            "gems": 10,
+            "accountingValueUsd": 0.10
+        },
+
+        "short": {
+            "gems": 20,
+            "accountingValueUsd": 0.20
+        },
+
+        "standard": {
+            "gems": 30,
+            "accountingValueUsd": 0.30
+        },
+
+        "long": {
+            "gems": 40,
+            "accountingValueUsd": 0.40
+        },
+
+        "specialExtraLong": {
+            "gems": 50,
+            "accountingValueUsd": 0.50
+        }
+    },
+
+    "pricingRules": {
+        "controlledBy": "EverJoy",
+        "creatorCanChoosePrice": false,
+        "automaticPricing": true,
+        "specialChaptersUseSamePricingTiers": true,
+        "maximumPaidChapterCostGems": 50
+    },
+
+    "creatorRevenueRules": {
+        "paidChapterCreatorSharePercentage": 65,
+        "paidChapterEverJoySharePercentage": 35,
+
+        "revenueGeneratedOnlyWhenGemsAreSpent": true,
+
+        "unusedReaderGemsGenerateCreatorRevenue": false
+    },
+
+    "notes": {
+        "freeChapters": "Chapters 1 through 18 are free to read through ad-supported access. Ever Gems are not required.",
+        "paidChapters": "Chapters after the free chapter range use an Ever Joy pricing tier based on chapter classification.",
+        "pricingControl": "Creators cannot manually select or modify chapter prices.",
+        "specialChapters": "Special, bonus, side-story, and extra chapters use the same approved pricing tiers.",
+        "gemAccounting": "100 Ever Gems equals 1 USD of accounting value.",
+        "creatorRevenue": "Creator revenue is generated only when Ever Gems are actually spent to unlock an eligible paid chapter."
+    }
+}

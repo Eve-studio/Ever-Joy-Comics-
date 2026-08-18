@@ -1,0 +1,262 @@
+{
+    "currency": {
+        "name": "Ever Gems",
+        "symbol": "◆",
+        "accounting_currency": "USD",
+        "base_value": {
+            "gems": 100,
+            "usd": 1.00
+        }
+    },
+
+    "gem_value": {
+        "accounting_rate": 0.01,
+        "description": "100 Ever Gems represent $1.00 of accounting value."
+    },
+
+    "revenue_recognition": {
+        "purchase_recognition": "immediate",
+
+        "reader_purchase": {
+            "description": "When a reader purchases Ever Gems through a bundle or membership, the corresponding purchase value is recognized by Ever Joy immediately.",
+            "creator_revenue_generated": false
+        },
+
+        "creator_revenue_trigger": {
+            "event": "gem_spent_on_paid_chapter",
+            "description": "Creator revenue is generated only when Ever Gems are actually spent to unlock a paid chapter.",
+            "unused_gems_generate_creator_revenue": false
+        }
+    },
+
+    "chapter_unlocks": {
+        "standard_price": {
+            "gems": 30,
+            "accounting_value_usd": 0.30
+        },
+
+        "distributed_value": {
+            "description": "Every 30 Ever Gems spent on a paid chapter creates $0.30 of distributed value before the creator/platform revenue split.",
+            "usd": 0.30
+        }
+    },
+
+    "creator_revenue": {
+        "creator_share_percent": 65,
+        "ever_joy_share_percent": 35,
+
+        "calculation": {
+            "creator_share": "distributed_value * 0.65",
+            "ever_joy_share": "distributed_value * 0.35"
+        },
+
+        "standard_chapter_example": {
+            "gems_spent": 30,
+            "distributed_value_usd": 0.30,
+            "creator_earnings_usd": 0.195,
+            "ever_joy_earnings_usd": 0.105
+        },
+
+        "creator_revenue_condition": "Creator earnings are generated only when a reader spends Ever Gems on that creator's paid content."
+    },
+
+    "membership": {
+        "gem_revenue_rule": "Membership Gems follow the same accounting rules as purchased Gem bundles.",
+        "gem_value_is_identical": true,
+        "creator_revenue_from_received_gems": false,
+        "creator_revenue_from_spent_gems": true
+    },
+
+    "gem_bundles": {
+        "same_accounting_value_as_membership": true,
+        "creator_revenue_trigger": "Only Gems actually spent on paid chapters generate creator revenue."
+    },
+
+    "free_chapters": {
+        "allowed": true,
+        "creator_gem_revenue": false,
+        "advertising": {
+            "enabled": true,
+            "separate_revenue_stream": true
+        }
+    },
+
+    "advertising": {
+        "enabled": true,
+
+        "creator_share_percent": 50,
+        "ever_joy_share_percent": 50,
+
+        "revenue_basis": "net_ad_revenue",
+
+        "description": "Advertising revenue is accounted for separately from Ever Gems and paid chapter revenue."
+    },
+
+    "collaboration": {
+        "enabled": true,
+
+        "revenue_rule": "After Ever Joy's platform share has been deducted, the creator share is divided according to the registered collaboration agreement.",
+
+        "default_splits": {
+            "two_creators": [
+                50,
+                50
+            ],
+            "three_creators": [
+                50,
+                30,
+                20
+            ]
+        },
+
+        "platform_share_before_collaboration": true,
+
+        "description": "Ever Joy does not take an additional percentage from the collaboration creator pool."
+    },
+
+    "creator_wallet": {
+        "enabled": true,
+
+        "currency": "USD",
+
+        "balances": {
+            "pending": true,
+            "available": true,
+            "paid": true,
+            "lifetime_earnings": true
+        },
+
+        "ledger_only": true,
+
+        "description": "Creator balances displayed in Ever Joy are accounting ledger balances representing amounts owed to the creator. They are not stored cash balances belonging to the creator."
+    },
+
+    "payouts": {
+        "currency": "USD",
+
+        "minimum_payout_usd": 50.00,
+
+        "payout_frequency": "monthly",
+
+        "payout_window": "end_of_month",
+
+        "rollover": true,
+
+        "rollover_description": "Creator earnings below the minimum payout threshold remain in the creator wallet and roll over until the creator reaches the minimum payout amount.",
+
+        "creator_request_required": true,
+
+        "automatic_payout": false
+    },
+
+    "payout_statuses": [
+        "pending",
+        "under_review",
+        "approved",
+        "processing",
+        "paid",
+        "failed",
+        "cancelled"
+    ],
+
+    "refunds": {
+        "general_policy": "Refunds are not normally permitted after Ever Gems have been spent.",
+
+        "unused_gems": {
+            "eligible_for_exceptional_review": true
+        },
+
+        "spent_gems": {
+            "refund_allowed": false
+        },
+
+        "exceptional_refunds": {
+            "allowed": true,
+            "requires_admin_review": true,
+            "creator_revenue_protection": true,
+
+            "description": "In exceptional circumstances where a refund is granted after Gems have been spent, Ever Joy may absorb the resulting settlement adjustment from its own platform share rather than deducting the affected creator's legitimate earnings."
+        }
+    },
+
+    "platform_adjustments": {
+        "creator_bonuses": {
+            "enabled": true,
+            "optional": true,
+            "funded_by": "Ever Joy",
+            "affects_creator_share": false,
+
+            "description": "Ever Joy may voluntarily provide small bonuses to creators, including bonuses that help a creator reach the minimum payout threshold."
+        },
+
+        "admin_adjustments": {
+            "enabled": true,
+            "requires_reason": true,
+            "requires_ledger_entry": true,
+            "audit_log_required": true
+        }
+    },
+
+    "copyright_infringement": {
+        "revenue_policy": "platform_retained",
+
+        "description": "Revenue associated with confirmed pirated, plagiarized, or copyright-infringing content is not distributed to the infringing creator.",
+
+        "creator_earnings": 0,
+
+        "platform_revenue": true
+    },
+
+    "original_work_removal": {
+        "creator_revenue_policy": "settle_legitimate_earnings",
+
+        "description": "If an original work is removed for reasons unrelated to creator misconduct or copyright infringement, legitimate creator earnings remain payable according to Ever Joy's settlement rules."
+    },
+
+    "international_creators": {
+        "enabled": true,
+
+        "accounting_currency": "USD",
+
+        "payout_currency": "USD",
+
+        "local_bank_currency_conversion": "handled_by_payout_system_or_receiving_bank",
+
+        "description": "Ever Joy creator accounting and payout amounts are maintained in USD regardless of the creator's country."
+    },
+
+    "taxes": {
+        "platform_side_taxes": {
+            "responsibility": "Ever Joy",
+            "description": "Taxes and applicable obligations arising within Ever Joy's platform operations are handled by Ever Joy."
+        },
+
+        "creator_side_taxes": {
+            "responsibility": "creator",
+            "description": "Creators are responsible for taxes and obligations applicable to income they receive in their own country."
+        }
+    },
+
+    "revenue_categories": {
+        "gem_chapter_revenue": true,
+        "advertising_revenue": true,
+        "membership_revenue": true,
+        "gem_bundle_revenue": true,
+        "creator_bonuses": false
+    },
+
+    "accounting_rules": {
+        "creator_revenue_is_based_on_gem_spending": true,
+        "creator_revenue_is_based_on_gem_purchase": false,
+        "creator_revenue_is_based_on_unused_gems": false,
+        "membership_gems_follow_standard_gem_value": true,
+        "ever_joy_share_is_deducted_before_collaboration_split": true,
+        "additional_collaboration_platform_fee": false,
+        "payout_currency": "USD",
+        "minimum_payout_usd": 50.00
+    },
+
+    "version": "1.0",
+
+    "status": "active"
+}

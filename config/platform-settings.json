@@ -1,0 +1,139 @@
+{
+    "platform": {
+        "name": "Ever Joy Comics",
+        "shortName": "EverJoy",
+        "status": "beta",
+        "version": "1.0",
+        "maintenanceMode": false
+    },
+
+    "registration": {
+        "readerRegistration": {
+            "enabled": true
+        },
+
+        "creatorRegistration": {
+            "enabled": true,
+            "requiresCode": true,
+            "readerAccountIncluded": true
+        }
+    },
+
+    "content": {
+        "comicSubmission": {
+            "enabled": true,
+            "moderationRequired": true,
+            "autoPublish": false
+        },
+
+        "comicVisibility": {
+            "approvedOnly": true
+        },
+
+        "originalWorksOnly": true,
+
+        "copyrightInfringingWorks": {
+            "allowed": false,
+            "creatorRevenueEligible": false
+        }
+    },
+
+    "readerFeatures": {
+        "reading": true,
+        "library": true,
+        "history": true,
+        "bookmarks": true,
+        "following": true,
+        "ratings": true,
+        "reviews": true,
+        "reporting": true
+    },
+
+    "creatorFeatures": {
+        "creatorStudio": true,
+        "comicManagement": true,
+        "chapterManagement": true,
+        "analytics": true,
+        "earningsDashboard": true,
+        "creatorWallet": true,
+        "payoutRequests": true,
+        "collaborations": true
+    },
+
+    "adminFeatures": {
+        "dashboard": true,
+        "moderation": true,
+        "reports": true,
+        "creatorManagement": true,
+        "readerManagement": true,
+        "comicManagement": true,
+        "platformManagement": true
+    },
+
+    "monetization": {
+        "everGems": true,
+        "gemPurchases": true,
+        "memberships": true,
+        "paidChapters": true,
+        "advertising": true,
+        "creatorAdRevenue": true
+    },
+
+    "beta": {
+        "readerAccess": true,
+        "creatorTesterAccess": true,
+        "publicReaderLaunch": false,
+        "creatorRecruitment": true,
+        "readerTesting": true
+    },
+
+    "launch": {
+        "liveMode": false,
+        "publicReading": false,
+        "publicCreatorPublishing": false
+    },
+
+    "moderation": {
+        "requiredForNewComics": true,
+        "requiredForNewChapters": true,
+        "approvedContentVisibleToReaders": true,
+        "reportedContentReview": true
+    },
+
+    "reports": {
+        "enabled": true,
+        "readerReports": true,
+        "copyrightReports": true,
+        "harassmentReports": true,
+        "spamReports": true,
+        "misleadingContentReports": true
+    },
+
+    "notifications": {
+        "enabled": true,
+        "readerNotifications": true,
+        "creatorNotifications": true,
+        "adminNotifications": true
+    },
+
+    "payments": {
+        "readerPayments": true,
+        "gemPurchases": true,
+        "membershipPayments": true,
+        "creatorPayouts": true,
+        "minimumCreatorPayout": 50,
+        "payoutCurrency": "USD",
+        "payoutFrequency": "monthly"
+    },
+
+    "creatorVisibility": {
+        "showEarnings": true,
+        "showPendingEarnings": true,
+        "showAvailableBalance": true,
+        "showPayoutStatus": true,
+
+        "showInternalAccountingValue": false,
+        "showInternalRevenueCalculation": false,
+        "showPlatformAccountingRules": false
+    }
+}
