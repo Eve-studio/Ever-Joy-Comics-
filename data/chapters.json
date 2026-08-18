@@ -1,0 +1,350 @@
+{
+    "chapters": [
+
+        {
+            "id": "chapter_001_001",
+            "comicId": "comic_001",
+
+            "chapterNumber": 1,
+            "title": "The Crimson Moon",
+
+            "pageCount": 18,
+
+            "status": "published",
+
+            "publishedAt": "2026-08-01T12:00:00Z",
+
+            "access": {
+                "type": "paid"
+            },
+
+            "pages": [
+                "page_001",
+                "page_002",
+                "page_003",
+                "page_004",
+                "page_005",
+                "page_006",
+                "page_007",
+                "page_008",
+                "page_009",
+                "page_010",
+                "page_011",
+                "page_012",
+                "page_013",
+                "page_014",
+                "page_015",
+                "page_016",
+                "page_017",
+                "page_018"
+            ]
+        },
+
+
+        {
+            "id": "chapter_001_002",
+            "comicId": "comic_001",
+
+            "chapterNumber": 2,
+            "title": "A Strange Encounter",
+
+            "pageCount": 24,
+
+            "status": "published",
+
+            "publishedAt": "2026-08-03T12:00:00Z",
+
+            "access": {
+                "type": "paid"
+            },
+
+            "pages": [
+                "page_001",
+                "page_002",
+                "page_003",
+                "page_004",
+                "page_005",
+                "page_006",
+                "page_007",
+                "page_008",
+                "page_009",
+                "page_010",
+                "page_011",
+                "page_012",
+                "page_013",
+                "page_014",
+                "page_015",
+                "page_016",
+                "page_017",
+                "page_018",
+                "page_019",
+                "page_020",
+                "page_021",
+                "page_022",
+                "page_023",
+                "page_024"
+            ]
+        },
+
+
+        {
+            "id": "chapter_001_003",
+            "comicId": "comic_001",
+
+            "chapterNumber": 3,
+            "title": "Whispers in the Dark",
+
+            "pageCount": 31,
+
+            "status": "published",
+
+            "publishedAt": "2026-08-05T12:00:00Z",
+
+            "access": {
+                "type": "paid"
+            },
+
+            "pages": [
+                "page_001",
+                "page_002",
+                "page_003",
+                "page_004",
+                "page_005",
+                "page_006",
+                "page_007",
+                "page_008",
+                "page_009",
+                "page_010",
+                "page_011",
+                "page_012",
+                "page_013",
+                "page_014",
+                "page_015",
+                "page_016",
+                "page_017",
+                "page_018",
+                "page_019",
+                "page_020",
+                "page_021",
+                "page_022",
+                "page_023",
+                "page_024",
+                "page_025",
+                "page_026",
+                "page_027",
+                "page_028",
+                "page_029",
+                "page_030",
+                "page_031"
+            ]
+        },
+
+
+        {
+            "id": "chapter_002_001",
+            "comicId": "comic_002",
+
+            "chapterNumber": 1,
+            "title": "After the Rain",
+
+            "pageCount": 15,
+
+            "status": "published",
+
+            "publishedAt": "2026-08-02T12:00:00Z",
+
+            "access": {
+                "type": "paid"
+            },
+
+            "pages": [
+                "page_001",
+                "page_002",
+                "page_003",
+                "page_004",
+                "page_005",
+                "page_006",
+                "page_007",
+                "page_008",
+                "page_009",
+                "page_010",
+                "page_011",
+                "page_012",
+                "page_013",
+                "page_014",
+                "page_015"
+            ]
+        },
+
+
+        {
+            "id": "chapter_002_002",
+            "comicId": "comic_002",
+
+            "chapterNumber": 2,
+            "title": "The Second Meeting",
+
+            "pageCount": 22,
+
+            "status": "published",
+
+            "publishedAt": "2026-08-06T12:00:00Z",
+
+            "access": {
+                "type": "paid"
+            },
+
+            "pages": [
+                "page_001",
+                "page_002",
+                "page_003",
+                "page_004",
+                "page_005",
+                "page_006",
+                "page_007",
+                "page_008",
+                "page_009",
+                "page_010",
+                "page_011",
+                "page_012",
+                "page_013",
+                "page_014",
+                "page_015",
+                "page_016",
+                "page_017",
+                "page_018",
+                "page_019",
+                "page_020",
+                "page_021",
+                "page_022"
+            ]
+        },
+
+
+        {
+            "id": "chapter_003_001",
+            "comicId": "comic_003",
+
+            "chapterNumber": 1,
+            "title": "The Awakening",
+
+            "pageCount": 28,
+
+            "status": "published",
+
+            "publishedAt": "2026-08-01T12:00:00Z",
+
+            "access": {
+                "type": "paid"
+            },
+
+            "pages": [
+                "page_001",
+                "page_002",
+                "page_003",
+                "page_004",
+                "page_005",
+                "page_006",
+                "page_007",
+                "page_008",
+                "page_009",
+                "page_010",
+                "page_011",
+                "page_012",
+                "page_013",
+                "page_014",
+                "page_015",
+                "page_016",
+                "page_017",
+                "page_018",
+                "page_019",
+                "page_020",
+                "page_021",
+                "page_022",
+                "page_023",
+                "page_024",
+                "page_025",
+                "page_026",
+                "page_027",
+                "page_028"
+            ]
+        },
+
+
+        {
+            "id": "chapter_004_001",
+            "comicId": "comic_004",
+
+            "chapterNumber": 1,
+            "title": "The First Letter",
+
+            "pageCount": 12,
+
+            "status": "published",
+
+            "publishedAt": "2026-08-04T12:00:00Z",
+
+            "access": {
+                "type": "paid"
+            },
+
+            "pages": [
+                "page_001",
+                "page_002",
+                "page_003",
+                "page_004",
+                "page_005",
+                "page_006",
+                "page_007",
+                "page_008",
+                "page_009",
+                "page_010",
+                "page_011",
+                "page_012"
+            ]
+        },
+
+
+        {
+            "id": "chapter_005_001",
+            "comicId": "comic_005",
+
+            "chapterNumber": 1,
+            "title": "The Falling Star",
+
+            "pageCount": 20,
+
+            "status": "published",
+
+            "publishedAt": "2026-08-07T12:00:00Z",
+
+            "access": {
+                "type": "paid"
+            },
+
+            "pages": [
+                "page_001",
+                "page_002",
+                "page_003",
+                "page_004",
+                "page_005",
+                "page_006",
+                "page_007",
+                "page_008",
+                "page_009",
+                "page_010",
+                "page_011",
+                "page_012",
+                "page_013",
+                "page_014",
+                "page_015",
+                "page_016",
+                "page_017",
+                "page_018",
+                "page_019",
+                "page_020"
+            ]
+        }
+
+    ]
+}

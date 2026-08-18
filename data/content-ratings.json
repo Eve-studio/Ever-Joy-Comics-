@@ -1,0 +1,22 @@
+{
+    "contentRatings": [
+        {
+            "id": "13-plus",
+            "label": "13+",
+            "minimumAge": 13,
+            "description": "Content may contain mild mature themes, language, violence, or suggestive material."
+        },
+        {
+            "id": "16-plus",
+            "label": "16+",
+            "minimumAge": 16,
+            "description": "Content may contain stronger mature themes, violence, language, romance, or suggestive material."
+        },
+        {
+            "id": "18-plus",
+            "label": "18+",
+            "minimumAge": 18,
+            "description": "Content intended strictly for adult audiences and may contain explicit or strongly mature themes."
+        }
+    ]
+}

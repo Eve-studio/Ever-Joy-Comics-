@@ -1,0 +1,271 @@
+{
+    "comics": [
+        {
+            "id": "comic_001",
+            "title": "Crimson Moon",
+            "cover": "assets/images/comics/crimson-moon.webp",
+            "banner": "assets/images/banners/crimson-moon.webp",
+            "description": "A mysterious fantasy story about a young woman whose life changes when the crimson moon appears.",
+            "format": "manhwa",
+            "readerMode": "vertical",
+            "genres": [
+                "Fantasy",
+                "Romance",
+                "Mystery"
+            ],
+            "tags": [
+                "Magic",
+                "Slow Burn",
+                "Supernatural",
+                "Secrets",
+                "Destiny",
+                "Power Awakening",
+                "Female Protagonist",
+                "Forbidden Magic",
+                "Mysterious Past"
+            ],
+            "status": "ongoing",
+            "rating": 4.9,
+            "creators": {
+                "writer": {
+                    "id": "creator_001",
+                    "name": "Creator Name"
+                },
+                "artist": {
+                    "id": "creator_002",
+                    "name": "Artist Name"
+                },
+                "colorist": {
+                    "id": "creator_003",
+                    "name": "Colorist Name"
+                }
+            },
+            "chapters": {
+                "published": 12,
+                "latest": 12
+            },
+            "access": {
+                "type": "paid",
+                "defaultChapterPrice": 30
+            },
+            "trending": true,
+            "rising": false,
+            "hiddenGem": false,
+            "newlyArrived": false
+        },
+
+        {
+            "id": "comic_002",
+            "title": "After the Rain",
+            "cover": "assets/images/comics/after-the-rain.webp",
+            "banner": "assets/images/banners/after-the-rain.webp",
+            "description": "Two strangers meet at the wrong time and discover that some stories deserve a second beginning.",
+            "format": "webtoon",
+            "readerMode": "vertical",
+            "genres": [
+                "Romance",
+                "Drama"
+            ],
+            "tags": [
+                "Second Chance",
+                "Slow Burn",
+                "Emotional",
+                "Healing",
+                "Misunderstanding",
+                "Modern Setting",
+                "Strangers to Lovers",
+                "Second Chance Romance",
+                "Forced Proximity"
+            ],
+            "status": "ongoing",
+            "rating": 4.8,
+            "creators": {
+                "writer": {
+                    "id": "creator_004",
+                    "name": "Writer Name"
+                },
+                "artist": {
+                    "id": "creator_005",
+                    "name": "Artist Name"
+                },
+                "colorist": null
+            },
+            "chapters": {
+                "published": 8,
+                "latest": 8
+            },
+            "access": {
+                "type": "paid",
+                "defaultChapterPrice": 30
+            },
+            "trending": true,
+            "rising": true,
+            "hiddenGem": false,
+            "newlyArrived": true
+        },
+
+        {
+            "id": "comic_003",
+            "title": "The Last Guardian",
+            "cover": "assets/images/comics/the-last-guardian.webp",
+            "banner": "assets/images/banners/the-last-guardian.webp",
+            "description": "An ancient guardian awakens to protect a world that has forgotten his name.",
+            "format": "manga",
+            "readerMode": "page",
+            "genres": [
+                "Action",
+                "Fantasy",
+                "Adventure"
+            ],
+            "tags": [
+                "Guardian",
+                "Warriors",
+                "Magic",
+                "Adventure",
+                "Ancient World",
+                "Supernatural",
+                "Chosen One",
+                "Power Awakening",
+                "Dragons",
+                "Ancient Power",
+                "Legendary Weapon",
+                "Rebellion"
+            ],
+            "status": "ongoing",
+            "rating": 4.9,
+            "creators": {
+                "writer": {
+                    "id": "creator_006",
+                    "name": "Writer Name"
+                },
+                "artist": {
+                    "id": "creator_007",
+                    "name": "Writer Name"
+                },
+                "colorist": {
+                    "id": "creator_008",
+                    "name": "Colorist Name"
+                }
+            },
+            "chapters": {
+                "published": 25,
+                "latest": 25
+            },
+            "access": {
+                "type": "paid",
+                "defaultChapterPrice": 30
+            },
+            "trending": true,
+            "rising": true,
+            "hiddenGem": false,
+            "newlyArrived": false
+        },
+
+        {
+            "id": "comic_004",
+            "title": "Paper Hearts",
+            "cover": "assets/images/comics/paper-hearts.webp",
+            "banner": "assets/images/banners/paper-hearts.webp",
+            "description": "A quiet romance begins through letters that were never meant to be delivered.",
+            "format": "graphic-novel",
+            "readerMode": "page",
+            "genres": [
+                "Romance",
+                "Drama"
+            ],
+            "tags": [
+                "Letters",
+                "Emotional",
+                "Slow Burn",
+                "Forbidden Love",
+                "Secret Relationship",
+                "Second Chance",
+                "Nostalgia",
+                "Forbidden Romance",
+                "Mutual Pining",
+                "First Love"
+            ],
+            "status": "completed",
+            "rating": 4.9,
+            "creators": {
+                "writer": {
+                    "id": "creator_009",
+                    "name": "Writer Name"
+                },
+                "artist": {
+                    "id": "creator_010",
+                    "name": "Artist Name"
+                },
+                "colorist": null
+            },
+            "chapters": {
+                "published": 32,
+                "latest": 32
+            },
+            "access": {
+                "type": "paid",
+                "defaultChapterPrice": 30
+            },
+            "trending": false,
+            "rising": false,
+            "hiddenGem": true,
+            "newlyArrived": false
+        },
+
+        {
+            "id": "comic_005",
+            "title": "Starfall",
+            "cover": "assets/images/comics/starfall.webp",
+            "banner": "assets/images/banners/starfall.webp",
+            "description": "When stars begin falling from the sky, a young girl discovers that each one carries a secret.",
+            "format": "manhua",
+            "readerMode": "page",
+            "genres": [
+                "Fantasy",
+                "Adventure",
+                "Mystery"
+            ],
+            "tags": [
+                "Stars",
+                "Magic",
+                "Adventure",
+                "Secrets",
+                "Supernatural",
+                "Destiny",
+                "Ancient Power",
+                "Mysterious Past",
+                "Sacred Artifact",
+                "Mythology",
+                "Female Protagonist"
+            ],
+            "status": "ongoing",
+            "rating": 4.7,
+            "creators": {
+                "writer": {
+                    "id": "creator_011",
+                    "name": "Writer Name"
+                },
+                "artist": {
+                    "id": "creator_012",
+                    "name": "Writer Name"
+                },
+                "colorist": {
+                    "id": "creator_013",
+                    "name": "Colorist Name"
+                }
+            },
+            "chapters": {
+                "published": 5,
+                "latest": 5
+            },
+            "access": {
+                "type": "paid",
+                "defaultChapterPrice": 30
+            },
+            "trending": false,
+            "rising": true,
+            "hiddenGem": false,
+            "newlyArrived": true
+        }
+    ]
+}
