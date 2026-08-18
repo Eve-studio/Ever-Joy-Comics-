@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Discover manga, manhwa, manhua, webtoons, comics, graphic novels and original stories on Ever Joy Comics."
+>
+
+<title>Discover | Ever Joy Comics</title>
+
+
+<!-- =====================================================
+     GLOBAL CSS
+     ===================================================== -->
+
+<link
+    rel="stylesheet"
+    href="css/global.css"
+>
+
+
+<!-- =====================================================
+     HOME / EVER JOY VISUAL SYSTEM
+     ===================================================== -->
+
+<link
+    rel="stylesheet"
+    href="css/home.css"
+>
+
+
+<!-- =====================================================
+     DISCOVER CSS
+     ===================================================== -->
+
+<link
+    rel="stylesheet"
+    href="css/discover.css"
+>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP NAVIGATION
+     ===================================================== -->
+
+<header class="top-nav">
+
+    <div class="nav-left">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            Ever Joy
+        </a>
+
+    </div>
+
+
+    <div class="search-container">
+
+        <form
+            class="search-bar"
+            id="discoverSearchForm"
+        >
+
+            <input
+                type="search"
+                id="discoverSearch"
+                placeholder="Search comics, creators, genres..."
+                aria-label="Search comics"
+                autocomplete="off"
+            >
+
+            <button
+                type="submit"
+                aria-label="Search"
+            >
+                🔍
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <a
+        href="account/auth.html"
+        class="profile-nav-btn"
+        aria-label="Account"
+    >
+        ♙
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     DISCOVER CATEGORY NAVIGATION
+     ===================================================== -->
+
+<nav
+    class="genre-nav"
+    aria-label="Comic formats"
+>
+
+    <div class="genre-scroll">
+
+        <a href="#originalsSection">
+            Originals
+        </a>
+
+        <a href="#mangaSection">
+            Manga
+        </a>
+
+        <a href="#manhwaSection">
+            Manhwa
+        </a>
+
+        <a href="#manhuaSection">
+            Manhua
+        </a>
+
+        <a href="#webtoonSection">
+            Webtoon
+        </a>
+
+        <a href="#westernComicsSection">
+            Western Comics
+        </a>
+
+        <a href="#bdSection">
+            Bande dessinée
+        </a>
+
+        <a href="#graphicNovelSection">
+            Graphic Novels
+        </a>
+
+        <a href="#comicStripSection">
+            Comic Strips
+        </a>
+
+        <a href="#indieSection">
+            Indie Comics
+        </a>
+
+        <a href="#webcomicSection">
+            Webcomics
+        </a>
+
+        <a href="#doujinshiSection">
+            Doujinshi
+        </a>
+
+        <a href="#manfraSection">
+            Manfra
+        </a>
+
+        <a href="#oelMangaSection">
+            OEL Manga
+        </a>
+
+        <a href="#digitalComicSection">
+            Digital Comics
+        </a>
+
+        <a href="#motionComicSection">
+            Motion Comics
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN DISCOVER CONTENT
+     ===================================================== -->
+
+<main class="discover-page">
+
+
+    <!-- =================================================
+         DISCOVER TOOLS / FILTERS / TABS
+         ================================================= -->
+
+    <section class="discover-search-section">
+
+        <div
+            class="search-suggestions"
+            id="searchSuggestions"
+        ></div>
+
+    </section>
+
+
+
+    <nav
+        class="discover-tabs"
+        aria-label="Discover categories"
+    >
+
+        <button
+            class="discover-tab active"
+            data-section="all"
+            type="button"
+        >
+            All
+        </button>
+
+        <button
+            class="discover-tab"
+            data-section="popular"
+            type="button"
+        >
+            Popular
+        </button>
+
+        <button
+            class="discover-tab"
+            data-section="new"
+            type="button"
+        >
+            New
+        </button>
+
+        <button
+            class="discover-tab"
+            data-section="rising"
+            type="button"
+        >
+            Rising
+        </button>
+
+        <button
+            class="discover-tab"
+            data-section="completed"
+            type="button"
+        >
+            Completed
+        </button>
+
+        <button
+            class="discover-tab"
+            data-section="ongoing"
+            type="button"
+        >
+            Ongoing
+        </button>
+
+    </nav>
+
+
+
+    <!-- =================================================
+         GENRES
+         ================================================= -->
+
+    <section
+        class="genre-section"
+        id="genreSection"
+    >
+
+        <div class="section-heading-row">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    Explore
+                </span>
+
+                <h1>
+                    Genres
+                </h1>
+
+            </div>
+
+
+            <button
+                class="see-all-genres"
+                id="allGenresButton"
+                type="button"
+            >
+                View all
+            </button>
+
+        </div>
+
+
+        <div
+            class="genre-list"
+            id="genreList"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EVER JOY ORIGINALS
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="original"
+        id="originalsSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Ever Joy Originals
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="original"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="originalsRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MANGA
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="manga"
+        id="mangaSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Manga
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="manga"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="mangaRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MANHWA
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="manhwa"
+        id="manhwaSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Manhwa
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="manhwa"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="manhwaRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MANHUA
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="manhua"
+        id="manhuaSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Manhua
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="manhua"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="manhuaRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         WEBTOON
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="webtoon"
+        id="webtoonSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Webtoon
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="webtoon"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="webtoonRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         WESTERN COMICS
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="western-comics"
+        id="westernComicsSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Western Comics
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="western-comics"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="westernComicsRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BANDE DESSINÉE
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="bd"
+        id="bdSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Bande dessinée
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="bd"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="bdRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GRAPHIC NOVELS
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="graphic-novel"
+        id="graphicNovelSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Graphic Novels
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="graphic-novel"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="graphicNovelRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         COMIC STRIPS
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="comic-strip"
+        id="comicStripSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Comic Strips
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="comic-strip"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="comicStripRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INDIE COMICS
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="indie"
+        id="indieSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Indie Comics
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="indie"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="indieRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         WEBCOMICS
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="webcomic"
+        id="webcomicSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Webcomics
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="webcomic"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="webcomicRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         DOUJINSHI
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="doujinshi"
+        id="doujinshiSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Doujinshi
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="doujinshi"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="doujinshiRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MANFRA
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="manfra"
+        id="manfraSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Manfra
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="manfra"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="manfraRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OEL MANGA
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="oel-manga"
+        id="oelMangaSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                OEL Manga
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="oel-manga"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="oelMangaRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         DIGITAL COMICS
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="digital-comic"
+        id="digitalComicSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Digital Comics
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="digital-comic"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="digitalComicRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MOTION COMICS
+         ================================================= -->
+
+    <section
+        class="comic-section format-section"
+        data-format="motion-comic"
+        id="motionComicSection"
+        hidden
+    >
+
+        <div class="section-heading">
+
+            <h2>
+                Motion Comics
+            </h2>
+
+            <button
+                class="discover-see-all"
+                data-format-view="motion-comic"
+                type="button"
+            >
+                See all
+            </button>
+
+        </div>
+
+
+        <div
+            class="comic-grid"
+            id="motionComicRow"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MORE DISCOVERY
+         ================================================= -->
+
+    <section class="discover-more-section">
+
+        <div class="discover-section-heading">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    Explore
+                </span>
+
+                <h2>
+                    More to Discover
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- FILTER + SORT -->
+
+        <div class="discover-tools">
+
+            <button
+                class="filter-button"
+                id="filterButton"
+                type="button"
+            >
+                <span>☷</span>
+                Filter
+            </button>
+
+
+            <button
+                class="sort-button"
+                id="sortButton"
+                type="button"
+            >
+                <span>↕</span>
+                Sort
+            </button>
+
+        </div>
+
+
+
+        <!-- RESULTS HEADER -->
+
+        <section class="results-header">
+
+            <div>
+
+                <span
+                    class="section-eyebrow"
+                    id="resultsEyebrow"
+                >
+                    Discover
+                </span>
+
+
+                <h2 id="resultsTitle">
+                    All Comics
+                </h2>
+
+            </div>
+
+
+            <span
+                class="result-count"
+                id="resultCount"
+            >
+                0 works
+            </span>
+
+        </section>
+
+
+
+        <!-- COMIC GRID -->
+
+        <section
+            class="comic-grid discover-grid"
+            id="discoverGrid"
+        ></section>
+
+
+
+        <!-- EMPTY STATE -->
+
+        <section
+            class="discover-empty"
+            id="discoverEmpty"
+            hidden
+        >
+
+            <div class="empty-icon">
+                ◌
+            </div>
+
+
+            <h2>
+                Nothing found
+            </h2>
+
+
+            <p>
+                We couldn't find a work matching your
+                search. Try another title, creator,
+                genre or filter.
+            </p>
+
+
+            <button
+                id="clearFiltersButton"
+                type="button"
+            >
+                Clear Filters
+            </button>
+
+        </section>
+
+
+
+        <!-- LOAD MORE -->
+
+        <button
+            class="load-more-btn"
+            id="loadMoreButton"
+            type="button"
+        >
+            Load More
+        </button>
+
+    </section>
+
+
+   <!-- =================================================
+         FILTER PANEL
+         ================================================= -->
+
+    <aside
+        class="filter-panel"
+        id="filterPanel"
+        aria-hidden="true"
+    >
+
+        <div class="filter-panel-header">
+
+            <h2>
+                Filters
+            </h2>
+
+
+            <button
+                id="closeFilterButton"
+                class="close-panel-btn"
+                type="button"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </aside>
+
+</main>
+
+
+
+<!-- =====================================================
+     MOBILE BOTTOM NAVIGATION
+     ===================================================== -->
+
+<nav
+    class="bottom-nav"
+    aria-label="Main navigation"
+>
+
+    <a
+        href="index.html"
+        class="bottom-nav-item"
+    >
+        <span>⌂</span>
+        <small>Home</small>
+    </a>
+
+
+    <a
+        href="discover.html"
+        class="bottom-nav-item active"
+    >
+        <span>◉</span>
+        <small>Discover</small>
+    </a>
+
+
+    <a
+        href="reader/library.html"
+        class="bottom-nav-item"
+    >
+        <span>▣</span>
+        <small>Library</small>
+    </a>
+
+
+    <a
+        href="account/auth.html"
+        class="bottom-nav-item"
+        aria-label="Open authentication"
+    >
+        <span>♙</span>
+        <small>Profile</small>
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-brand">
+
+        <h2>
+            Ever Joy
+        </h2>
+
+        <p>
+            Original stories. Original creators.
+        </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="#">
+            About
+        </a>
+
+        <a href="#">
+            Terms
+        </a>
+
+        <a href="#">
+            Privacy
+        </a>
+
+        <a href="#">
+            Contact
+        </a>
+        
+        <a href="reports/report.html">Report</a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 Ever Joy Comics
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="js/script.js"></script>
+<script src="js/discover.js"></script>
+<script src="js/curated-labels.js"></script>
+</body>
+
+</html>
