@@ -1,0 +1,435 @@
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Manage your Ever Joy Gems and purchase Gem bundles."
+>
+
+<title>Ever Gems | Ever Joy Comics</title>
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+<link
+    rel="stylesheet"
+    href="../css/gems.css"
+>
+
+</head><body class="gems-page"><main class="gems-shell"><!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="gems-header">
+
+    <a
+        href="../index.html"
+        class="gems-brand"
+    >
+        Ever Joy
+    </a>
+
+
+    <a
+        href="../reader/profile.html"
+        class="gems-back-link"
+    >
+        ← Profile
+    </a>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE INTRO
+====================================================== -->
+
+<section class="gems-intro">
+
+    <span class="gems-eyebrow">
+        EVER JOY WALLET
+    </span>
+
+    <h1>
+        Ever Gems
+    </h1>
+
+    <p>
+        Unlock the stories you love and keep your
+        Gems available whenever you're ready to read.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     GEM BALANCE
+====================================================== -->
+
+<section class="gems-balance-card">
+
+    <div class="gems-balance-glow"></div>
+
+
+    <div class="gems-balance-content">
+
+        <span class="gems-balance-label">
+            YOUR GEM BALANCE
+        </span>
+
+
+        <div class="gems-balance-value">
+
+            <span
+                class="gems-icon"
+                aria-hidden="true"
+            >
+                ◆
+            </span>
+
+            <strong id="gemsBalance">
+                0
+            </strong>
+
+        </div>
+
+
+        <p>
+            Your Gems never expire.
+        </p>
+
+    </div>
+
+
+    <div class="gems-balance-decoration">
+        ✦
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GEM STORE
+====================================================== -->
+
+<section class="gems-section">
+
+    <div class="gems-section-heading">
+
+        <div>
+
+            <span class="gems-eyebrow">
+                GEM STORE
+            </span>
+
+            <h2>
+                Get more Gems
+            </h2>
+
+            <p>
+                Purchase Gems whenever you need them.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="gems-bundle-grid">
+
+
+        <!-- 200 GEM BUNDLE -->
+
+        <article
+            class="gems-bundle-card"
+            data-gem-amount="200"
+            data-price="1.49"
+        >
+
+            <div class="gems-bundle-top">
+
+                <span class="gems-bundle-badge">
+                    GEM BUNDLE
+                </span>
+
+                <span class="gems-bundle-icon">
+                    ◆
+                </span>
+
+            </div>
+
+
+            <div class="gems-bundle-amount">
+
+                <strong>
+                    200
+                </strong>
+
+                <span>
+                    Gems
+                </span>
+
+            </div>
+
+
+            <p>
+                A small boost for your next few
+                chapter unlocks.
+            </p>
+
+
+            <button
+                type="button"
+                class="gems-purchase-button"
+                data-gem-amount="200"
+                data-price="1.49"
+            >
+                Get 200 Gems
+                <span>$1.49</span>
+            </button>
+
+        </article>
+
+
+
+        <!-- 500 GEM BUNDLE -->
+
+        <article
+            class="gems-bundle-card gems-bundle-featured"
+            data-gem-amount="500"
+            data-price="3.49"
+        >
+
+            <div class="gems-featured-label">
+                MOST POPULAR
+            </div>
+
+
+            <div class="gems-bundle-top">
+
+                <span class="gems-bundle-badge">
+                    GEM BUNDLE
+                </span>
+
+                <span class="gems-bundle-icon">
+                    ◆
+                </span>
+
+            </div>
+
+
+            <div class="gems-bundle-amount">
+
+                <strong>
+                    500
+                </strong>
+
+                <span>
+                    Gems
+                </span>
+
+            </div>
+
+
+            <p>
+                More room to keep reading without
+                stopping between chapters.
+            </p>
+
+
+            <button
+                type="button"
+                class="gems-purchase-button"
+                data-gem-amount="500"
+                data-price="3.49"
+            >
+                Get 500 Gems
+                <span>$3.49</span>
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW GEMS WORK
+====================================================== -->
+
+<section class="gems-section">
+
+    <div class="gems-info-card">
+
+        <div class="gems-info-icon">
+            ✦
+        </div>
+
+
+        <div class="gems-info-content">
+
+            <span class="gems-eyebrow">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Your Gems stay yours.
+            </h2>
+
+            <p>
+                Use Ever Gems to unlock paid chapters
+                across Ever Joy Comics. Any unused Gems
+                remain in your wallet and can be used
+                whenever you return.
+            </p>
+
+            <p>
+                Gems do not expire.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PURCHASE STATUS
+====================================================== -->
+
+<div
+    class="gems-purchase-message"
+    id="gemsPurchaseMessage"
+    aria-live="polite"
+    hidden
+></div>
+
+
+
+<!-- =====================================================
+     PURCHASE HISTORY
+====================================================== -->
+
+<section class="gems-section">
+
+    <div class="gems-section-heading">
+
+        <div>
+
+            <span class="gems-eyebrow">
+                WALLET ACTIVITY
+            </span>
+
+            <h2>
+                Gem history
+            </h2>
+
+            <p>
+                Keep track of Gem purchases and credits.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="gems-history"
+        id="gemsHistory"
+    >
+
+        <div class="gems-history-empty">
+
+            <span>
+                ◆
+            </span>
+
+            <h3>
+                No Gem activity yet
+            </h3>
+
+            <p>
+                Your Gem purchases and membership credits
+                will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMBERSHIP REMINDER
+====================================================== -->
+
+<section class="gems-membership-card">
+
+    <div>
+
+        <span class="gems-eyebrow">
+            WANT MORE VALUE?
+        </span>
+
+        <h2>
+            Explore Ever Joy Membership
+        </h2>
+
+        <p>
+            Membership includes monthly Gems and
+            additional reader benefits.
+        </p>
+
+    </div>
+
+
+    <a
+        href="./membership.html"
+        class="gems-membership-button"
+    >
+        View Membership
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="gems-footer">
+
+    <p>
+        Ever Joy Comics
+    </p>
+
+    <a
+        href="../index.html"
+    >
+        Back to Ever Joy
+    </a>
+
+</footer>
+
+</main><script
+    src="../js/gems.js"
+></script></body>
+
+</html>

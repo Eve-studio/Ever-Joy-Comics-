@@ -1,0 +1,80 @@
+{
+    "plans": [
+        {
+            "id": "reader",
+            "name": "Reader",
+            "label": "READER",
+            "price": 4.99,
+            "currency": "USD",
+            "billingInterval": "month",
+            "monthlyGems": 500,
+            "description": "A simple way to enjoy more of Ever Joy.",
+            "benefits": [
+                "500 monthly Ever Gems",
+                "Gems never expire",
+                "Ad-free reading"
+            ],
+            "featured": false,
+            "featuredLabel": null,
+            "active": true
+        },
+        {
+            "id": "plus",
+            "name": "Plus",
+            "label": "PLUS",
+            "price": 7.99,
+            "currency": "USD",
+            "billingInterval": "month",
+            "monthlyGems": 1000,
+            "description": "More Gems for readers who read regularly.",
+            "benefits": [
+                "1,000 monthly Ever Gems",
+                "Gems never expire",
+                "Ad-free reading",
+                "Enhanced reading benefits"
+            ],
+            "featured": true,
+            "featuredLabel": "MOST POPULAR",
+            "active": true
+        },
+        {
+            "id": "premium",
+            "name": "Premium",
+            "label": "PREMIUM",
+            "price": 10.99,
+            "currency": "USD",
+            "billingInterval": "month",
+            "monthlyGems": 1500,
+            "description": "The full Ever Joy reading experience.",
+            "benefits": [
+                "1,500 monthly Ever Gems",
+                "Gems never expire",
+                "Ad-free reading",
+                "Full reader benefits",
+                "Best value for frequent readers"
+            ],
+            "featured": false,
+            "featuredLabel": null,
+            "active": true
+        }
+    ],
+
+    "readingModel": {
+        "freeChapters": 18,
+        "freeReadingWithAds": true,
+        "paidUnlockStartsAfterChapter": 18,
+        "paidUnlockCurrency": "Ever Gems"
+    },
+
+    "gemPolicy": {
+        "expire": false,
+        "remainAfterRenewal": true,
+        "remainAfterMembershipEnds": true
+    },
+
+    "renewal": {
+        "automatic": true,
+        "creditsMonthlyGems": true,
+        "activatesBenefits": true
+    }
+}

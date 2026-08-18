@@ -1,0 +1,28 @@
+{
+    "bundles": [
+        {
+            "id": "ever-gems-200",
+            "gemAmount": 200,
+            "price": 1.49,
+            "currency": "USD",
+            "name": "200 Gems",
+            "description": "A small boost for your next few chapter unlocks.",
+            "badge": "GEM BUNDLE",
+            "featured": false,
+            "featuredLabel": null,
+            "active": true
+        },
+        {
+            "id": "ever-gems-500",
+            "gemAmount": 500,
+            "price": 3.49,
+            "currency": "USD",
+            "name": "500 Gems",
+            "description": "More room to keep reading without stopping between chapters.",
+            "badge": "GEM BUNDLE",
+            "featured": true,
+            "featuredLabel": "MOST POPULAR",
+            "active": true
+        }
+    ]
+}
