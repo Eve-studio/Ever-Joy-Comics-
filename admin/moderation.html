@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Ever Joy Comics content moderation dashboard."
+    >
+
+    <title>Moderation | Ever Joy Comics</title>
+
+
+    <!-- =====================================================
+         GLOBAL STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ADMIN APPLICATION
+     ===================================================== -->
+
+<div
+    class="admin-app"
+    id="adminModeration"
+>
+
+
+    <!-- =================================================
+         ADMIN HEADER
+         ================================================= -->
+
+    <header class="admin-header">
+
+
+        <div class="admin-brand">
+
+            <button
+                type="button"
+                class="admin-menu-btn"
+                id="adminMenuBtn"
+                aria-label="Open admin menu"
+            >
+
+                ☰
+
+            </button>
+
+
+            <div class="admin-brand-text">
+
+                <span class="admin-brand-name">
+                    Ever Joy
+                </span>
+
+                <span class="admin-brand-label">
+                    Administration
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-header-actions">
+
+
+            <button
+                type="button"
+                class="admin-header-btn"
+                id="adminNotificationsBtn"
+                aria-label="Notifications"
+            >
+
+                ♢
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-profile-btn"
+                id="adminProfileBtn"
+                aria-label="Admin profile"
+            >
+
+                A
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ADMIN LAYOUT
+         ================================================= -->
+
+    <div class="admin-layout">
+
+
+        <!-- =============================================
+             SIDEBAR
+             ============================================= -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar"
+        >
+
+
+            <div class="admin-sidebar-top">
+
+
+                <div class="admin-sidebar-title">
+
+                    CONTROL CENTER
+
+                </div>
+
+
+                <nav class="admin-navigation">
+
+
+                    <a
+                        href="./admin-dashboard.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ◈
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="./moderation.html"
+                        class="admin-nav-item active"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ◇
+                        </span>
+
+                        <span>
+                            Moderation
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="./reports.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            !
+                        </span>
+
+                        <span>
+                            Reports
+                        </span>
+
+                    </a>
+
+                </nav>
+
+
+            </div>
+
+
+
+            <div class="admin-sidebar-bottom">
+
+
+                <div class="admin-sidebar-title">
+
+                    PLATFORM
+
+                </div>
+
+
+                <nav class="admin-navigation">
+
+
+                    <a
+                        href="../index.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ↗
+                        </span>
+
+                        <span>
+                            View Platform
+                        </span>
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="admin-nav-item admin-logout-btn"
+                        id="adminLogoutBtn"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ←
+                        </span>
+
+                        <span>
+                            Sign Out
+                        </span>
+
+                    </button>
+
+                </nav>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="admin-main">
+
+
+            <!-- =============================================
+                 PAGE INTRO
+                 ============================================= -->
+
+            <section class="admin-page-intro">
+
+
+                <div>
+
+                    <span class="admin-eyebrow">
+                        CONTENT CONTROL
+                    </span>
+
+
+                    <h1>
+                        Moderation
+                    </h1>
+
+
+                    <p>
+                        Review, approve, reject, and manage
+                        content submitted to Ever Joy Comics.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-date-card">
+
+                    <span>
+                        PENDING
+                    </span>
+
+                    <strong id="adminModerationCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =============================================
+                 MODERATION SUMMARY
+                 ============================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            MODERATION OVERVIEW
+                        </span>
+
+                        <h2>
+                            Submission queue
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-grid">
+
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ◇
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                PENDING
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="moderationPendingCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Awaiting Review
+                        </span>
+
+                    </article>
+
+
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ✓
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                APPROVED
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="moderationApprovedCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Approved
+                        </span>
+
+                    </article>
+
+
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ×
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                REJECTED
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="moderationRejectedCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Rejected
+                        </span>
+
+                    </article>
+
+
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ▤
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                TOTAL
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="moderationTotalCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Submissions
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 FILTERS
+                 ============================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-moderation-toolbar">
+
+
+                    <div class="admin-filter-group">
+
+
+                        <label
+                            for="moderationStatusFilter"
+                            class="admin-filter-label"
+                        >
+
+                            STATUS
+
+                        </label>
+
+
+                        <select
+                            id="moderationStatusFilter"
+                            class="admin-filter-select"
+                        >
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="approved">
+                                Approved
+                            </option>
+
+                            <option value="rejected">
+                                Rejected
+                            </option>
+
+                            <option value="all">
+                                All Submissions
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="admin-filter-group">
+
+
+                        <label
+                            for="moderationTypeFilter"
+                            class="admin-filter-label"
+                        >
+
+                            CONTENT TYPE
+
+                        </label>
+
+
+                        <select
+                            id="moderationTypeFilter"
+                            class="admin-filter-select"
+                        >
+
+                            <option value="all">
+                                All Content
+                            </option>
+
+                            <option value="comic">
+                                Comics
+                            </option>
+
+                            <option value="chapter">
+                                Chapters
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="admin-filter-group admin-search-group">
+
+
+                        <label
+                            for="moderationSearch"
+                            class="admin-filter-label"
+                        >
+
+                            SEARCH
+
+                        </label>
+
+
+                        <input
+                            type="search"
+                            id="moderationSearch"
+                            class="admin-filter-input"
+                            placeholder="Search submissions..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-text-button"
+                        id="refreshModeration"
+                    >
+
+                        Refresh
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 MODERATION QUEUE
+                 ============================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-section-heading">
+
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            SUBMISSIONS
+                        </span>
+
+
+                        <h2>
+                            Content awaiting review
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        class="admin-results-count"
+                        id="moderationResultsCount"
+                    >
+
+                        0 submissions
+
+                    </span>
+
+                </div>
+
+
+
+                <div
+                    class="admin-moderation-list"
+                    id="moderationList"
+                >
+
+
+                    <!-- =====================================
+                         EMPTY STATE
+                         ===================================== -->
+
+                    <div
+                        class="admin-empty-state"
+                        id="moderationEmptyState"
+                    >
+
+                        <span class="admin-empty-icon">
+                            ◌
+                        </span>
+
+
+                        <strong>
+                            Nothing to review
+                        </strong>
+
+
+                        <span>
+                            New creator submissions will appear here.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 MODERATION REVIEW PANEL
+                 ============================================= -->
+
+            <section
+                class="admin-section admin-review-section"
+                id="moderationReviewSection"
+            >
+
+
+                <div class="admin-section-heading">
+
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            REVIEW
+                        </span>
+
+
+                        <h2>
+                            Submission details
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="admin-review-panel"
+                    id="moderationReviewPanel"
+                >
+
+
+                    <div class="admin-empty-state">
+
+
+                        <span class="admin-empty-icon">
+                            ◈
+                        </span>
+
+
+                        <strong>
+                            Select a submission
+                        </strong>
+
+
+                        <span>
+                            Choose a submission above to inspect
+                            its details.
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 MODERATION INFORMATION
+                 ============================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-platform-status">
+
+
+                    <div class="admin-status-heading">
+
+
+                        <div>
+
+                            <span class="admin-section-label">
+                                MODERATION POLICY
+                            </span>
+
+
+                            <h2>
+                                Before approving content
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-status-grid">
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Originality
+                            </span>
+
+                            <strong>
+                                Verify
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Content Rating
+                            </span>
+
+                            <strong>
+                                Verify
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Submission Rules
+                            </span>
+
+                            <strong>
+                                Verify
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Platform Safety
+                            </span>
+
+                            <strong>
+                                Verify
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 FOOTER
+                 ============================================= -->
+
+            <footer class="admin-footer">
+
+                <span>
+                    Ever Joy Comics
+                </span>
+
+                <span>
+                    Moderation Panel
+                </span>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     GLOBAL JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/script.js"
+></script>
+
+
+<!-- =====================================================
+     AUTHENTICATION
+     ===================================================== -->
+
+<script
+    src="../js/auth.js"
+></script>
+
+
+<!-- =====================================================
+     ADMIN JAVASCRIPT
+     ===================================================== -->
+
+<script src="../js/admin-moderation.js"></script>
+
+</body>
+
+</html>

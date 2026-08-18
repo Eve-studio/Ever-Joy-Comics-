@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Ever Joy Comics administration dashboard."
+    >
+
+    <title>Admin Dashboard | Ever Joy Comics</title>
+
+
+    <!-- =====================================================
+         GLOBAL STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ADMIN APPLICATION
+     ===================================================== -->
+
+<div
+    class="admin-app"
+    id="adminDashboard"
+>
+
+
+    <!-- =================================================
+         ADMIN HEADER
+         ================================================= -->
+
+    <header class="admin-header">
+
+
+        <div class="admin-brand">
+
+            <button
+                type="button"
+                class="admin-menu-btn"
+                id="adminMenuBtn"
+                aria-label="Open admin menu"
+            >
+
+                ☰
+
+            </button>
+
+
+            <div class="admin-brand-text">
+
+                <span class="admin-brand-name">
+                    Ever Joy
+                </span>
+
+                <span class="admin-brand-label">
+                    Administration
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-header-actions">
+
+
+            <button
+                type="button"
+                class="admin-header-btn"
+                id="adminNotificationsBtn"
+                aria-label="Notifications"
+            >
+
+                ♢
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-profile-btn"
+                id="adminProfileBtn"
+                aria-label="Admin profile"
+            >
+
+                A
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ADMIN LAYOUT
+         ================================================= -->
+
+    <div class="admin-layout">
+
+
+        <!-- =============================================
+             SIDEBAR
+             ============================================= -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar"
+        >
+
+
+            <div class="admin-sidebar-top">
+
+
+                <div class="admin-sidebar-title">
+
+                    CONTROL CENTER
+
+                </div>
+
+
+                <nav class="admin-navigation">
+
+
+                    <a
+                        href="./admin-dashboard.html"
+                        class="admin-nav-item active"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ◈
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="./moderation.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ◇
+                        </span>
+
+                        <span>
+                            Moderation
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="./reports.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            !
+                        </span>
+
+                        <span>
+                            Reports
+                        </span>
+
+                    </a>
+
+                </nav>
+
+
+            </div>
+
+
+
+            <div class="admin-sidebar-bottom">
+
+
+                <div class="admin-sidebar-title">
+
+                    PLATFORM
+
+                </div>
+
+
+                <nav class="admin-navigation">
+
+
+                    <a
+                        href="../index.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ↗
+                        </span>
+
+                        <span>
+                            View Platform
+                        </span>
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="admin-nav-item admin-logout-btn"
+                        id="adminLogoutBtn"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ←
+                        </span>
+
+                        <span>
+                            Sign Out
+                        </span>
+
+                    </button>
+
+                </nav>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =============================================
+             MAIN CONTENT
+             ============================================= -->
+
+        <main class="admin-main">
+
+
+            <!-- =========================================
+                 PAGE INTRO
+                 ========================================= -->
+
+            <section class="admin-page-intro">
+
+
+                <div>
+
+                    <span class="admin-eyebrow">
+                        ADMINISTRATION
+                    </span>
+
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+
+                    <p>
+                        Overview of what is happening across
+                        Ever Joy Comics.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-date-card">
+
+                    <span>
+                        TODAY
+                    </span>
+
+                    <strong id="adminCurrentDate">
+                        --
+                    </strong>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =========================================
+                 OVERVIEW STATISTICS
+                 ========================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            PLATFORM OVERVIEW
+                        </span>
+
+                        <h2>
+                            At a glance
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-grid">
+
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ◈
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                CONTENT
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="adminComicCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Comics
+                        </span>
+
+
+                    </article>
+
+
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ▤
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                CONTENT
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="adminChapterCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Chapters
+                        </span>
+
+
+                    </article>
+
+
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ◎
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                CREATORS
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="adminCreatorCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Creators
+                        </span>
+
+
+                    </article>
+
+
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ○
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                READERS
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="adminReaderCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Readers
+                        </span>
+
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 ATTENTION REQUIRED
+                 ========================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            ATTENTION
+                        </span>
+
+                        <h2>
+                            Needs your review
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-attention-grid">
+
+
+                    <a
+                        href="./moderation.html"
+                        class="admin-attention-card"
+                    >
+
+                        <div class="admin-attention-icon">
+                            ◇
+                        </div>
+
+
+                        <div class="admin-attention-content">
+
+                            <strong>
+                                Pending Moderation
+                            </strong>
+
+                            <span>
+                                Content waiting for review
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-attention-count"
+                            id="adminPendingCount"
+                        >
+                            0
+                        </strong>
+
+                    </a>
+
+
+
+                    <a
+                        href="./reports.html"
+                        class="admin-attention-card"
+                    >
+
+                        <div class="admin-attention-icon report">
+                            !
+                        </div>
+
+
+                        <div class="admin-attention-content">
+
+                            <strong>
+                                Open Reports
+                            </strong>
+
+                            <span>
+                                Reader reports requiring attention
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-attention-count"
+                            id="adminReportCount"
+                        >
+                            0
+                        </strong>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 QUICK ACTIONS
+                 ========================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            SHORTCUTS
+                        </span>
+
+                        <h2>
+                            Quick actions
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-quick-grid">
+
+
+                    <a
+                        href="./moderation.html"
+                        class="admin-quick-card"
+                    >
+
+                        <span class="admin-quick-icon">
+                            ◇
+                        </span>
+
+                        <span class="admin-quick-title">
+                            Review Content
+                        </span>
+
+                        <span class="admin-quick-description">
+                            Inspect comics and chapters awaiting moderation.
+                        </span>
+
+                    </a>
+
+
+
+                    <a
+                        href="./reports.html"
+                        class="admin-quick-card"
+                    >
+
+                        <span class="admin-quick-icon">
+                            !
+                        </span>
+
+                        <span class="admin-quick-title">
+                            Review Reports
+                        </span>
+
+                        <span class="admin-quick-description">
+                            Handle reader and platform reports.
+                        </span>
+
+                    </a>
+
+
+
+                    <a
+                        href="../creator/comics.html"
+                        class="admin-quick-card"
+                    >
+
+                        <span class="admin-quick-icon">
+                            ◈
+                        </span>
+
+                        <span class="admin-quick-title">
+                            View Comics
+                        </span>
+
+                        <span class="admin-quick-description">
+                            Browse the current comic catalogue.
+                        </span>
+
+                    </a>
+
+
+
+                    <a
+                        href="../index.html"
+                        class="admin-quick-card"
+                    >
+
+                        <span class="admin-quick-icon">
+                            ↗
+                        </span>
+
+                        <span class="admin-quick-title">
+                            View Platform
+                        </span>
+
+                        <span class="admin-quick-description">
+                            Open Ever Joy Comics as a reader.
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 RECENT ACTIVITY
+                 ========================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-section-heading">
+
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            ACTIVITY
+                        </span>
+
+                        <h2>
+                            Recent activity
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-text-button"
+                        id="adminRefreshActivity"
+                    >
+
+                        Refresh
+
+                    </button>
+
+
+                </div>
+
+
+                <div
+                    class="admin-activity-list"
+                    id="adminActivityList"
+                >
+
+
+                    <div class="admin-empty-state">
+
+                        <span class="admin-empty-icon">
+                            ◌
+                        </span>
+
+
+                        <strong>
+                            No recent activity
+                        </strong>
+
+
+                        <span>
+                            Platform activity will appear here.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 PLATFORM STATUS
+                 ========================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-platform-status">
+
+
+                    <div class="admin-status-heading">
+
+
+                        <div>
+
+                            <span class="admin-section-label">
+                                SYSTEM
+                            </span>
+
+                            <h2>
+                                Platform status
+                            </h2>
+
+                        </div>
+
+
+                        <span class="admin-online-indicator">
+
+                            <i></i>
+
+                            Operational
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-status-grid">
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Content System
+                            </span>
+
+                            <strong>
+                                Operational
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Reader System
+                            </span>
+
+                            <strong>
+                                Operational
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Creator System
+                            </span>
+
+                            <strong>
+                                Operational
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Reports System
+                            </span>
+
+                            <strong>
+                                Operational
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 FOOTER
+                 ========================================= -->
+
+            <footer class="admin-footer">
+
+                <span>
+                    Ever Joy Comics
+                </span>
+
+                <span>
+                    Administration Panel
+                </span>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN DASHBOARD JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/admin.js"
+></script>
+
+
+</body>
+
+</html>

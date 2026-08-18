@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Ever Joy Comics administration reports center."
+    >
+
+    <title>Reports | Ever Joy Comics</title>
+
+
+    <!-- =====================================================
+         GLOBAL STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================================
+         ADMIN STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ADMIN APPLICATION
+     ===================================================== -->
+
+<div
+    class="admin-app"
+    id="adminReports"
+>
+
+
+    <!-- =================================================
+         ADMIN HEADER
+         ================================================= -->
+
+    <header class="admin-header">
+
+
+        <div class="admin-brand">
+
+            <button
+                type="button"
+                class="admin-menu-btn"
+                id="adminMenuBtn"
+                aria-label="Open admin menu"
+            >
+
+                ☰
+
+            </button>
+
+
+            <div class="admin-brand-text">
+
+                <span class="admin-brand-name">
+                    Ever Joy
+                </span>
+
+                <span class="admin-brand-label">
+                    Administration
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-header-actions">
+
+
+            <button
+                type="button"
+                class="admin-header-btn"
+                id="adminNotificationsBtn"
+                aria-label="Notifications"
+            >
+
+                ♢
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-profile-btn"
+                id="adminProfileBtn"
+                aria-label="Admin profile"
+            >
+
+                A
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         ADMIN LAYOUT
+         ================================================= -->
+
+    <div class="admin-layout">
+
+
+        <!-- =============================================
+             SIDEBAR
+             ============================================= -->
+
+        <aside
+            class="admin-sidebar"
+            id="adminSidebar"
+        >
+
+
+            <div class="admin-sidebar-top">
+
+
+                <div class="admin-sidebar-title">
+
+                    CONTROL CENTER
+
+                </div>
+
+
+                <nav class="admin-navigation">
+
+
+                    <a
+                        href="./admin-dashboard.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ◈
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="./moderation.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ◇
+                        </span>
+
+                        <span>
+                            Moderation
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="./reports.html"
+                        class="admin-nav-item active"
+                    >
+
+                        <span class="admin-nav-icon">
+                            !
+                        </span>
+
+                        <span>
+                            Reports
+                        </span>
+
+                    </a>
+
+                </nav>
+
+
+            </div>
+
+
+
+            <div class="admin-sidebar-bottom">
+
+
+                <div class="admin-sidebar-title">
+
+                    PLATFORM
+
+                </div>
+
+
+                <nav class="admin-navigation">
+
+
+                    <a
+                        href="../index.html"
+                        class="admin-nav-item"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ↗
+                        </span>
+
+                        <span>
+                            View Platform
+                        </span>
+
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="admin-nav-item admin-logout-btn"
+                        id="adminLogoutBtn"
+                    >
+
+                        <span class="admin-nav-icon">
+                            ←
+                        </span>
+
+                        <span>
+                            Sign Out
+                        </span>
+
+                    </button>
+
+                </nav>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =============================================
+             MAIN CONTENT
+             ============================================= -->
+
+        <main class="admin-main">
+
+
+            <!-- =========================================
+                 PAGE INTRO
+                 ========================================= -->
+
+            <section class="admin-page-intro">
+
+
+                <div>
+
+                    <span class="admin-eyebrow">
+                        ADMINISTRATION
+                    </span>
+
+
+                    <h1>
+                        Reports
+                    </h1>
+
+
+                    <p>
+                        Review reports submitted by readers
+                        and manage issues across Ever Joy Comics.
+                    </p>
+
+                </div>
+
+
+                <div class="admin-date-card">
+
+                    <span>
+                        TODAY
+                    </span>
+
+                    <strong id="adminCurrentDate">
+                        --
+                    </strong>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =========================================
+                 REPORT OVERVIEW
+                 ========================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            REPORT OVERVIEW
+                        </span>
+
+                        <h2>
+                            At a glance
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-grid">
+
+
+                    <!-- OPEN -->
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                !
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                OPEN
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="adminOpenReportCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Open Reports
+                        </span>
+
+
+                    </article>
+
+
+
+                    <!-- REVIEW -->
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ◇
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                REVIEW
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="adminReviewReportCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Under Review
+                        </span>
+
+
+                    </article>
+
+
+
+                    <!-- RESOLVED -->
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ✓
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                RESOLVED
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="adminResolvedReportCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Resolved
+                        </span>
+
+
+                    </article>
+
+
+
+                    <!-- TOTAL -->
+
+                    <article class="admin-stat-card">
+
+
+                        <div class="admin-stat-top">
+
+                            <span class="admin-stat-icon">
+                                ▤
+                            </span>
+
+                            <span class="admin-stat-caption">
+                                TOTAL
+                            </span>
+
+                        </div>
+
+
+                        <strong
+                            class="admin-stat-value"
+                            id="adminTotalReportCount"
+                        >
+                            0
+                        </strong>
+
+
+                        <span class="admin-stat-label">
+                            Total Reports
+                        </span>
+
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 REPORT FILTERS
+                 ========================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-section-label">
+                            REPORT QUEUE
+                        </span>
+
+                        <h2>
+                            Reader reports
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-text-button"
+                        id="adminRefreshReports"
+                    >
+
+                        Refresh
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- FILTER BAR -->
+
+                <div class="admin-report-filters">
+
+
+                    <div class="admin-report-search">
+
+                        <input
+                            type="search"
+                            id="adminReportSearch"
+                            placeholder="Search reports..."
+                            aria-label="Search reports"
+                        >
+
+                    </div>
+
+
+                    <select
+                        id="adminReportStatusFilter"
+                        aria-label="Filter by report status"
+                    >
+
+                        <option value="all">
+                            All Statuses
+                        </option>
+
+                        <option value="open">
+                            Open
+                        </option>
+
+                        <option value="review">
+                            Under Review
+                        </option>
+
+                        <option value="resolved">
+                            Resolved
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="adminReportReasonFilter"
+                        aria-label="Filter by report reason"
+                    >
+
+                        <option value="all">
+                            All Reasons
+                        </option>
+
+                        <option value="inappropriate">
+                            Inappropriate Content
+                        </option>
+
+                        <option value="copyright">
+                            Copyright
+                        </option>
+
+                        <option value="harassment">
+                            Harassment
+                        </option>
+
+                        <option value="spam">
+                            Spam
+                        </option>
+
+                        <option value="misleading">
+                            Misleading Information
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     REPORT LIST
+                     ===================================== -->
+
+                <div
+                    class="admin-report-list"
+                    id="adminReportList"
+                >
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div class="admin-empty-state">
+
+                        <span class="admin-empty-icon">
+                            ◌
+                        </span>
+
+
+                        <strong>
+                            No reports yet
+                        </strong>
+
+
+                        <span>
+                            Reader reports will appear here
+                            when they are submitted.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 REPORT INFORMATION
+                 ========================================= -->
+
+            <section class="admin-section">
+
+
+                <div class="admin-platform-status">
+
+
+                    <div class="admin-status-heading">
+
+
+                        <div>
+
+                            <span class="admin-section-label">
+                                REPORT HANDLING
+                            </span>
+
+                            <h2>
+                                Keep Ever Joy safe
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-status-grid">
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Reader Reports
+                            </span>
+
+                            <strong>
+                                Monitored
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Content Complaints
+                            </span>
+
+                            <strong>
+                                Review Required
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Copyright Reports
+                            </span>
+
+                            <strong>
+                                Review Required
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-system-item">
+
+                            <span>
+                                Resolved Reports
+                            </span>
+
+                            <strong>
+                                Archived
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 FOOTER
+                 ========================================= -->
+
+            <footer class="admin-footer">
+
+                <span>
+                    Ever Joy Comics
+                </span>
+
+                <span>
+                    Administration Panel
+                </span>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/admin.js"
+></script>
+
+
+<!-- =====================================================
+     REPORTS JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/admin-reports.js"
+></script>
+
+
+</body>
+
+</html>
