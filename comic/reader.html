@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Read comics on Ever Joy Comics."
+    >
+
+    <title>Reader | Ever Joy Comics</title>
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================================
+         COMIC CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/comic.css"
+    >
+
+
+    <!-- =====================================================
+         READER CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/reader.css"
+    >
+
+</head>
+
+
+<body class="reader-body">
+
+
+    <!-- =====================================================
+         READER HEADER
+         ===================================================== -->
+
+    <header class="reader-header">
+
+
+        <!-- Back -->
+
+        <button
+            class="reader-header-btn"
+            id="readerBackButton"
+            aria-label="Go back"
+        >
+
+            ←
+
+        </button>
+
+
+        <!-- Comic information -->
+
+        <div class="reader-title-area">
+
+            <span
+                class="reader-comic-title"
+                id="readerComicTitle"
+            >
+
+                Ever Joy
+
+            </span>
+
+
+            <span
+                class="reader-chapter-title"
+                id="readerChapterTitle"
+            >
+
+                Loading...
+
+            </span>
+
+        </div>
+
+
+        <!-- Reader menu -->
+
+        <button
+            class="reader-header-btn"
+            id="readerMenuButton"
+            aria-label="Reader menu"
+        >
+
+            ⋮
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         READER MAIN
+         ===================================================== -->
+
+    <main
+        class="reader-container"
+        id="readerContainer"
+    >
+
+
+        <!-- =================================================
+             LOADING STATE
+             ================================================= -->
+
+        <section
+            class="reader-loading"
+            id="readerLoading"
+        >
+
+            <div class="reader-loader"></div>
+
+
+            <p>
+                Preparing your chapter...
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COMIC PAGES
+             ================================================= -->
+
+        <section
+            class="comic-pages"
+            id="comicPages"
+        >
+
+            <!--
+
+                Comic pages will be inserted
+                here by reader.js.
+
+            -->
+
+        </section>
+
+
+
+        <!-- =================================================
+             END OF CHAPTER
+             ================================================= -->
+
+        <section
+            class="chapter-end"
+            id="chapterEnd"
+        >
+
+            <div class="chapter-end-icon">
+
+                ✦
+
+            </div>
+
+
+            <h2>
+                End of Chapter
+            </h2>
+
+
+            <p>
+                You've reached the end of this chapter.
+            </p>
+
+
+            <div class="chapter-end-actions">
+
+
+                <button
+                    class="next-chapter-btn"
+                    id="nextChapterButton"
+                >
+
+                    Next Chapter
+
+                </button>
+
+
+                <button
+                    class="back-details-btn"
+                    id="readerDetailsButton"
+                >
+
+                    Back to Comic
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         READER CONTROLS
+         ===================================================== -->
+
+    <nav
+        class="reader-controls"
+        id="readerControls"
+        aria-label="Reader controls"
+    >
+
+
+        <!-- Previous chapter -->
+
+        <button
+            class="reader-control-btn"
+            id="previousChapterButton"
+            aria-label="Previous chapter"
+        >
+
+            ‹
+
+        </button>
+
+
+        <!-- Page progress -->
+
+        <div
+            class="reader-progress-area"
+        >
+
+            <span
+                id="readerPageNumber"
+            >
+
+                1
+
+            </span>
+
+
+            <span class="reader-progress-divider">
+
+                /
+
+            </span>
+
+
+            <span
+                id="readerTotalPages"
+            >
+
+                --
+
+            </span>
+
+        </div>
+
+
+        <!-- Next chapter -->
+
+        <button
+            class="reader-control-btn"
+            id="nextChapterControl"
+            aria-label="Next chapter"
+        >
+
+            ›
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         READER MENU
+         ===================================================== -->
+
+    <aside
+        class="reader-menu"
+        id="readerMenu"
+        aria-hidden="true"
+    >
+
+
+        <div class="reader-menu-header">
+
+            <h2>
+                Reader Settings
+            </h2>
+
+
+            <button
+                class="reader-menu-close"
+                id="readerMenuClose"
+                aria-label="Close reader settings"
+            >
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div class="reader-menu-content">
+
+
+            <button
+    class="reader-menu-option"
+    id="readerBookmarkButton"
+>
+    <span>
+        ♡
+    </span>
+
+    Bookmark Current Page
+</button>
+
+            <button
+                class="reader-menu-option"
+                id="readerHistoryButton"
+            >
+
+                <span>
+                    ◷
+                </span>
+
+                Reading History
+
+            </button>
+
+
+            <button
+                class="reader-menu-option"
+                id="readerSettingsButton"
+            >
+
+                <span>
+                    ⚙
+                </span>
+
+                Reader Settings
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         READER OVERLAY
+         ===================================================== -->
+
+    <div
+        class="reader-overlay"
+        id="readerOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="../js/script.js"
+    ></script>
+
+
+    <script
+        src="../js/comics.js"
+    ></script>
+
+
+    <script
+        src="../js/reader.js"
+    ></script>
+    
+    
+    <script src="../js/bookmarks.js"></script>
+
+
+<!-- =====================================================
+     EVER JOY LIBRARY INTEGRATION
+     ===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        initializeComicLibrary();
+
+    }
+);
+
+
+/* =====================================================
+   GET CURRENT COMIC / CHAPTER
+   ===================================================== */
+
+function getReaderParameters() {
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    return {
+
+        comicId:
+            params.get("comic"),
+
+        chapterId:
+            params.get("chapter")
+
+    };
+
+}
+
+
+/* =====================================================
+   INITIALIZE READER LIBRARY FEATURES
+   ===================================================== */
+
+async function initializeComicLibrary() {
+
+    const {
+        comicId,
+        chapterId
+    } =
+        getReaderParameters();
+
+
+    if (
+        !comicId
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+        Automatically place the comic
+        in the reader's library.
+    */
+
+    if (
+        typeof isInLibrary === "function"
+        &&
+        typeof addToLibrary === "function"
+    ) {
+
+        if (
+            !isInLibrary(
+                comicId
+            )
+        ) {
+
+            addToLibrary(
+                comicId
+            );
+
+        }
+
+    }
+
+
+    /*
+        Create the bookmark button
+        if the reader page doesn't
+        already have one.
+    */
+
+    createReaderBookmarkButton(
+        comicId,
+        chapterId
+    );
+
+
+    /*
+        Save an initial reading
+        position.
+    */
+
+    saveReaderProgress(
+        comicId,
+        chapterId
+    );
+
+}
+
+
+/* =====================================================
+   READING PROGRESS
+   ===================================================== */
+
+function saveReaderProgress(
+    comicId,
+    chapterId
+) {
+
+    if (
+        typeof saveReadingProgress !== "function"
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+        We start at 0%.
+        The scroll listener below
+        will continuously update it.
+    */
+
+    saveReadingProgress(
+
+        comicId,
+
+        chapterId,
+
+        getCurrentChapterTitle(),
+
+        calculateReaderProgress()
+
+    );
+
+}
+
+
+/* =====================================================
+   CALCULATE PAGE / SCROLL PROGRESS
+   ===================================================== */
+
+function calculateReaderProgress() {
+
+    const documentHeight =
+        document.documentElement
+            .scrollHeight;
+
+
+    const windowHeight =
+        window.innerHeight;
+
+
+    const scrollableHeight =
+        documentHeight -
+        windowHeight;
+
+
+    if (
+        scrollableHeight <= 0
+    ) {
+
+        return 100;
+
+    }
+
+
+    const scrollTop =
+        window.scrollY;
+
+
+    const percentage =
+        (
+            scrollTop /
+            scrollableHeight
+        )
+        *
+        100;
+
+
+    return Math.round(
+        Math.min(
+            100,
+            Math.max(
+                0,
+                percentage
+            )
+        )
+    );
+
+}
+
+
+/* =====================================================
+   SAVE PROGRESS WHILE READING
+   ===================================================== */
+
+let readerProgressTimer;
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        clearTimeout(
+            readerProgressTimer
+        );
+
+
+        readerProgressTimer =
+            setTimeout(
+                () => {
+
+                    const {
+                        comicId,
+                        chapterId
+                    } =
+                        getReaderParameters();
+
+
+                    if (
+                        !comicId
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    if (
+                        typeof saveReadingProgress
+                        !==
+                        "function"
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    saveReadingProgress(
+
+                        comicId,
+
+                        chapterId,
+
+                        getCurrentChapterTitle(),
+
+                        calculateReaderProgress()
+
+                    );
+
+                },
+
+                400
+
+            );
+
+    },
+
+    {
+        passive: true
+    }
+
+);
+
+
+/* =====================================================
+   CHAPTER TITLE
+   ===================================================== */
+
+function getCurrentChapterTitle() {
+
+    const titleElement =
+        document.querySelector(
+            "[data-chapter-title]"
+        );
+
+
+    if (
+        titleElement
+    ) {
+
+        return titleElement
+            .textContent
+            .trim();
+
+    }
+
+
+    const heading =
+        document.querySelector(
+            "h1"
+        );
+
+
+    if (
+        heading
+    ) {
+
+        return heading
+            .textContent
+            .trim();
+
+    }
+
+
+    return "Chapter";
+
+}
+
+
+/* =====================================================
+   BOOKMARK BUTTON
+   ===================================================== */
+
+function createReaderBookmarkButton(
+    comicId,
+    chapterId
+) {
+
+    /*
+        If you already have a bookmark
+        button in your reader, we use it
+        instead of creating another one.
+    */
+
+    let button =
+        document.querySelector(
+            "[data-reader-bookmark]"
+        );
+
+
+    if (
+        !button
+    ) {
+
+        button =
+            document.createElement(
+                "button"
+            );
+
+
+        button.type =
+            "button";
+
+
+        button.className =
+            "reader-bookmark-button";
+
+
+        button.setAttribute(
+            "data-reader-bookmark",
+            ""
+        );
+
+
+        button.setAttribute(
+            "aria-label",
+            "Bookmark chapter"
+        );
+
+
+        button.innerHTML =
+            "🔖";
+
+
+        /*
+            Place the button at the top
+            of the reader.
+        */
+
+        const readerHeader =
+            document.querySelector(
+                ".reader-header"
+            );
+
+
+        if (
+            readerHeader
+        ) {
+
+            readerHeader.appendChild(
+                button
+            );
+
+        } else {
+
+            document.body.prepend(
+                button
+            );
+
+        }
+
+    }
+
+
+    updateBookmarkButton(
+        button,
+        comicId,
+        chapterId
+    );
+
+
+    /*
+        Avoid attaching the event
+        more than once.
+    */
+
+    if (
+        button.dataset.bookmarkReady
+        ===
+        "true"
+    ) {
+
+        return;
+
+    }
+
+
+    button.dataset.bookmarkReady =
+        "true";
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            toggleReaderBookmark(
+                button,
+                comicId,
+                chapterId
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   UPDATE BOOKMARK BUTTON
+   ===================================================== */
+
+function updateBookmarkButton(
+    button,
+    comicId,
+    chapterId
+) {
+
+    if (
+        typeof isChapterBookmarked
+        !==
+        "function"
+    ) {
+
+        return;
+
+    }
+
+
+    const bookmarked =
+        isChapterBookmarked(
+            comicId,
+            chapterId
+        );
+
+
+    button.classList.toggle(
+        "bookmarked",
+        bookmarked
+    );
+
+
+    button.innerHTML =
+        bookmarked
+            ? "🔖"
+            : "♧";
+
+
+    button.setAttribute(
+        "aria-label",
+        bookmarked
+            ? "Remove bookmark"
+            : "Bookmark chapter"
+    );
+
+}
+
+
+/* =====================================================
+   TOGGLE BOOKMARK
+   ===================================================== */
+
+function toggleReaderBookmark(
+    button,
+    comicId,
+    chapterId
+) {
+
+    if (
+        !comicId ||
+        !chapterId
+    ) {
+
+        return;
+
+    }
+
+
+    if (
+        typeof isChapterBookmarked
+        !==
+        "function"
+        ||
+        typeof saveChapterBookmark
+        !==
+        "function"
+        ||
+        typeof removeChapterBookmark
+        !==
+        "function"
+    ) {
+
+        return;
+
+    }
+
+
+    const bookmarked =
+        isChapterBookmarked(
+            comicId,
+            chapterId
+        );
+
+
+    if (
+        bookmarked
+    ) {
+
+        removeChapterBookmark(
+            comicId,
+            chapterId
+        );
+
+    } else {
+
+        saveChapterBookmark(
+
+            comicId,
+
+            chapterId,
+
+            getCurrentChapterTitle()
+
+        );
+
+    }
+
+
+    updateBookmarkButton(
+        button,
+        comicId,
+        chapterId
+    );
+
+}
+
+
+/* =====================================================
+   MARK CHAPTER AS COMPLETED
+   ===================================================== */
+
+function markChapterCompleted() {
+
+    const {
+        comicId,
+        chapterId
+    } =
+        getReaderParameters();
+
+
+    if (
+        !comicId
+        ||
+        !chapterId
+    ) {
+
+        return;
+
+    }
+
+
+    if (
+        typeof saveReadingProgress
+        !==
+        "function"
+    ) {
+
+        return;
+
+    }
+
+
+    saveReadingProgress(
+
+        comicId,
+
+        chapterId,
+
+        getCurrentChapterTitle(),
+
+        100
+
+    );
+
+}
+
+
+/* =====================================================
+   WHEN READER REACHES THE END
+   ===================================================== */
+
+let readerEndObserver;
+
+
+function setupReaderCompletion() {
+
+    if (
+        readerEndObserver
+    ) {
+
+        return;
+
+    }
+
+
+    const footer =
+        document.querySelector(
+            ".reader-footer"
+        );
+
+
+    if (
+        !footer
+    ) {
+
+        return;
+
+    }
+
+
+    readerEndObserver =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(
+                    entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            markChapterCompleted();
+
+                        }
+
+                    }
+                );
+
+            },
+
+            {
+                threshold: 0.5
+            }
+
+        );
+
+
+    readerEndObserver.observe(
+        footer
+    );
+
+}
+
+
+/* =====================================================
+   START COMPLETION OBSERVER
+   ===================================================== */
+
+setTimeout(
+    () => {
+
+        setupReaderCompletion();
+
+    },
+
+    500
+
+);
+/* =========================================================
+   EVER JOY COMICS
+   READER MENU BOOKMARK CONNECTION
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const bookmarkButton =
+            document.querySelector(
+                "#readerBookmarkButton"
+            );
+
+
+        if (!bookmarkButton) {
+
+            return;
+
+        }
+
+
+        /*
+            Prevent duplicate initialization.
+        */
+
+        if (
+            bookmarkButton.dataset.bookmarkConnected
+            ===
+            "true"
+        ) {
+
+            return;
+
+        }
+
+
+        bookmarkButton.dataset.bookmarkConnected =
+            "true";
+
+
+        bookmarkButton.addEventListener(
+            "click",
+            () => {
+
+                const {
+                    comicId,
+                    chapterId
+                } =
+                    getReaderParameters();
+
+
+                if (
+                    !comicId ||
+                    !chapterId
+                ) {
+
+                    return;
+
+                }
+
+
+                /*
+                    Use the existing bookmark
+                    system — do NOT create
+                    another storage system.
+                */
+
+                if (
+                    typeof isChapterBookmarked
+                    !==
+                    "function"
+                    ||
+                    typeof saveChapterBookmark
+                    !==
+                    "function"
+                    ||
+                    typeof removeChapterBookmark
+                    !==
+                    "function"
+                ) {
+
+                    console.error(
+                        "Ever Joy: Bookmark functions are not available."
+                    );
+
+                    return;
+
+                }
+
+
+                const bookmarked =
+                    isChapterBookmarked(
+                        comicId,
+                        chapterId
+                    );
+
+
+                if (
+                    bookmarked
+                ) {
+
+                    removeChapterBookmark(
+                        comicId,
+                        chapterId
+                    );
+
+                } else {
+
+                    saveChapterBookmark(
+
+                        comicId,
+
+                        chapterId,
+
+                        getCurrentChapterTitle()
+
+                    );
+
+                }
+
+
+                /*
+                    Update the button immediately.
+                */
+
+                updateReaderMenuBookmarkButton(
+
+                    bookmarkButton,
+
+                    comicId,
+
+                    chapterId
+
+                );
+
+            }
+        );
+
+
+        /*
+            Set the correct initial state.
+        */
+
+        const {
+            comicId,
+            chapterId
+        } =
+            getReaderParameters();
+
+
+        if (
+            comicId &&
+            chapterId
+        ) {
+
+            updateReaderMenuBookmarkButton(
+
+                bookmarkButton,
+
+                comicId,
+
+                chapterId
+
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   UPDATE MENU BUTTON
+   ========================================================= */
+
+function updateReaderMenuBookmarkButton(
+    button,
+    comicId,
+    chapterId
+) {
+
+    if (
+        typeof isChapterBookmarked
+        !==
+        "function"
+    ) {
+
+        return;
+
+    }
+
+
+    const bookmarked =
+        isChapterBookmarked(
+            comicId,
+            chapterId
+        );
+
+
+    const icon =
+        button.querySelector(
+            "span"
+        );
+
+
+    if (
+        bookmarked
+    ) {
+
+        if (icon) {
+
+            icon.textContent =
+                "♥";
+
+        }
+
+
+        button.lastChild.textContent =
+            " Bookmarked";
+
+        button.classList.add(
+            "bookmarked"
+        );
+
+    } else {
+
+        if (icon) {
+
+            icon.textContent =
+                "♡";
+
+        }
+
+
+        button.lastChild.textContent =
+            " Bookmark Chapter";
+
+        button.classList.remove(
+            "bookmarked"
+        );
+
+    }
+
+}
+</script>
+
+<script src="../js/script.js"></script>
+<script src="../js/comics.js"></script>
+
+<script src="../security/security.js"></script>
+
+<script src="../security/asset-protection.js"></script>
+<script src="../js/content-protection.js"></script>
+<script src="../js/watermark.js"></script>
+
+<script src="../js/reader.js"></script>
+<script src="../js/bookmarks.js"></script>
+
+</body>
+
+</html>

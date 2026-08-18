@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Read comic chapters on Ever Joy Comics."
+    >
+
+    <title>Chapter | Ever Joy Comics</title>
+
+
+    <!-- Global Styles -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- Comic Styles -->
+
+    <link
+        rel="stylesheet"
+        href="../css/comic.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CHAPTER HEADER
+         ===================================================== -->
+
+    <header class="comic-header">
+
+        <button
+            class="back-btn"
+            onclick="history.back()"
+            aria-label="Go back"
+        >
+
+            ←
+
+        </button>
+
+
+        <div class="comic-header-title">
+
+            <span id="chapterComicTitle">
+                Ever Joy
+            </span>
+
+        </div>
+
+
+        <button
+            class="header-action"
+            id="chapterMenu"
+            aria-label="More options"
+        >
+
+            ⋮
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CHAPTER CONTENT
+         ===================================================== -->
+
+    <main
+        class="chapter-page"
+        id="chapterPage"
+    >
+
+
+        <!-- =================================================
+             CHAPTER INTRO
+             ================================================= -->
+
+        <section class="chapter-intro">
+
+
+            <span
+                class="chapter-label"
+                id="chapterLabel"
+            >
+
+                CHAPTER
+
+            </span>
+
+
+            <h1
+                class="chapter-title"
+                id="chapterTitle"
+            >
+
+                Loading...
+
+            </h1>
+
+
+            <div
+                class="chapter-meta"
+                id="chapterMeta"
+            >
+
+                Loading chapter information...
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACCESS / GEM INFORMATION
+             ================================================= -->
+
+        <section
+            class="chapter-access"
+            id="chapterAccess"
+        >
+
+            <div class="access-icon">
+
+                ◈
+
+            </div>
+
+
+            <div class="access-information">
+
+                <strong
+                    id="chapterPrice"
+                >
+
+                    -- Ever Gems
+
+                </strong>
+
+
+                <span>
+
+                    Unlock this chapter to continue reading.
+
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CHAPTER ACTION
+             ================================================= -->
+
+        <section class="chapter-action">
+
+
+            <button
+                class="read-chapter-btn"
+                id="readChapterButton"
+            >
+
+                Read Chapter
+
+            </button>
+
+
+            <a
+                href="#"
+                class="back-to-comic"
+                id="backToComic"
+            >
+
+                Back to Comic
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             CHAPTER NOTICE
+             ================================================= -->
+
+        <section class="chapter-notice">
+
+            <p>
+
+                Your access is saved to your Ever Joy account
+                after unlocking a chapter.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         GLOBAL JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="../js/script.js"
+    ></script>
+
+
+    <!-- =====================================================
+         COMIC JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="../js/comics.js"
+    ></script>
+
+
+</body>
+
+</html>

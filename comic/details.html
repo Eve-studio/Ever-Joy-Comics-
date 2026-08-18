@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Read original comics on Ever Joy Comics."
+>
+
+<title>Comic Details | Ever Joy Comics</title>
+
+
+<!-- Global Styles -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- Comic Styles -->
+
+<link
+    rel="stylesheet"
+    href="../css/comic.css"
+>
+
+
+<!-- Reviews Styles -->
+
+<link
+    rel="stylesheet"
+    href="../css/reviews.css"
+>
+
+</head><body><!-- =====================================================
+     TOP NAVIGATION
+     ===================================================== -->
+
+<header class="comic-header">
+
+    <button
+        class="back-btn"
+        onclick="history.back()"
+        aria-label="Go back"
+    >
+
+        ←
+
+    </button>
+
+
+    <div class="comic-header-title">
+
+        <span>
+            Ever Joy
+        </span>
+
+    </div>
+
+
+    <button
+        class="header-action"
+        aria-label="More options"
+    >
+
+        ⋮
+
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+     ===================================================== -->
+
+<main
+    class="comic-details"
+    id="comicDetails"
+>
+
+
+    <!-- =================================================
+         HERO / BANNER
+         ================================================= -->
+
+    <section class="comic-hero">
+
+        <div class="comic-banner">
+
+            <img
+                id="comicBanner"
+                src="../assets/images/hero-placeholder.jpg"
+                alt=""
+            >
+
+            <div class="comic-banner-overlay"></div>
+
+        </div>
+<button
+               type="button"
+               class="follow-comic-btn"
+               id="followComicBtn"
+              aria-label="Follow this comic"
+             >
+                 ♡
+                      <span>
+                        Follow
+                      </span>
+   
+             </button>
+
+      </div>
+
+
+        <!-- =============================================
+             COVER + BASIC INFORMATION
+             ============================================= -->
+
+        <div class="comic-intro">
+
+
+            <div class="comic-cover-large">
+
+    <img
+        id="comicCover"
+        src="../assets/images/comic-placeholder.jpg"
+        alt=""
+    >
+
+         </div>
+    
+            <div class="comic-basic-info">
+
+                <h1 id="comicTitle">
+                    Loading...
+                </h1>
+
+
+                <div
+                    class="comic-status"
+                    id="comicStatus"
+                >
+
+                    --
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FORMAT
+         ================================================= -->
+
+    <section class="comic-section comic-meta-section">
+
+        <div
+            class="comic-format"
+            id="comicFormat"
+        >
+
+            <!-- Format inserted by JavaScript -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GENRES
+         ================================================= -->
+
+    <section class="comic-section">
+
+        <div
+            class="genre-list"
+            id="comicGenres"
+        >
+
+            <!-- Genres inserted by JavaScript -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TAGS
+         ================================================= -->
+
+    <section class="comic-section comic-tags-section">
+
+        <div
+            class="tag-list"
+            id="comicTags"
+        >
+
+            <!-- Tags inserted by JavaScript -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         AGE RATING
+         ================================================= -->
+
+    <section class="comic-section comic-age-rating-section">
+
+        <div
+            class="comic-age-rating"
+            id="comicAgeRating"
+        >
+
+            <!-- Age rating inserted by JavaScript -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RATINGS
+         ================================================= -->
+
+    <section
+        class="comic-section comic-rating-section"
+        id="comicRatingSection"
+    >
+
+        <div
+            class="comic-rating-summary"
+            id="comicRatingSummary"
+        >
+
+            <div
+                class="comic-rating-score"
+                id="comicRatingScore"
+            >
+
+                --
+
+            </div>
+
+
+            <div class="comic-rating-stars">
+
+                <span
+                    id="comicRatingStars"
+                    aria-label="Comic rating"
+                >
+
+                    ☆☆☆☆☆
+
+                </span>
+
+            </div>
+
+
+            <div
+                class="comic-rating-count"
+                id="comicRatingCount"
+            >
+
+                No ratings yet
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CREATOR INFORMATION
+         ================================================= -->
+
+    <section class="comic-section creator-section">
+
+        <div class="section-heading">
+
+            <h2>
+                Creators
+            </h2>
+
+        </div>
+
+
+        <div
+            class="creator-list"
+            id="comicCreators"
+        >
+
+            <!-- Creator information inserted by JavaScript -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SYNOPSIS
+         ================================================= -->
+
+    <section class="comic-section synopsis-section">
+
+        <div class="section-heading">
+
+            <h2>
+                About this comic
+            </h2>
+
+        </div>
+
+
+        <p
+            id="comicDescription"
+            class="comic-description"
+        >
+
+            Loading comic description...
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RATINGS & REVIEWS
+         ================================================= -->
+
+    <section
+        class="comic-section reviews-section"
+        id="comicReviews"
+    >
+
+
+        <!-- =============================================
+             SECTION HEADING
+             ============================================= -->
+
+        <div class="section-heading reviews-heading">
+
+            <div>
+
+                <h2>
+                    Ratings & Reviews
+                </h2>
+
+                <span
+                    class="reviews-subtitle"
+                    id="reviewsSubtitle"
+                >
+
+                    What readers think about this comic
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             OVERALL RATING
+             ============================================= -->
+
+        <div class="reviews-overall-card">
+
+
+            <div class="reviews-overall-score">
+
+                <span
+                    id="reviewsOverallScore"
+                    class="reviews-score-number"
+                >
+
+                    --
+
+                </span>
+
+
+                <div
+                    id="reviewsOverallStars"
+                    class="reviews-stars"
+                    aria-label="Overall comic rating"
+                >
+
+                    ☆☆☆☆☆
+
+                </div>
+
+
+                <span
+                    id="reviewsTotalCount"
+                    class="reviews-total-count"
+                >
+
+                    No ratings yet
+
+                </span>
+
+            </div>
+
+
+            <div
+                class="reviews-rating-breakdown"
+                id="reviewsRatingBreakdown"
+            >
+
+                <!-- Rating distribution inserted by JavaScript -->
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================
+             REVIEW PREVIEW
+             ============================================= -->
+
+        <div class="reviews-preview-header">
+
+            <h3>
+                Reader Reviews
+            </h3>
+
+
+            <a
+                href="./reviews.html"
+                class="view-all-reviews"
+                id="viewAllReviews"
+            >
+
+                View All
+
+            </a>
+
+        </div>
+
+
+        <div
+            class="reviews-list"
+            id="reviewsList"
+        >
+
+            <!-- =====================================
+                 FIRST FOUR REVIEWS INSERTED BY JS
+                 ===================================== -->
+
+            <div class="review-loading">
+
+                Loading reviews...
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CHAPTER INFORMATION
+         ================================================= -->
+
+    <section class="comic-section chapters-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Chapters
+                </h2>
+
+                <span
+                    id="chapterCount"
+                    class="chapter-count"
+                >
+
+                    --
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="sort-chapters"
+                id="sortChapters"
+            >
+
+                Newest
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="chapter-list"
+            id="chapterList"
+        >
+
+            <!-- Chapters inserted by JavaScript -->
+
+            <div class="chapter-loading">
+
+                Loading chapters...
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BOTTOM ACTION
+         ================================================= -->
+
+    <section class="comic-action-section">
+
+        <div class="comic-action-buttons">
+
+            <a
+                href="#"
+                class="read-first-btn"
+                id="readFirstChapter"
+            >
+
+                Start Reading
+
+            </a>
+
+            <button
+                type="button"
+                class="save-library-btn"
+                id="saveToLibraryBtn"
+                aria-label="Save comic to library"
+            >
+
+                ♡
+
+                <span>
+                    Save
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     GLOBAL JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/script.js"
+></script>
+
+
+<!-- =====================================================
+     COMIC JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/comics.js"
+></script>
+
+
+<!-- =====================================================
+     REVIEWS JAVASCRIPT
+     ===================================================== -->
+
+<script
+    src="../js/reviews.js"
+></script>
+
+</body></html>

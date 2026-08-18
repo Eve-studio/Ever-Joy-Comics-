@@ -1,0 +1,491 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Reader ratings and reviews for this comic on Ever Joy Comics."
+>
+
+<title>Ratings & Reviews | Ever Joy Comics</title>
+
+
+<!-- =================================================
+     GLOBAL STYLES
+================================================== -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- =================================================
+     REVIEWS STYLES
+================================================== -->
+
+<link
+    rel="stylesheet"
+    href="../css/reviews.css"
+>
+
+</head><body><!-- =================================================
+     EVER JOY REVIEWS PAGE
+================================================== -->
+
+<main class="reviews-page">
+
+
+    <!-- =================================================
+         PAGE HEADER
+    ================================================== -->
+
+    <header class="reviews-page-header">
+
+        <div class="reviews-page-header-content">
+
+            <span class="reviews-page-eyebrow">
+                Reader Experience
+            </span>
+
+            <h1 class="reviews-page-title">
+                Ratings & Reviews
+            </h1>
+
+            <p class="reviews-page-description">
+                See what readers think about this comic.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         RATING SUMMARY
+    ================================================== -->
+
+    <section
+        class="reviews-rating-section"
+        aria-labelledby="overallRatingHeading"
+    >
+
+        <div class="reviews-rating-layout">
+
+
+            <!-- =================================================
+                 OVERALL RATING
+            ================================================== -->
+
+            <div class="reviews-overall-rating">
+
+                <span class="reviews-section-label">
+                    Overall Rating
+                </span>
+
+                <div
+                    class="reviews-overall-score"
+                    id="overallRatingHeading"
+                >
+                    0.0
+                </div>
+
+                <div
+                    class="reviews-overall-stars"
+                    aria-label="Overall comic rating"
+                >
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                </div>
+
+                <p class="reviews-rating-count">
+                    0 ratings
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RATING DISTRIBUTION
+            ================================================== -->
+
+            <div class="reviews-rating-distribution">
+
+                <div class="reviews-distribution-row">
+
+                    <span class="reviews-distribution-label">
+                        5 ★
+                    </span>
+
+                    <div class="reviews-distribution-bar">
+                        <span
+                            class="reviews-distribution-fill"
+                            data-rating="5"
+                        ></span>
+                    </div>
+
+                    <span
+                        class="reviews-distribution-percent"
+                        data-rating-percent="5"
+                    >
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="reviews-distribution-row">
+
+                    <span class="reviews-distribution-label">
+                        4 ★
+                    </span>
+
+                    <div class="reviews-distribution-bar">
+                        <span
+                            class="reviews-distribution-fill"
+                            data-rating="4"
+                        ></span>
+                    </div>
+
+                    <span
+                        class="reviews-distribution-percent"
+                        data-rating-percent="4"
+                    >
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="reviews-distribution-row">
+
+                    <span class="reviews-distribution-label">
+                        3 ★
+                    </span>
+
+                    <div class="reviews-distribution-bar">
+                        <span
+                            class="reviews-distribution-fill"
+                            data-rating="3"
+                        ></span>
+                    </div>
+
+                    <span
+                        class="reviews-distribution-percent"
+                        data-rating-percent="3"
+                    >
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="reviews-distribution-row">
+
+                    <span class="reviews-distribution-label">
+                        2 ★
+                    </span>
+
+                    <div class="reviews-distribution-bar">
+                        <span
+                            class="reviews-distribution-fill"
+                            data-rating="2"
+                        ></span>
+                    </div>
+
+                    <span
+                        class="reviews-distribution-percent"
+                        data-rating-percent="2"
+                    >
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="reviews-distribution-row">
+
+                    <span class="reviews-distribution-label">
+                        1 ★
+                    </span>
+
+                    <div class="reviews-distribution-bar">
+                        <span
+                            class="reviews-distribution-fill"
+                            data-rating="1"
+                        ></span>
+                    </div>
+
+                    <span
+                        class="reviews-distribution-percent"
+                        data-rating-percent="1"
+                    >
+                        0%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RATE THIS COMIC
+    ================================================== -->
+
+    <section
+        class="reviews-rate-section"
+        aria-labelledby="rateComicHeading"
+    >
+
+        <div class="reviews-rate-content">
+
+            <span class="reviews-section-label">
+                Your Rating
+            </span>
+
+            <h2
+                id="rateComicHeading"
+                class="reviews-rate-title"
+            >
+                Rate this comic
+            </h2>
+
+            <p class="reviews-rate-description">
+                Share your experience with other readers.
+            </p>
+
+
+            <div
+                class="reviews-interactive-stars"
+                id="ratingStars"
+                role="radiogroup"
+                aria-label="Rate this comic from one to five stars"
+            >
+
+                <button
+                    type="button"
+                    class="reviews-star-button"
+                    data-rating="1"
+                    aria-label="Rate 1 star"
+                >
+                    ☆
+                </button>
+
+                <button
+                    type="button"
+                    class="reviews-star-button"
+                    data-rating="2"
+                    aria-label="Rate 2 stars"
+                >
+                    ☆
+                </button>
+
+                <button
+                    type="button"
+                    class="reviews-star-button"
+                    data-rating="3"
+                    aria-label="Rate 3 stars"
+                >
+                    ☆
+                </button>
+
+                <button
+                    type="button"
+                    class="reviews-star-button"
+                    data-rating="4"
+                    aria-label="Rate 4 stars"
+                >
+                    ☆
+                </button>
+
+                <button
+                    type="button"
+                    class="reviews-star-button"
+                    data-rating="5"
+                    aria-label="Rate 5 stars"
+                >
+                    ☆
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         WRITE REVIEW
+    ================================================== -->
+
+    <section
+        class="reviews-write-section"
+        id="writeReviewSection"
+        aria-labelledby="writeReviewHeading"
+    >
+
+        <div class="reviews-write-content">
+
+            <span class="reviews-section-label">
+                Your Review
+            </span>
+
+            <h2
+                id="writeReviewHeading"
+                class="reviews-write-title"
+            >
+                Tell readers what you think
+            </h2>
+
+            <textarea
+                id="reviewText"
+                class="reviews-write-textarea"
+                maxlength="1000"
+                rows="6"
+                placeholder="Share your thoughts about this comic..."
+            ></textarea>
+
+            <div class="reviews-write-footer">
+
+                <span
+                    class="reviews-character-count"
+                    id="reviewCharacterCount"
+                >
+                    0 / 1000
+                </span>
+
+                <button
+                    type="button"
+                    class="reviews-submit-button"
+                    id="submitReviewButton"
+                >
+                    Submit Review
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         READER REVIEWS
+    ================================================== -->
+
+    <section
+        class="reviews-list-section"
+        aria-labelledby="readerReviewsHeading"
+    >
+
+        <div class="reviews-list-header">
+
+            <div>
+
+                <span class="reviews-section-label">
+                    Community
+                </span>
+
+                <h2
+                    id="readerReviewsHeading"
+                    class="reviews-list-title"
+                >
+                    Reader Reviews
+                </h2>
+
+                <p
+                    class="reviews-list-count"
+                    id="reviewCount"
+                >
+                    0 reviews
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="reviews-sort-button"
+                id="reviewsSortButton"
+            >
+                Latest
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             REVIEW CARDS
+        ================================================== -->
+
+        <div
+            class="reviews-list"
+            id="reviewsList"
+        >
+
+            <!-- Reviews will be inserted here by JavaScript. -->
+
+        </div>
+
+
+        <!-- =================================================
+             EMPTY STATE
+        ================================================== -->
+
+        <div
+            class="reviews-empty-state"
+            id="reviewsEmptyState"
+            hidden
+        >
+
+            <span class="reviews-empty-icon">
+                ☆
+            </span>
+
+            <h3>
+                No reviews yet
+            </h3>
+
+            <p>
+                Be the first reader to share your thoughts.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+</main>
+
+
+
+<!-- =================================================
+     REVIEWS JAVASCRIPT
+================================================== -->
+
+<script
+    src="../js/reviews.js"
+    defer
+></script>
+
+</body>
+
+</html>
