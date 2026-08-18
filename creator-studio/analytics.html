@@ -1,0 +1,860 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Ever Joy Comics Creator Studio analytics."
+>
+
+<title>Analytics | Ever Joy Creator Studio</title>
+
+
+<!-- GLOBAL STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- CREATOR ANALYTICS STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/creator-analytics.css"
+>
+
+</head><body class="creator-dashboard-body"><main class="creator-studio"><!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="creator-sidebar">
+
+
+    <div class="creator-sidebar-brand">
+
+        <a
+            href="../index.html"
+            class="creator-logo"
+        >
+            Ever Joy
+        </a>
+
+        <span class="creator-studio-label">
+            CREATOR STUDIO
+        </span>
+
+    </div>
+
+
+    <nav
+        class="creator-navigation"
+        aria-label="Creator Studio navigation"
+    >
+
+        <a
+            href="./dashboard.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">⌂</span>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a
+            href="./comics.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">▣</span>
+            <span>My Comics</span>
+        </a>
+
+
+        <a
+            href="./upload.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">＋</span>
+            <span>Upload</span>
+        </a>
+
+
+        <a
+            href="./analytics.html"
+            class="creator-nav-item active"
+        >
+            <span class="creator-nav-icon">⌁</span>
+            <span>Analytics</span>
+        </a>
+
+
+        <a
+            href="./earnings.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">$</span>
+            <span>Earnings</span>
+        </a>
+
+
+        <a
+            href="./collaborations.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">✦</span>
+            <span>Collab Pool</span>
+        </a>
+
+
+        <a
+            href="./settings.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">⚙</span>
+            <span>Settings</span>
+        </a>
+
+    </nav>
+
+
+    <div class="creator-sidebar-footer">
+
+        <a
+            href="../index.html"
+            class="creator-return-link"
+        >
+            ← Back to Ever Joy
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<section class="creator-main">
+
+
+    <!-- =================================================
+         TOP BAR
+    ================================================== -->
+
+    <header class="creator-topbar">
+
+
+        <div class="creator-page-heading">
+
+            <span class="creator-eyebrow">
+                CREATOR STUDIO
+            </span>
+
+            <h1>
+                Analytics
+            </h1>
+
+        </div>
+
+
+        <div class="creator-account-area">
+
+            <button
+                type="button"
+                class="creator-notification-button"
+                id="creatorNotificationButton"
+                aria-label="Notifications"
+            >
+                ♢
+            </button>
+
+
+            <a
+                href="./settings.html"
+                class="creator-account"
+            >
+
+                <span
+                    class="creator-avatar"
+                    id="creatorAvatar"
+                >
+                    E
+                </span>
+
+
+                <span class="creator-account-text">
+
+                    <strong
+                        id="creatorAccountName"
+                    >
+                        Creator
+                    </strong>
+
+                    <small>
+                        Creator account
+                    </small>
+
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================== -->
+
+    <section class="creator-welcome-panel">
+
+
+        <div class="creator-welcome-content">
+
+            <span class="creator-eyebrow">
+                PERFORMANCE CENTER
+            </span>
+
+            <h2>
+                Understand your audience.
+            </h2>
+
+            <p>
+                Track how your comics perform, understand
+                your audience activity, and see how your
+                creative world grows over time.
+            </p>
+
+        </div>
+
+
+        <select
+            id="analyticsRange"
+            class="creator-select"
+            aria-label="Analytics period"
+        >
+
+            <option value="7">
+                Last 7 days
+            </option>
+
+            <option
+                value="30"
+                selected
+            >
+                Last 30 days
+            </option>
+
+            <option value="90">
+                Last 3 months
+            </option>
+
+            <option value="365">
+                Last year
+            </option>
+
+        </select>
+
+    </section>
+
+
+
+    <!-- =================================================
+         OVERALL PERFORMANCE
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    OVERVIEW
+                </span>
+
+                <h2>
+                    Overall performance
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-stat-grid">
+
+
+            <article class="creator-stat-card">
+
+                <div class="creator-stat-top">
+
+                    <span>
+                        Total Reads
+                    </span>
+
+                    <span class="creator-stat-icon">
+                        ◉
+                    </span>
+
+                </div>
+
+
+                <strong id="analyticsTotalReads">
+                    0
+                </strong>
+
+
+                <small>
+                    Across all your comics
+                </small>
+
+            </article>
+
+
+
+            <article class="creator-stat-card">
+
+                <div class="creator-stat-top">
+
+                    <span>
+                        Subscribers
+                    </span>
+
+                    <span class="creator-stat-icon">
+                        ♡
+                    </span>
+
+                </div>
+
+
+                <strong id="analyticsSubscribers">
+                    0
+                </strong>
+
+
+                <small>
+                    Readers following your work
+                </small>
+
+            </article>
+
+
+
+            <article class="creator-stat-card">
+
+                <div class="creator-stat-top">
+
+                    <span>
+                        Published
+                    </span>
+
+                    <span class="creator-stat-icon">
+                        ✓
+                    </span>
+
+                </div>
+
+
+                <strong id="analyticsPublished">
+                    0
+                </strong>
+
+
+                <small>
+                    Published comics
+                </small>
+
+            </article>
+
+
+
+            <article class="creator-stat-card">
+
+                <div class="creator-stat-top">
+
+                    <span>
+                        Engagement
+                    </span>
+
+                    <span class="creator-stat-icon">
+                        ✦
+                    </span>
+
+                </div>
+
+
+                <strong id="analyticsEngagement">
+                    0%
+                </strong>
+
+
+                <small>
+                    Current audience engagement
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         AUDIENCE ACTIVITY
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    AUDIENCE
+                </span>
+
+                <h2>
+                    Reader activity
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-chart-card">
+
+
+            <div class="creator-chart-header">
+
+                <div>
+
+                    <span>
+                        Reads
+                    </span>
+
+                    <strong id="analyticsChartTotal">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <span
+                    class="creator-chart-empty-label"
+                    id="analyticsChartLabel"
+                >
+                    No activity yet
+                </span>
+
+            </div>
+
+
+            <div
+                class="creator-chart"
+                id="analyticsChart"
+            >
+
+                <div class="creator-chart-line"></div>
+
+
+                <div class="creator-chart-message">
+
+                    <span>
+                        ✦
+                    </span>
+
+                    <p id="analyticsChartMessage">
+                        Your audience activity will appear
+                        here once your comics begin receiving
+                        reads.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PUBLISHING ACTIVITY
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    PUBLISHING
+                </span>
+
+                <h2>
+                    Publishing activity
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-action-grid">
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ✎
+                </span>
+
+                <div>
+
+                    <strong>
+                        Drafts
+                    </strong>
+
+                    <p>
+                        Comics currently being created
+                        or edited.
+                    </p>
+
+                    <strong
+                        id="analyticsDrafts"
+                        class="creator-inline-value"
+                    >
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ◷
+                </span>
+
+                <div>
+
+                    <strong>
+                        Pending Review
+                    </strong>
+
+                    <p>
+                        Comics waiting for publication
+                        approval.
+                    </p>
+
+                    <strong
+                        id="analyticsPending"
+                        class="creator-inline-value"
+                    >
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Published
+                    </strong>
+
+                    <p>
+                        Comics currently available
+                        to readers.
+                    </p>
+
+                    <strong
+                        id="analyticsPublishedActivity"
+                        class="creator-inline-value"
+                    >
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         COMIC PERFORMANCE
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    YOUR WORK
+                </span>
+
+                <h2>
+                    Comic performance
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="creator-comics-grid"
+            id="analyticsComicGrid"
+        >
+        </div>
+
+
+        <div
+            class="creator-comics-empty"
+            id="analyticsComicEmpty"
+        >
+
+            <div class="creator-empty-icon">
+                ▣
+            </div>
+
+
+            <h3>
+                No comic data yet
+            </h3>
+
+
+            <p>
+                Performance information for your comics
+                will appear here once you create and
+                publish your work.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TOP PERFORMING COMICS
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    HIGHLIGHTS
+                </span>
+
+                <h2>
+                    Top performing comics
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="creator-comics-empty"
+            id="analyticsTopEmpty"
+        >
+
+            <div class="creator-empty-icon">
+                ✦
+            </div>
+
+
+            <h3>
+                Nothing to rank yet
+            </h3>
+
+
+            <p>
+                Once your comics start receiving reads,
+                your strongest-performing work will appear
+                here.
+            </p>
+
+        </div>
+
+
+        <div
+            class="creator-comics-grid"
+            id="analyticsTopGrid"
+            hidden
+        >
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RECENT CREATOR ACTIVITY
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    ACTIVITY
+                </span>
+
+                <h2>
+                    Recent activity
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="creator-activity-empty"
+            id="analyticsActivity"
+        >
+
+            <div class="creator-empty-icon">
+                ✦
+            </div>
+
+
+            <h3>
+                No analytics activity yet.
+            </h3>
+
+
+            <p>
+                Comic creation, updates, publishing,
+                reader activity, and subscriber events
+                will appear here as your creator account
+                grows.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FUTURE CHAPTER ANALYTICS
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-check-card">
+
+            <div class="creator-check-icon">
+                ↗
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Chapter analytics are coming.
+                </strong>
+
+                <p>
+                    When Ever Joy begins storing individual
+                    chapters and episodes, this section can
+                    track chapter reads, reader retention,
+                    completion, and where readers stop.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CREATOR NOTE
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-check-card">
+
+            <div class="creator-check-icon">
+                ✓
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Your analytics are ready.
+                </strong>
+
+                <p>
+                    As your comics grow, this page will become
+                    the central place for understanding your
+                    audience and measuring your creative
+                    performance.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+</main><script
+    src="../js/creator-analytics.js"
+></script></body>
+
+</html>

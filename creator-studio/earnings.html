@@ -1,0 +1,960 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Ever Joy Comics Creator Studio earnings dashboard."
+>
+
+<title>Earnings | Ever Joy Creator Studio</title>
+
+
+<!-- GLOBAL STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- CREATOR STUDIO STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/creator-dashboard.css"
+>
+
+
+<!-- EARNINGS STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/creator-earnings.css"
+>
+
+</head><body class="creator-dashboard-body"><main class="creator-studio"><!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="creator-sidebar">
+
+
+    <div class="creator-sidebar-brand">
+
+        <a
+            href="../index.html"
+            class="creator-logo"
+        >
+            Ever Joy
+        </a>
+
+        <span class="creator-studio-label">
+            CREATOR STUDIO
+        </span>
+
+    </div>
+
+
+    <nav
+        class="creator-navigation"
+        aria-label="Creator Studio navigation"
+    >
+
+        <a
+            href="./dashboard.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">⌂</span>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a
+            href="./comics.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">▣</span>
+            <span>My Comics</span>
+        </a>
+
+
+        <a
+            href="./upload.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">＋</span>
+            <span>Upload</span>
+        </a>
+
+
+        <a
+            href="./analytics.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">⌁</span>
+            <span>Analytics</span>
+        </a>
+
+
+        <a
+            href="./earnings.html"
+            class="creator-nav-item active"
+        >
+            <span class="creator-nav-icon">$</span>
+            <span>Earnings</span>
+        </a>
+
+
+        <a
+            href="./collaborations.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">✦</span>
+            <span>Collab Pool</span>
+        </a>
+
+
+        <a
+            href="./settings.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">⚙</span>
+            <span>Settings</span>
+        </a>
+
+    </nav>
+
+
+    <div class="creator-sidebar-footer">
+
+        <a
+            href="../index.html"
+            class="creator-return-link"
+        >
+            ← Back to Ever Joy
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<section class="creator-main">
+
+
+    <!-- =================================================
+         TOP BAR
+    ================================================== -->
+
+    <header class="creator-topbar">
+
+
+        <div class="creator-page-heading">
+
+            <span class="creator-eyebrow">
+                CREATOR STUDIO
+            </span>
+
+            <h1>
+                Earnings
+            </h1>
+
+        </div>
+
+
+        <div class="creator-account-area">
+
+            <button
+                type="button"
+                class="creator-notification-button"
+                id="creatorNotificationButton"
+                aria-label="Notifications"
+            >
+                ♢
+            </button>
+
+
+            <a
+                href="./settings.html"
+                class="creator-account"
+            >
+
+                <span
+                    class="creator-avatar"
+                    id="creatorAvatar"
+                >
+                    E
+                </span>
+
+
+                <span class="creator-account-text">
+
+                    <strong id="creatorAccountName">
+                        Creator
+                    </strong>
+
+                    <small>
+                        Creator account
+                    </small>
+
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         EARNINGS INTRO
+    ================================================== -->
+
+    <section class="creator-welcome-panel creator-earnings-hero">
+
+        <div class="creator-welcome-content">
+
+            <span class="creator-eyebrow">
+                CREATOR REVENUE
+            </span>
+
+            <h2>
+                Turn your stories into something more.
+            </h2>
+
+            <p>
+                Track your creator earnings, understand
+                your revenue, and manage your future
+                payouts from one place.
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="creator-primary-button"
+            id="managePayoutButton"
+        >
+            Manage Payouts
+        </button>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EARNINGS OVERVIEW
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    OVERVIEW
+                </span>
+
+                <h2>
+                    Your earnings
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-earnings-stat-grid">
+
+
+            <article class="creator-earnings-stat-card featured">
+
+                <div class="creator-stat-top">
+
+                    <span>
+                        Available Balance
+                    </span>
+
+                    <span class="creator-stat-icon">
+                        $
+                    </span>
+
+                </div>
+
+
+                <strong id="availableBalance">
+                    $0.00
+                </strong>
+
+
+                <small>
+                    Available for future payout
+                </small>
+
+            </article>
+
+
+            <article class="creator-earnings-stat-card">
+
+                <div class="creator-stat-top">
+
+                    <span>
+                        Lifetime Earnings
+                    </span>
+
+                    <span class="creator-stat-icon">
+                        ◉
+                    </span>
+
+                </div>
+
+
+                <strong id="lifetimeEarnings">
+                    $0.00
+                </strong>
+
+
+                <small>
+                    Total creator revenue
+                </small>
+
+            </article>
+
+
+            <article class="creator-earnings-stat-card">
+
+                <div class="creator-stat-top">
+
+                    <span>
+                        This Month
+                    </span>
+
+                    <span class="creator-stat-icon">
+                        ↗
+                    </span>
+
+                </div>
+
+
+                <strong id="monthlyEarnings">
+                    $0.00
+                </strong>
+
+
+                <small>
+                    Earnings this month
+                </small>
+
+            </article>
+
+
+            <article class="creator-earnings-stat-card">
+
+                <div class="creator-stat-top">
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <span class="creator-stat-icon">
+                        ◷
+                    </span>
+
+                </div>
+
+
+                <strong id="pendingEarnings">
+                    $0.00
+                </strong>
+
+
+                <small>
+                    Earnings being processed
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EARNINGS CHART
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    PERFORMANCE
+                </span>
+
+                <h2>
+                    Revenue activity
+                </h2>
+
+            </div>
+
+
+            <select
+                id="earningsRange"
+                class="creator-select"
+                aria-label="Earnings period"
+            >
+
+                <option value="7">
+                    Last 7 days
+                </option>
+
+                <option
+                    value="30"
+                    selected
+                >
+                    Last 30 days
+                </option>
+
+                <option value="90">
+                    Last 3 months
+                </option>
+
+                <option value="365">
+                    Last year
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="creator-chart-card creator-earnings-chart-card">
+
+
+            <div class="creator-chart-header">
+
+                <div>
+
+                    <span>
+                        Revenue
+                    </span>
+
+                    <strong id="chartEarningsTotal">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <span
+                    class="creator-chart-empty-label"
+                    id="earningsChartLabel"
+                >
+                    No earnings yet
+                </span>
+
+            </div>
+
+
+            <div class="creator-chart">
+
+                <div class="creator-chart-line"></div>
+
+
+                <div
+                    class="creator-chart-message"
+                    id="earningsChartMessage"
+                >
+
+                    <span>
+                        ✦
+                    </span>
+
+                    <p>
+                        Your revenue activity will appear
+                        here once your comics begin earning.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         REVENUE SOURCES
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    REVENUE
+                </span>
+
+                <h2>
+                    Where your earnings come from
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-action-grid">
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ▣
+                </span>
+
+                <div>
+
+                    <strong>
+                        Comic Purchases
+                    </strong>
+
+                    <p>
+                        Revenue from readers purchasing
+                        your paid comics.
+                    </p>
+
+                    <span
+                        class="creator-revenue-value"
+                        id="comicPurchaseEarnings"
+                    >
+                        $0.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ◇
+                </span>
+
+                <div>
+
+                    <strong>
+                        Premium Content
+                    </strong>
+
+                    <p>
+                        Earnings from paid chapters,
+                        episodes, or exclusive content.
+                    </p>
+
+                    <span
+                        class="creator-revenue-value"
+                        id="premiumEarnings"
+                    >
+                        $0.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ♡
+                </span>
+
+                <div>
+
+                    <strong>
+                        Reader Support
+                    </strong>
+
+                    <p>
+                        Support received from readers
+                        who want to back your work.
+                    </p>
+
+                    <span
+                        class="creator-revenue-value"
+                        id="supportEarnings"
+                    >
+                        $0.00
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ✦
+                </span>
+
+                <div>
+
+                    <strong>
+                        Creator Programs
+                    </strong>
+
+                    <p>
+                        Bonuses, special programs, and
+                        future Ever Joy opportunities.
+                    </p>
+
+                    <span
+                        class="creator-revenue-value"
+                        id="programEarnings"
+                    >
+                        $0.00
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EARNINGS ACTIVITY
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    ACTIVITY
+                </span>
+
+                <h2>
+                    Recent earnings
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="creator-earnings-activity"
+            id="earningsActivity"
+        >
+
+            <div class="creator-activity-empty">
+
+                <div class="creator-empty-icon">
+                    $
+                </div>
+
+
+                <h3>
+                    No earnings yet
+                </h3>
+
+
+                <p>
+                    When your work begins generating
+                    revenue, your earnings activity will
+                    appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PAYOUT
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    PAYOUTS
+                </span>
+
+                <h2>
+                    Payout information
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-check-card creator-payout-card">
+
+
+            <div class="creator-check-icon">
+                $
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Payouts are not set up yet.
+                </strong>
+
+                <p>
+                    Once Ever Joy's payout system is
+                    available, you'll be able to connect
+                    your payout method and manage your
+                    withdrawal preferences here.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="creator-secondary-button"
+                    id="setupPayoutButton"
+                >
+                    Set Up Payouts
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PAYOUT HISTORY
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    HISTORY
+                </span>
+
+                <h2>
+                    Payout history
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="creator-activity-empty creator-payout-history"
+            id="payoutHistory"
+        >
+
+            <div class="creator-empty-icon">
+                ◷
+            </div>
+
+
+            <h3>
+                No payouts yet
+            </h3>
+
+
+            <p>
+                Completed payouts will appear here with
+                their amount, date, and status.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MONETIZATION GUIDE
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    CREATOR GUIDE
+                </span>
+
+                <h2>
+                    Grow your earnings
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-action-grid">
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ✦
+                </span>
+
+                <div>
+
+                    <strong>
+                        Publish consistently
+                    </strong>
+
+                    <p>
+                        Keep giving readers new stories
+                        and episodes to discover.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ♡
+                </span>
+
+                <div>
+
+                    <strong>
+                        Build your audience
+                    </strong>
+
+                    <p>
+                        Growing readers and subscribers
+                        creates more opportunities.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="creator-action-card">
+
+                <span class="creator-action-icon">
+                    ◇
+                </span>
+
+                <div>
+
+                    <strong>
+                        Explore monetization
+                    </strong>
+
+                    <p>
+                        Eligible creators may eventually
+                        earn through paid content and
+                        other Ever Joy programs.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CREATOR NOTE
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-check-card">
+
+            <div class="creator-check-icon">
+                ✓
+            </div>
+
+
+            <div>
+
+                <strong>
+                    You're ready to create.
+                </strong>
+
+                <p>
+                    Your earnings dashboard will grow with
+                    you. As Ever Joy's creator monetization
+                    features expand, your revenue,
+                    transactions, and payout information
+                    will appear here automatically.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+</main><script
+    src="../js/creator-earnings.js"
+></script></body>
+
+</html>

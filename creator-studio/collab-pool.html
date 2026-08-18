@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Discover Ever Joy Comics creators who are open to collaboration."
+    >
+
+    <title>Collab Pool | Ever Joy Comics</title>
+
+
+    <!-- =====================================================
+         GLOBAL STYLES
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- =====================================================
+         COLLAB POOL STYLES
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/creator-collab-pool.css"
+    >
+
+</head>
+
+
+<body class="collab-pool-body">
+
+
+<!-- =====================================================
+     AUTHENTICATION
+====================================================== -->
+
+<script src="../js/auth.js"></script>
+
+<script>
+
+    if (
+        !isEverJoyLoggedIn()
+    ) {
+
+        window.location.replace(
+            "../account/auth.html"
+        );
+
+    }
+
+</script>
+
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="collab-pool-header">
+
+
+    <button
+        type="button"
+        class="collab-pool-header-button"
+        id="collabPoolBackButton"
+        aria-label="Go back"
+    >
+        ←
+    </button>
+
+
+    <div class="collab-pool-header-title">
+
+        <span class="collab-pool-eyebrow">
+            EVER JOY CREATORS
+        </span>
+
+        <h1>
+            Collab Pool
+        </h1>
+
+    </div>
+
+
+    <button
+        type="button"
+        class="collab-pool-header-button"
+        id="collabPoolMenuButton"
+        aria-label="Collab Pool menu"
+    >
+        ⋮
+    </button>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
+<main class="collab-pool-container">
+
+
+
+    <!-- =================================================
+         INTRO
+    ================================================== -->
+
+    <section class="collab-pool-intro">
+
+        <span class="collab-pool-eyebrow">
+            COLLABORATION NETWORK
+        </span>
+
+        <h2>
+            Find your next creative partner.
+        </h2>
+
+        <p>
+            Discover creators who are currently open
+            to collaboration and find someone whose
+            skills fit your project.
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SEARCH & FILTERS
+    ================================================== -->
+
+    <section class="collab-pool-discovery-tools">
+
+
+        <div class="collab-pool-search">
+
+            <span
+                class="collab-pool-search-icon"
+                aria-hidden="true"
+            >
+                ⌕
+            </span>
+
+
+            <input
+                type="search"
+                id="collabPoolSearch"
+                placeholder="Search creators..."
+                autocomplete="off"
+                aria-label="Search creators"
+            >
+
+        </div>
+
+
+
+        <div class="collab-pool-filter-row">
+
+
+            <select
+                id="collabPoolRoleFilter"
+                class="collab-pool-filter"
+                aria-label="Filter creators by role"
+            >
+
+                <option value="all">
+                    All roles
+                </option>
+
+                <option value="writer">
+                    Writer
+                </option>
+
+                <option value="artist">
+                    Artist
+                </option>
+
+                <option value="colorist">
+                    Colorist
+                </option>
+
+                <option value="editor">
+                    Editor
+                </option>
+
+                <option value="other">
+                    Other
+                </option>
+
+            </select>
+
+
+
+            <select
+                id="collabPoolGenreFilter"
+                class="collab-pool-filter"
+                aria-label="Filter creators by genre"
+            >
+
+                <option value="all">
+                    All genres
+                </option>
+
+                <option value="romance">
+                    Romance
+                </option>
+
+                <option value="fantasy">
+                    Fantasy
+                </option>
+
+                <option value="action">
+                    Action
+                </option>
+
+                <option value="drama">
+                    Drama
+                </option>
+
+                <option value="comedy">
+                    Comedy
+                </option>
+
+                <option value="horror">
+                    Horror
+                </option>
+
+                <option value="mystery">
+                    Mystery
+                </option>
+
+                <option value="sci-fi">
+                    Sci-Fi
+                </option>
+
+                <option value="other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         AVAILABLE CREATOR COUNT
+    ================================================== -->
+
+    <section class="collab-pool-availability">
+
+        <span
+            class="collab-pool-availability-dot"
+            aria-hidden="true"
+        ></span>
+
+
+        <span id="collabPoolAvailableCount">
+            Creators currently open to collaboration
+        </span>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CREATOR DISCOVERY FEED
+    ================================================== -->
+
+    <section
+        class="collab-pool-feed"
+        aria-label="Creators open to collaboration"
+    >
+
+
+        <div
+            class="collab-pool-grid"
+            id="collabPoolGrid"
+        >
+
+            <!--
+
+                CREATOR CARDS ARE GENERATED
+                BY Creator-collab-pool.js.
+
+                Each card should contain only
+                collaboration-relevant information.
+
+            -->
+
+        </div>
+
+
+
+        <!-- =================================================
+             LOADING
+        ================================================== -->
+
+        <div
+            class="collab-pool-loading"
+            id="collabPoolLoading"
+            hidden
+            aria-live="polite"
+        >
+
+            <span class="collab-pool-loading-icon">
+                ✦
+            </span>
+
+            <span>
+                Finding more creators...
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             EMPTY SEARCH STATE
+        ================================================== -->
+
+        <div
+            class="collab-pool-empty"
+            id="collabPoolEmpty"
+            hidden
+        >
+
+            <div
+                class="collab-pool-empty-icon"
+                aria-hidden="true"
+            >
+                ✦
+            </div>
+
+            <h3>
+                No creators found
+            </h3>
+
+            <p>
+                No available creators match your search
+                or selected filters.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             END OF CURRENT POOL
+        ================================================== -->
+
+        <div
+            class="collab-pool-end"
+            id="collabPoolEnd"
+            hidden
+        >
+
+            <span aria-hidden="true">
+                ✦
+            </span>
+
+            <p>
+                You've reached the end of the available
+                creators for now.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ONE COLLABORATION RULE
+    ================================================== -->
+
+    <section class="collab-pool-rule-card">
+
+
+        <div
+            class="collab-pool-rule-icon"
+            aria-hidden="true"
+        >
+            ⚖
+        </div>
+
+
+        <div class="collab-pool-rule-content">
+
+            <strong>
+                One active collaboration at a time.
+            </strong>
+
+            <p>
+                Creators who accept a collaboration are
+                automatically removed from the available
+                pool until their current collaboration ends.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MY COLLABORATION STATUS
+    ================================================== -->
+
+    <section class="collab-pool-status-card">
+
+
+        <div>
+
+            <span class="collab-pool-eyebrow">
+                YOUR COLLABORATION STATUS
+            </span>
+
+            <h2>
+                Want to appear here?
+            </h2>
+
+            <p>
+                Manage your collaboration profile and
+                availability from Creator Studio.
+            </p>
+
+        </div>
+
+
+        <a
+            href="../creator-studio/collaborations.html"
+            class="collab-pool-manage-button"
+        >
+            Manage Availability
+        </a>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="collab-pool-footer">
+
+        <span>
+            Ever Joy Comics
+        </span>
+
+
+        <a
+            href="../index.html"
+        >
+            Back to Ever Joy
+        </a>
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script
+    src="../js/creator-collab-pool.js"
+></script>
+
+
+</body>
+
+</html>

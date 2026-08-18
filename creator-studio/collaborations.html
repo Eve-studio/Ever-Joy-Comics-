@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Ever Joy Comics Creator Collaboration Pool."
+    >
+
+    <title>Collab Pool | Ever Joy Creator Studio</title>
+
+
+    <!-- GLOBAL STYLES -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <!-- CREATOR STUDIO STYLES -->
+
+    <link
+        rel="stylesheet"
+        href="../css/creator-dashboard.css"
+    >
+
+
+    <!-- COLLABORATION STYLES -->
+
+    <link
+        rel="stylesheet"
+        href="../css/creator-collaborations.css"
+    >
+
+</head>
+
+
+<body class="creator-dashboard-body">
+
+
+<main class="creator-studio">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="creator-sidebar">
+
+
+        <div class="creator-sidebar-brand">
+
+            <a
+                href="../index.html"
+                class="creator-logo"
+            >
+                Ever Joy
+            </a>
+
+            <span class="creator-studio-label">
+                CREATOR STUDIO
+            </span>
+
+        </div>
+
+
+        <nav
+            class="creator-navigation"
+            aria-label="Creator Studio navigation"
+        >
+
+            <a
+                href="./dashboard.html"
+                class="creator-nav-item"
+            >
+                <span class="creator-nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="./comics.html"
+                class="creator-nav-item"
+            >
+                <span class="creator-nav-icon">▣</span>
+                <span>My Comics</span>
+            </a>
+
+
+            <a
+                href="./upload.html"
+                class="creator-nav-item"
+            >
+                <span class="creator-nav-icon">＋</span>
+                <span>Upload</span>
+            </a>
+
+
+            <a
+                href="./analytics.html"
+                class="creator-nav-item"
+            >
+                <span class="creator-nav-icon">⌁</span>
+                <span>Analytics</span>
+            </a>
+
+
+            <a
+                href="./earnings.html"
+                class="creator-nav-item"
+            >
+                <span class="creator-nav-icon">$</span>
+                <span>Earnings</span>
+            </a>
+
+
+            <a
+                href="./collaborations.html"
+                class="creator-nav-item active"
+            >
+                <span class="creator-nav-icon">✦</span>
+                <span>Collab Pool</span>
+            </a>
+
+
+            <a
+                href="./settings.html"
+                class="creator-nav-item"
+            >
+                <span class="creator-nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="creator-sidebar-footer">
+
+            <a
+                href="../index.html"
+                class="creator-return-link"
+            >
+                ← Back to Ever Joy
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <section class="creator-main">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="creator-topbar">
+
+
+            <div class="creator-page-heading">
+
+                <span class="creator-eyebrow">
+                    CREATOR STUDIO
+                </span>
+
+                <h1>
+                    Collab Pool
+                </h1>
+
+            </div>
+
+
+            <div class="creator-account-area">
+
+
+                <button
+                    type="button"
+                    class="creator-notification-button"
+                    id="creatorNotificationButton"
+                    aria-label="Notifications"
+                >
+                    ♢
+                </button>
+
+
+                <a
+                    href="./settings.html"
+                    class="creator-account"
+                >
+
+                    <span
+                        class="creator-avatar"
+                        id="creatorAvatar"
+                    >
+                        E
+                    </span>
+
+
+                    <span class="creator-account-text">
+
+                        <strong id="creatorAccountName">
+                            Creator
+                        </strong>
+
+                        <small>
+                            Creator account
+                        </small>
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             COLLAB HERO
+        ================================================== -->
+
+        <section class="creator-welcome-panel creator-collab-hero">
+
+
+            <div class="creator-welcome-content">
+
+                <span class="creator-eyebrow">
+                    COLLABORATION NETWORK
+                </span>
+
+                <h2>
+                    Find the right creator for your next story.
+                </h2>
+
+                <p>
+                    Discover creators who are currently open
+                    to collaboration and find the right match
+                    for your comic, art, writing, or creative
+                    project.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="creator-primary-button"
+                id="openCollabProfileButton"
+            >
+                Open My Collaboration Profile
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MY COLLABORATION STATUS
+        ================================================== -->
+
+        <section class="creator-section">
+
+
+            <div class="creator-section-heading">
+
+                <div>
+
+                    <span class="creator-eyebrow">
+                        YOUR STATUS
+                    </span>
+
+                    <h2>
+                        Collaboration availability
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="creator-collab-status-card"
+                id="creatorCollabStatusCard"
+            >
+
+                <div class="creator-collab-status-icon">
+                    ✦
+                </div>
+
+
+                <div class="creator-collab-status-content">
+
+                    <strong id="creatorCollabStatusTitle">
+                        You're currently unavailable.
+                    </strong>
+
+                    <p id="creatorCollabStatusMessage">
+                        Turn on collaboration availability
+                        when you're ready to work with another
+                        creator.
+                    </p>
+
+                </div>
+
+
+                <label
+                    class="creator-toggle"
+                    aria-label="Toggle collaboration availability"
+                >
+
+                    <input
+                        type="checkbox"
+                        id="collabAvailabilityToggle"
+                    >
+
+                    <span class="creator-toggle-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div
+                class="creator-collab-lock-notice"
+                id="creatorCollabLockNotice"
+                hidden
+            >
+
+                <span>
+                    🔒
+                </span>
+
+                <p>
+                    You are currently collaborating with another
+                    creator. Your profile has automatically been
+                    removed from the collaboration pool until
+                    your current collaboration ends.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DISCOVER CREATORS
+        ================================================== -->
+
+        <section class="creator-section">
+
+
+            <div class="creator-section-heading">
+
+                <div>
+
+                    <span class="creator-eyebrow">
+                        DISCOVER
+                    </span>
+
+                    <h2>
+                        Find creators
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="creator-collab-result-count"
+                    id="collabResultCount"
+                >
+                    0 creators available
+                </span>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="creator-collab-search-area">
+
+
+                <div class="creator-collab-search">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        id="collabSearch"
+                        placeholder="Search creators, skills, genres..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <select
+                    id="collabRoleFilter"
+                    class="creator-select"
+                    aria-label="Filter by creator role"
+                >
+
+                    <option value="all">
+                        All roles
+                    </option>
+
+                    <option value="writer">
+                        Writer
+                    </option>
+
+                    <option value="artist">
+                        Artist
+                    </option>
+
+                    <option value="colorist">
+                        Colorist
+                    </option>
+
+                    <option value="editor">
+                        Editor
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="collabGenreFilter"
+                    class="creator-select"
+                    aria-label="Filter by genre"
+                >
+
+                    <option value="all">
+                        All genres
+                    </option>
+
+                    <option value="romance">
+                        Romance
+                    </option>
+
+                    <option value="fantasy">
+                        Fantasy
+                    </option>
+
+                    <option value="action">
+                        Action
+                    </option>
+
+                    <option value="drama">
+                        Drama
+                    </option>
+
+                    <option value="comedy">
+                        Comedy
+                    </option>
+
+                    <option value="horror">
+                        Horror
+                    </option>
+
+                    <option value="mystery">
+                        Mystery
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- CREATOR GRID -->
+
+            <div
+                class="creator-collab-grid"
+                id="creatorCollabGrid"
+            >
+            </div>
+
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="creator-collab-empty"
+                id="creatorCollabEmpty"
+            >
+
+                <div class="creator-empty-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    No creators found
+                </h3>
+
+                <p>
+                    There are currently no creators matching
+                    your search. Try adjusting your filters
+                    or check back later.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SENT REQUESTS
+        ================================================== -->
+
+        <section class="creator-section">
+
+
+            <div class="creator-section-heading">
+
+                <div>
+
+                    <span class="creator-eyebrow">
+                        YOUR REQUESTS
+                    </span>
+
+                    <h2>
+                        Collaboration requests
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="creator-request-tabs"
+                role="tablist"
+            >
+
+                <button
+                    type="button"
+                    class="creator-request-tab active"
+                    data-request-tab="received"
+                >
+                    Received
+                    <span id="receivedRequestCount">
+                        0
+                    </span>
+                </button>
+
+
+                <button
+                    type="button"
+                    class="creator-request-tab"
+                    data-request-tab="sent"
+                >
+                    Sent
+                    <span id="sentRequestCount">
+                        0
+                    </span>
+                </button>
+
+            </div>
+
+
+
+            <!-- RECEIVED -->
+
+            <div
+                class="creator-request-list"
+                id="receivedRequests"
+            >
+            </div>
+
+
+
+            <!-- SENT -->
+
+            <div
+                class="creator-request-list"
+                id="sentRequests"
+                hidden
+            >
+            </div>
+
+
+            <div
+                class="creator-request-empty"
+                id="requestEmpty"
+            >
+
+                <div class="creator-empty-icon">
+                    ◷
+                </div>
+
+                <h3>
+                    No collaboration requests
+                </h3>
+
+                <p>
+                    Requests you receive or send will appear
+                    here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACTIVE COLLABORATIONS
+        ================================================== -->
+
+        <section class="creator-section">
+
+
+            <div class="creator-section-heading">
+
+                <div>
+
+                    <span class="creator-eyebrow">
+                        CURRENT PROJECT
+                    </span>
+
+                    <h2>
+                        Active collaboration
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="creator-active-collab"
+                id="activeCollaboration"
+            >
+
+                <div class="creator-collab-empty">
+
+                    <div class="creator-empty-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        No active collaboration
+                    </h3>
+
+                    <p>
+                        When you accept a collaboration request,
+                        your active project will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HOW IT WORKS
+        ================================================== -->
+
+        <section class="creator-section">
+
+
+            <div class="creator-section-heading">
+
+                <div>
+
+                    <span class="creator-eyebrow">
+                        HOW IT WORKS
+                    </span>
+
+                    <h2>
+                        Collaboration, without the chaos.
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="creator-action-grid">
+
+
+                <article class="creator-action-card">
+
+                    <span class="creator-action-icon">
+                        ⌕
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Discover
+                        </strong>
+
+                        <p>
+                            Browse creators who are currently
+                            available and filter by role, genre,
+                            and creative skills.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="creator-action-card">
+
+                    <span class="creator-action-icon">
+                        ✉
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Request
+                        </strong>
+
+                        <p>
+                            Submit a structured collaboration
+                            request explaining your project and
+                            what you need.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="creator-action-card">
+
+                    <span class="creator-action-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Match
+                        </strong>
+
+                        <p>
+                            Once the creator accepts, the
+                            collaboration becomes active and
+                            their availability automatically
+                            turns off.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FAIR COLLABORATION NOTICE
+        ================================================== -->
+
+        <section class="creator-section">
+
+
+            <div class="creator-check-card">
+
+                <div class="creator-check-icon">
+                    ⚖
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        One active collaboration at a time.
+                    </strong>
+
+                    <p>
+                        Ever Joy automatically removes a creator
+                        from the available pool when they accept
+                        a collaboration. This keeps opportunities
+                        fair and prevents creators from collecting
+                        multiple projects while others are still
+                        waiting for a chance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CREATOR NOTE
+        ================================================== -->
+
+        <section class="creator-section">
+
+
+            <div class="creator-check-card">
+
+                <div class="creator-check-icon">
+                    ✦
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        No public posts. No comment sections. No
+                        complicated chat.
+                    </strong>
+
+                    <p>
+                        Collaboration on Ever Joy is intentionally
+                        structured. Your profile tells creators
+                        what you do, the request form explains
+                        the project, and both creators can decide
+                        whether the opportunity is right for them.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     COLLABORATION SCRIPT
+====================================================== -->
+
+<script
+    src="../js/creator-collaborations.js"
+></script>
+
+
+</body>
+
+</html>

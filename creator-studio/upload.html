@@ -1,0 +1,692 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Create and publish your comic with Ever Joy Comics Creator Studio."
+>
+
+<title>Create a Comic | Ever Joy Creator Studio</title>
+
+
+<!-- GLOBAL STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- CREATOR STUDIO STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/creator-dashboard.css"
+>
+
+<link
+    rel="stylesheet"
+    href="../css/creator-upload.css"
+>
+
+</head><body class="creator-dashboard-body"><main class="creator-studio"><!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="creator-sidebar">
+
+
+    <!-- BRAND -->
+
+    <div class="creator-sidebar-brand">
+
+        <a
+            href="../index.html"
+            class="creator-logo"
+        >
+            Ever Joy
+        </a>
+
+        <span class="creator-studio-label">
+            CREATOR STUDIO
+        </span>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        class="creator-navigation"
+        aria-label="Creator Studio navigation"
+    >
+
+        <a
+            href="./dashboard.html"
+            class="creator-nav-item"
+        >
+
+            <span class="creator-nav-icon">
+                ⌂
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a
+            href="./comics.html"
+            class="creator-nav-item"
+        >
+
+            <span class="creator-nav-icon">
+                ▣
+            </span>
+
+            <span>
+                My Comics
+            </span>
+
+        </a>
+
+
+        <a
+            href="./upload.html"
+            class="creator-nav-item active"
+        >
+
+            <span class="creator-nav-icon">
+                ＋
+            </span>
+
+            <span>
+                Upload
+            </span>
+
+        </a>
+
+
+        <a
+            href="./analytics.html"
+            class="creator-nav-item"
+        >
+
+            <span class="creator-nav-icon">
+                ⌁
+            </span>
+
+            <span>
+                Analytics
+            </span>
+
+        </a>
+
+
+        <a
+            href="./earnings.html"
+            class="creator-nav-item"
+        >
+
+            <span class="creator-nav-icon">
+                $
+            </span>
+
+            <span>
+                Earnings
+            </span>
+
+        </a>
+
+
+        <a
+            href="./collaborations.html"
+            class="creator-nav-item"
+        >
+
+            <span class="creator-nav-icon">
+                ✦
+            </span>
+
+            <span>
+                Collab Pool
+            </span>
+
+        </a>
+
+
+        <a
+            href="./settings.html"
+            class="creator-nav-item"
+        >
+
+            <span class="creator-nav-icon">
+                ⚙
+            </span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- BACK TO EVER JOY -->
+
+    <div class="creator-sidebar-footer">
+
+        <a
+            href="../index.html"
+            class="creator-return-link"
+        >
+            ← Back to Ever Joy
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<section class="creator-main">
+
+
+    <!-- =================================================
+         TOP BAR
+    ================================================== -->
+
+    <header class="creator-topbar">
+
+
+        <div class="creator-page-heading">
+
+            <span class="creator-eyebrow">
+                CREATOR STUDIO
+            </span>
+
+            <h1>
+                Create a Comic
+            </h1>
+
+        </div>
+
+
+        <div class="creator-account-area">
+
+
+            <button
+                type="button"
+                class="creator-notification-button"
+                aria-label="Notifications"
+            >
+                ♢
+            </button>
+
+
+            <a
+                href="./settings.html"
+                class="creator-account"
+            >
+
+                <span class="creator-avatar">
+                    E
+                </span>
+
+
+                <span class="creator-account-text">
+
+                    <strong>
+                        Creator
+                    </strong>
+
+                    <small>
+                        Creator account
+                    </small>
+
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         PAGE INTRO
+    ================================================== -->
+
+    <section class="creator-welcome-panel">
+
+
+        <div class="creator-welcome-content">
+
+            <span class="creator-eyebrow">
+                NEW PROJECT
+            </span>
+
+
+            <h2>
+                Give your story a home.
+            </h2>
+
+
+            <p>
+                Create your comic, add its details, choose
+                how you want it published, and build your
+                story one chapter at a time.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         COMIC FORM
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    COMIC INFORMATION
+                </span>
+
+
+                <h2>
+                    Tell readers about your story
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <form
+            id="creatorComicForm"
+            class="creator-form"
+            novalidate
+        >
+
+
+            <!-- =================================================
+                 TITLE
+            ================================================== -->
+
+            <div class="creator-form-group">
+
+                <label
+                    for="comicTitle"
+                    class="creator-form-label"
+                >
+                    Comic title
+                </label>
+
+
+                <input
+                    type="text"
+                    id="comicTitle"
+                    name="title"
+                    class="creator-input"
+                    placeholder="Enter your comic title"
+                    maxlength="150"
+                    required
+                >
+
+
+                <small class="creator-form-help">
+                    Choose a clear and memorable title for your story.
+                </small>
+
+            </div>
+
+
+
+<!-- =================================================
+     DESCRIPTION
+================================================== --><div class="creator-form-group"><label
+    for="comicDescription"
+    class="creator-form-label"
+>
+    Description
+</label>
+
+
+<textarea
+    id="comicDescription"
+    name="description"
+    class="creator-textarea"
+    placeholder="Tell readers what your comic is about..."
+    maxlength="2000"
+    rows="7"
+    required
+></textarea>
+
+
+<small class="creator-form-help">
+    Give readers a short introduction to your story.
+</small>
+
+</div><!-- =================================================
+     COVER
+================================================== --><div class="creator-form-group"><label
+    for="comicCover"
+    class="creator-form-label"
+>
+    Comic cover
+</label>
+
+
+<input
+    type="url"
+    id="comicCover"
+    name="cover"
+    class="creator-input"
+    placeholder="https://example.com/your-cover.jpg"
+>
+
+
+<small class="creator-form-help">
+    Add the image URL for your comic cover.
+    File uploads can be connected later.
+</small>
+
+</div><!-- =================================================
+     FORMAT
+================================================== --><div class="creator-form-group"><label
+    for="comicFormat"
+    class="creator-form-label"
+>
+    Format
+</label>
+
+
+<select
+    id="comicFormat"
+    name="format"
+    class="creator-select creator-form-select"
+    required
+>
+
+    <option value="">
+        Select a format
+    </option>
+
+</select>
+
+
+<small class="creator-form-help">
+    Choose the format that best describes your comic.
+</small>
+
+</div><!-- =================================================
+     GENRE & STATUS
+================================================== --><div class="creator-form-grid"><!-- GENRES -->
+
+<div class="creator-form-group">
+
+    <label
+        for="comicGenre"
+        class="creator-form-label"
+    >
+        Primary genre
+    </label>
+
+
+    <select
+        id="comicGenre"
+        name="genre"
+        class="creator-select creator-form-select"
+        required
+    >
+
+        <option value="">
+            Select a genre
+        </option>
+
+    </select>
+
+
+    <small class="creator-form-help">
+        Choose the main genre of your comic.
+    </small>
+
+</div>
+
+
+
+<!-- STATUS -->
+
+<div class="creator-form-group">
+
+    <label
+        for="comicStatus"
+        class="creator-form-label"
+    >
+        Status
+    </label>
+
+
+    <select
+        id="comicStatus"
+        name="status"
+        class="creator-select creator-form-select"
+    >
+
+        <option value="draft">
+            Draft
+        </option>
+
+        <option value="ongoing">
+            Ongoing
+        </option>
+
+        <option value="completed">
+            Completed
+        </option>
+
+        <option value="scheduled">
+            Scheduled
+        </option>
+
+    </select>
+
+</div>
+
+</div><!-- =================================================
+     ADDITIONAL GENRES
+================================================== --><div class="creator-form-group"><label
+    for="comicGenres"
+    class="creator-form-label"
+>
+    Genres
+</label>
+
+
+<select
+    id="comicGenres"
+    class="creator-select creator-form-select"
+    multiple
+></select>
+
+
+<small class="creator-form-help">
+    Select additional genres that apply to your comic.
+    Hold Ctrl or Command to select multiple genres.
+</small>
+
+</div><!-- =================================================
+     AGE RATING
+================================================== --><div class="creator-form-group"><label
+    for="comicRating"
+    class="creator-form-label"
+>
+    Content rating
+</label>
+
+
+<select
+    id="comicRating"
+    name="rating"
+    class="creator-select creator-form-select"
+>
+
+    <option value="all">
+        All Ages
+    </option>
+
+    <option value="13">
+        13+
+    </option>
+
+    <option value="16">
+        16+
+    </option>
+
+    <option value="18">
+        18+
+    </option>
+
+</select>
+
+
+<small class="creator-form-help">
+    Choose the rating that best matches your comic's content.
+</small>
+
+</div><!-- =================================================
+     TAGS
+================================================== --><div class="creator-form-group"><label
+    for="comicTags"
+    class="creator-form-label"
+>
+    Tags
+</label>
+
+
+<select
+    id="comicTags"
+    class="creator-select creator-form-select"
+    multiple
+></select>
+
+
+<small class="creator-form-help">
+    Select all tags that accurately describe your story.
+    Tags help readers discover your comic.
+</small>
+
+</div><!-- =================================================
+     FORM MESSAGE
+================================================== --><div
+    id="creatorComicMessage"
+    class="creator-form-message"
+    aria-live="polite"
+></div><!-- =================================================
+     ACTIONS
+================================================== --><div class="creator-form-actions"><a
+    href="./comics.html"
+    class="creator-secondary-button"
+>
+    Cancel
+</a>
+
+
+<button
+    type="submit"
+    class="creator-primary-button"
+    id="creatorComicSubmit"
+>
+    Save Comic
+</button>
+
+</div>
+        </form>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FUTURE CHAPTER SYSTEM
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    STORY BUILDER
+                </span>
+
+
+                <h2>
+                    Chapters come next.
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-check-card">
+
+
+            <div class="creator-check-icon">
+                ✦
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Build your story one chapter at a time.
+                </strong>
+
+
+                <p>
+                    After your comic is created, you'll be able
+                    to add episodes or chapters without having
+                    to decide in advance how many your story will
+                    contain.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+</section>
+
+</main><!-- =====================================================
+     JAVASCRIPT
+====================================================== --><script
+    src="../js/creator-upload.js"
+></script></body>
+
+</html>

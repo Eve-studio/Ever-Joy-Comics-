@@ -1,0 +1,1090 @@
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Manage your Ever Joy Comics Creator Studio profile, publishing, collaboration, notifications, and preferences."
+>
+
+<title>Settings | Ever Joy Creator Studio</title>
+
+
+<!-- GLOBAL STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/global.css"
+>
+
+
+<!-- CREATOR STUDIO STYLES -->
+
+<link
+    rel="stylesheet"
+    href="../css/creator-settings.css"
+>
+
+</head><body class="creator-dashboard-body"><main class="creator-studio"><!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<aside class="creator-sidebar">
+
+
+    <div class="creator-sidebar-brand">
+
+        <a
+            href="../index.html"
+            class="creator-logo"
+        >
+            Ever Joy
+        </a>
+
+        <span class="creator-studio-label">
+            CREATOR STUDIO
+        </span>
+
+    </div>
+
+
+    <nav
+        class="creator-navigation"
+        aria-label="Creator Studio navigation"
+    >
+
+        <a
+            href="./dashboard.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">⌂</span>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a
+            href="./comics.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">▣</span>
+            <span>My Comics</span>
+        </a>
+
+
+        <a
+            href="./upload.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">＋</span>
+            <span>Upload</span>
+        </a>
+
+
+        <a
+            href="./analytics.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">⌁</span>
+            <span>Analytics</span>
+        </a>
+
+
+        <a
+            href="./earnings.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">$</span>
+            <span>Earnings</span>
+        </a>
+
+
+        <a
+            href="./collaborations.html"
+            class="creator-nav-item"
+        >
+            <span class="creator-nav-icon">✦</span>
+            <span>Collab Pool</span>
+        </a>
+
+
+        <a
+            href="./settings.html"
+            class="creator-nav-item active"
+        >
+            <span class="creator-nav-icon">⚙</span>
+            <span>Settings</span>
+        </a>
+
+    </nav>
+
+
+    <div class="creator-sidebar-footer">
+
+        <a
+            href="../index.html"
+            class="creator-return-link"
+        >
+            ← Back to Ever Joy
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<section class="creator-main">
+
+
+    <!-- =================================================
+         TOP BAR
+    ================================================== -->
+
+    <header class="creator-topbar">
+
+
+        <div class="creator-page-heading">
+
+            <span class="creator-eyebrow">
+                CREATOR STUDIO
+            </span>
+
+            <h1>
+                Settings
+            </h1>
+
+        </div>
+
+
+        <div class="creator-account-area">
+
+
+            <button
+                type="button"
+                class="creator-notification-button"
+                id="creatorNotificationButton"
+                aria-label="Notifications"
+            >
+                ♢
+            </button>
+
+
+            <a
+                href="./settings.html"
+                class="creator-account"
+            >
+
+                <span
+                    class="creator-avatar"
+                    id="creatorAvatar"
+                >
+                    E
+                </span>
+
+
+                <span class="creator-account-text">
+
+                    <strong
+                        id="creatorAccountName"
+                    >
+                        Creator
+                    </strong>
+
+                    <small>
+                        Creator account
+                    </small>
+
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         SETTINGS INTRO
+    ================================================== -->
+
+    <section class="creator-welcome-panel">
+
+
+        <div class="creator-welcome-content">
+
+            <span class="creator-eyebrow">
+                CREATOR CONTROL
+            </span>
+
+            <h2>
+                Shape your creator experience.
+            </h2>
+
+            <p>
+                Manage your creator identity, publishing
+                preferences, collaboration availability,
+                notifications, and Creator Studio settings.
+            </p>
+
+        </div>
+
+
+        <span class="creator-settings-status">
+            Creator account active
+        </span>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CREATOR PROFILE
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    IDENTITY
+                </span>
+
+                <h2>
+                    Creator profile
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-settings-card">
+
+
+            <div class="creator-profile-preview">
+
+
+                <div
+                    class="creator-settings-avatar"
+                    id="settingsAvatar"
+                >
+                    E
+                </div>
+
+
+                <div>
+
+                    <strong
+                        id="settingsPreviewName"
+                    >
+                        Creator
+                    </strong>
+
+                    <p>
+                        This is how your creator identity
+                        appears across Creator Studio.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                id="creatorProfileForm"
+                class="creator-settings-form"
+            >
+
+
+                <div class="creator-form-group">
+
+                    <label for="creatorDisplayName">
+                        Creator display name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="creatorDisplayName"
+                        name="creatorDisplayName"
+                        placeholder="Your creator name"
+                        maxlength="60"
+                    >
+
+                    <small>
+                        The name readers and collaborators
+                        will see on your creator profile.
+                    </small>
+
+                </div>
+
+
+                <div class="creator-form-group">
+
+                    <label for="creatorBio">
+                        Creator bio
+                    </label>
+
+                    <textarea
+                        id="creatorBio"
+                        name="creatorBio"
+                        rows="5"
+                        maxlength="500"
+                        placeholder="Tell readers a little about yourself and the stories you create."
+                    ></textarea>
+
+                    <small>
+                        Keep it concise. You can update it
+                        whenever your creative direction changes.
+                    </small>
+
+                </div>
+
+
+                <div class="creator-form-group">
+
+                    <label for="creatorAvatarUrl">
+                        Avatar image URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="creatorAvatarUrl"
+                        name="creatorAvatarUrl"
+                        placeholder="https://..."
+                    >
+
+                    <small>
+                        A custom creator avatar can replace
+                        your default initial.
+                    </small>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="creator-primary-button"
+                >
+                    Save profile
+                </button>
+
+
+                <p
+                    class="creator-form-message"
+                    id="creatorProfileMessage"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROFILE VISIBILITY
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    VISIBILITY
+                </span>
+
+                <h2>
+                    Creator profile visibility
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-settings-card">
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Public creator profile
+                    </strong>
+
+                    <p>
+                        Allow readers to discover your
+                        creator profile through Ever Joy.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="creatorPublicProfile"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Show published comics
+                    </strong>
+
+                    <p>
+                        Display your published comics on
+                        your public creator profile.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="creatorShowComics"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Show collaboration status
+                    </strong>
+
+                    <p>
+                        Let other creators know whether
+                        you're currently available for
+                        collaboration.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="creatorShowCollabStatus"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PUBLISHING PREFERENCES
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    PUBLISHING
+                </span>
+
+                <h2>
+                    Publishing preferences
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-settings-card">
+
+
+            <div class="creator-form-group">
+
+                <label for="creatorDefaultStatus">
+                    New comic default status
+                </label>
+
+                <select
+                    id="creatorDefaultStatus"
+                    class="creator-select creator-settings-select"
+                >
+
+                    <option value="draft">
+                        Draft
+                    </option>
+
+                    <option value="pending">
+                        Pending Review
+                    </option>
+
+                </select>
+
+                <small>
+                    New comics can begin as drafts or be
+                    prepared for review.
+                </small>
+
+            </div>
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Confirm before submission
+                    </strong>
+
+                    <p>
+                        Ask for confirmation before a comic
+                        is submitted for review.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="creatorConfirmSubmission"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Keep completed comics visible
+                    </strong>
+
+                    <p>
+                        Keep completed works available on
+                        your public creator profile.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="creatorKeepCompleted"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+
+            <button
+                type="button"
+                class="creator-secondary-button"
+                id="savePublishingSettings"
+            >
+                Save publishing settings
+            </button>
+
+
+            <p
+                class="creator-form-message"
+                id="publishingMessage"
+                aria-live="polite"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         COLLABORATION SETTINGS
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    COLLABORATION
+                </span>
+
+                <h2>
+                    Collaboration availability
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-settings-card">
+
+
+            <div
+                class="creator-collaboration-status"
+                id="creatorCollaborationStatus"
+            >
+
+                <span class="creator-status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        Available for collaboration
+                    </strong>
+
+                    <p>
+                        You can currently receive
+                        collaboration invitations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="creator-setting-notice">
+
+                <strong>
+                    One collaboration at a time.
+                </strong>
+
+                <p>
+                    Once you accept a collaboration invitation,
+                    your availability will automatically switch
+                    off. You cannot remain on the collaboration
+                    market while actively collaborating.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="creator-secondary-button"
+                id="manageCollaborationButton"
+            >
+                Open Collaboration Pool
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         NOTIFICATIONS
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    NOTIFICATIONS
+                </span>
+
+                <h2>
+                    Notification preferences
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-settings-card">
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Publication updates
+                    </strong>
+
+                    <p>
+                        Receive updates when your comics
+                        are approved or require changes.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="notifyPublishing"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Collaboration invitations
+                    </strong>
+
+                    <p>
+                        Receive notifications when another
+                        creator invites you to collaborate.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="notifyCollaboration"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Earnings updates
+                    </strong>
+
+                    <p>
+                        Receive important updates concerning
+                        creator earnings and payouts.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="notifyEarnings"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Ever Joy announcements
+                    </strong>
+
+                    <p>
+                        Receive important platform updates
+                        and creator announcements.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="notifyAnnouncements"
+                    class="creator-toggle"
+                    checked
+                >
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+
+ <!-- =================================================
+         CREATOR STUDIO PREFERENCES
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    PREFERENCES
+                </span>
+
+                <h2>
+                    Creator Studio preferences
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-settings-card">
+
+
+            <div class="creator-form-group">
+
+                <label for="analyticsDefaultRange">
+                    Default analytics period
+                </label>
+
+                <select
+                    id="analyticsDefaultRange"
+                    class="creator-select creator-settings-select"
+                >
+
+                    <option value="7">
+                        Last 7 days
+                    </option>
+
+                    <option
+                        value="30"
+                        selected
+                    >
+                        Last 30 days
+                    </option>
+
+                    <option value="90">
+                        Last 3 months
+                    </option>
+
+                    <option value="365">
+                        Last year
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <label class="creator-setting-row">
+
+                <div>
+
+                    <strong>
+                        Compact comic cards
+                    </strong>
+
+                    <p>
+                        Use a more compact layout when
+                        viewing your comic library.
+                    </p>
+
+                </div>
+
+
+                <input
+                    type="checkbox"
+                    id="creatorCompactCards"
+                    class="creator-toggle"
+                >
+
+            </label>
+
+
+            <button
+                type="button"
+                class="creator-secondary-button"
+                id="saveStudioPreferences"
+            >
+                Save preferences
+            </button>
+
+
+            <p
+                class="creator-form-message"
+                id="studioPreferencesMessage"
+                aria-live="polite"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ACCOUNT ACTIONS
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-section-heading">
+
+            <div>
+
+                <span class="creator-eyebrow">
+                    ACCOUNT
+                </span>
+
+                <h2>
+                    Account actions
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="creator-danger-card">
+
+
+            <div>
+
+                <strong>
+                    Creator mode
+                </strong>
+
+                <p>
+                    Your creator workspace can be
+                    deactivated without deleting your
+                    comics or Ever Joy reader account.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="creator-danger-button"
+                id="deactivateCreator"
+            >
+                Deactivate Creator Mode
+            </button>
+
+        </div>
+
+
+        <div class="creator-settings-card creator-signout-card">
+
+
+            <div>
+
+                <strong>
+                    Sign out
+                </strong>
+
+                <p>
+                    End your current Ever Joy session.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="creator-secondary-button"
+                id="creatorSignOut"
+            >
+                Sign Out
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CREATOR NOTE
+    ================================================== -->
+
+    <section class="creator-section">
+
+
+        <div class="creator-check-card">
+
+            <div class="creator-check-icon">
+                ✦
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Your studio, your stories.
+                </strong>
+
+                <p>
+                    These settings are designed to give you
+                    control over your creator identity and
+                    publishing experience while keeping your
+                    Ever Joy Comics workspace organized.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+</main>
+
+
+
+<script
+    src="../js/creator-settings.js"
+></script>
+
+</body>
+</html>
